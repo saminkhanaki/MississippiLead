@@ -147,6 +147,18 @@
         <p>&copy; 2026 MississippiLead.com | Dedicated to Business Excellence in Mississippi</p>
     </div>
 </footer>
+  <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navList = document.querySelector('.nav-links');
 
+            if (mobileMenu && navList) {
+                mobileMenu.addEventListener('click', function() {
+                    navList.classList.toggle('active');
+                    console.log("Menu clicked!"); // برای تست در کنسول مرورگر
+                });
+            }
+        });
+    </script>
 </body>
 </html>
