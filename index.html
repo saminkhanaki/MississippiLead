@@ -41,6 +41,13 @@
         /* Ad Sections */
         .ad-banner { background: #e2e8f0; padding: 40px; text-align: center; border: 2px dashed #cbd5e1; color: #64748b; font-weight: bold; margin: 20px 0; }
 
+        /* RSS Feed Styling */
+        .feed-item { border-bottom: 1px solid #eee; padding: 10px 0; transition: 0.3s; }
+        .feed-item:last-child { border-bottom: none; }
+        .feed-item a { color: var(--primary); text-decoration: none; font-weight: bold; font-size: 1rem; display: block; }
+        .feed-item a:hover { color: var(--accent); }
+        .feed-date { font-size: 0.75rem; color: #94a3b8; }
+
         @media (max-width: 768px) { .main-grid { grid-template-columns: 1fr; } .featured-img { height: 200px; } }
     </style>
 </head>
@@ -75,6 +82,11 @@
                 <p>New reports indicate a significant influx of venture capital into local Mississippi startups. This shift is expected to create over 2,000 high-paying jobs in the lead generation and digital marketing sectors by the end of the year...</p>
                 <p>Governor's office stated that "Mississippi is becoming a hub for strategic business intelligence."</p>
             </article>
+
+            <div style="background: white; padding: 25px; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); margin-bottom: 20px;">
+                <h3 style="border-left: 4px solid var(--accent); padding-left: 10px; margin-top: 0;">Live Mississippi Updates</h3>
+                <div id="feed-content" style="font-size: 0.9rem; color: #64748b;">Fetching live business news...</div>
+            </div>
 
             <div class="ad-banner">
                 SPONSORED CONTENT AREA
@@ -112,6 +124,34 @@
             <p>&copy; 2026 MississippiLead.com - Your Source for Mississippi Business Intelligence.</p>
         </div>
     </footer>
+
+    <script>
+        const FEED_URL = 'https://news.google.com/rss/search?q=mississippi+business+news&hl=en-US&gl=US&ceid=US:en';
+        
+        async function loadFeed() {
+            try {
+                // استفاده از مبدل آنلاین برای تبدیل RSS به JSON بدون نیاز به سرور
+                const res = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(FEED_URL)}`);
+                const data = await res.json();
+                
+                let html = '';
+                // نمایش ۵ خبر آخر واقعی
+                data.items.slice(0, 5).forEach(item => {
+                    const cleanDate = item.pubDate.split(' ')[0];
+                    html += `
+                        <div class="feed-item">
+                            <a href="${item.link}" target="_blank">${item.title}</a>
+                            <span class="feed-date">Source: Business News | ${cleanDate}</span>
+                        </div>
+                    `;
+                });
+                document.getElementById('feed-content').innerHTML = html;
+            } catch (e) {
+                document.getElementById('feed-content').innerHTML = "Check back soon for live Mississippi business updates.";
+            }
+        }
+        window.onload = loadFeed;
+    </script>
 
 </body>
 </html>
