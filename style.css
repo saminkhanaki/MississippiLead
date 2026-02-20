@@ -1,42 +1,27 @@
-:root {
-    --primary: #0f172a;
-    --accent: #2563eb;
-    --text: #334155;
-    --bg: #f8fafc;
+/* Styles for Marketplace Buttons */
+.listing-text { margin-bottom: 25px; color: #cbd5e1; font-size: 0.95rem; }
+
+.marketplace-buttons { display: flex; flex-direction: column; gap: 15px; margin-bottom: 30px; }
+
+.btn-marketplace {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 8px;
+    transition: transform 0.2s, opacity 0.2s;
+    text-transform: uppercase;
+    font-size: 0.9rem;
 }
 
-body { font-family: 'Inter', sans-serif; margin: 0; color: var(--text); background: var(--bg); }
-.container { width: 90%; max-width: 1200px; margin: auto; }
+.btn-marketplace:hover { transform: translateY(-2px); opacity: 0.9; }
 
-/* Navbar */
-.navbar { background: white; padding: 20px 0; border-bottom: 1px solid #e2e8f0; }
-.nav-flex { display: flex; justify-content: space-between; align-items: center; }
-.logo { font-weight: 800; font-size: 1.5rem; letter-spacing: -1px; }
-.logo span { color: var(--accent); }
-.nav-links { list-style: none; display: flex; gap: 20px; align-items: center; }
-.nav-links a { text-decoration: none; color: var(--text); font-weight: 500; }
-.nav-cta { background: var(--accent); color: white !important; padding: 8px 16px; border-radius: 5px; }
+.afternic { background-color: #fff; color: #111; } /* سفید تمیز برای افترنیک */
 
-/* Hero */
-.hero { background: var(--primary); color: white; padding: 60px 0; text-align: center; }
-.hero h1 { font-size: 2.5rem; margin-bottom: 10px; }
+.sedo { background-color: #3b82f6; color: #fff; } /* آبی برای سدو */
 
-/* Layout */
-.main-layout { display: grid; grid-template-columns: 2fr 1fr; gap: 40px; margin-top: 40px; }
+.private-offer { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; }
 
-/* Content Area */
-.main-post { background: white; padding: 30px; border-radius: 12px; border: 1px solid #e2e8f0; }
-.featured-img { width: 100%; border-radius: 8px; margin-bottom: 20px; }
-.read-more { display: inline-block; margin-top: 15px; color: var(--accent); font-weight: bold; text-decoration: none; }
+.direct-link { color: #60a5fa; text-decoration: none; font-weight: 500; }
 
-.ad-placeholder { background: #f1f5f9; height: 150px; margin-top: 30px; display: flex; align-items: center; justify-content: center; border: 2px dashed #cbd5e1; font-size: 0.8rem; }
-
-/* Sidebar */
-.offer-card { background: white; padding: 25px; border-radius: 12px; border: 2px solid var(--accent); position: sticky; top: 20px; }
-.btn-bid { display: block; background: var(--accent); color: white; text-align: center; padding: 15px; border-radius: 6px; text-decoration: none; font-weight: bold; margin-top: 20px; }
-.status { color: #10b981; font-weight: bold; }
-.tag { display: inline-block; background: #e2e8f0; padding: 5px 10px; border-radius: 4px; font-size: 0.75rem; margin: 2px; }
-
-footer { text-align: center; padding: 40px 0; margin-top: 40px; border-top: 1px solid #e2e8f0; }
-
-@media (max-width: 768px) { .main-layout { grid-template-columns: 1fr; } }
+.direct-link:hover { text-decoration: underline; }
