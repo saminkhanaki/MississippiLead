@@ -40,6 +40,36 @@
         
         footer { background: var(--primary); color: white; padding: 30px 0; margin-top: 60px; text-align: center; }
         .marketplace-footer { margin-top: 40px; font-size: 0.75rem; color: #94a3b8; border-top: 1px solid #eee; padding-top: 20px; text-align: center; }
+               /* Responsive Navigation (Mobile) */
+        .menu-toggle { display: none; cursor: pointer; flex-direction: column; gap: 5px; z-index: 1001; }
+        .bar { width: 25px; height: 3px; background-color: var(--primary); transition: 0.3s; }
+
+        @media (max-width: 768px) {
+            .nav-flex { position: relative; }
+            .menu-toggle { display: flex; } /* نمایش دکمه همبرگری */
+
+            .nav-links {
+                display: none; /* مخفی کردن منو در حالت عادی در موبایل */
+                flex-direction: column;
+                position: absolute;
+                top: 55px;
+                left: -5%;
+                width: 110%;
+                background-color: white;
+                border-bottom: 3px solid var(--accent);
+                padding: 20px 0;
+                text-align: center;
+                box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+                z-index: 1000;
+            }
+
+            /* نمایش منو وقتی کلاس active اضافه می‌شود */
+            .nav-links.active { display: flex !important; }
+
+            .nav-links li { margin: 15px 0; }
+            .acq-wrapper { padding: 30px 20px; margin: 30px auto; }
+            h1 { font-size: 1.8rem; }
+        }
     </style>
 </head>
 <body>
@@ -133,6 +163,18 @@
         <p>&copy; 2026 MississippiLead.com | Dedicated to Business Excellence in Mississippi</p>
     </div>
 </footer>
+        <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navList = document.querySelector('.nav-links');
 
+        if (mobileMenu && navList) {
+            mobileMenu.addEventListener('click', function() {
+                navList.classList.toggle('active');
+                console.log("Menu clicked!"); // برای تست در کنسول مرورگر
+            });
+        }
+    });
+</script>
 </body>
 </html>
