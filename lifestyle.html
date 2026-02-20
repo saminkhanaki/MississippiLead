@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lifestyle & Tourism | Mississippi Lead</title>
+    <style>
+        :root { --primary: #0f172a; --accent: #b91c1c; --text: #334155; --bg: #f1f5f9; }
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: var(--bg); color: var(--text); line-height: 1.6; }
+        .container { width: 90%; max-width: 1100px; margin: auto; }
+        
+        /* Navbar */
+        nav { background: white; padding: 15px 0; border-bottom: 3px solid var(--accent); position: sticky; top: 0; z-index: 100; }
+        .nav-flex { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-weight: 900; font-size: 1.6rem; color: var(--primary); text-decoration: none; text-transform: uppercase; }
+        .logo span { color: var(--accent); }
+        .nav-links { list-style: none; display: flex; gap: 20px; margin: 0; padding: 0; }
+        .nav-links a { text-decoration: none; color: var(--primary); font-weight: 600; font-size: 0.9rem; }
+        .partnership-btn { background: var(--accent); color: white !important; padding: 5px 12px; border-radius: 4px; }
+
+        /* Content Layout */
+        .lifestyle-header { background: white; padding: 40px 0; border-bottom: 1px solid #e2e8f0; margin-bottom: 30px; text-align: center; }
+        .lifestyle-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 50px; }
+        
+        article { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: 0.3s; }
+        article:hover { transform: translateY(-5px); }
+        .article-img { width: 100%; height: 200px; background: #cbd5e1; object-fit: cover; }
+        .article-body { padding: 20px; }
+        .category-tag { color: var(--accent); font-size: 0.75rem; font-weight: bold; text-transform: uppercase; }
+        h3 { margin: 10px 0; color: var(--primary); }
+        p { font-size: 0.9rem; color: #64748b; }
+
+        footer { background: var(--primary); color: white; padding: 50px 0; margin-top: 60px; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="container nav-flex">
+            <a href="index.html" class="logo">MISSISSIPPI<span>LEAD</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="lifestyle.html">Lifestyle</a></li>
+                <li><a href="acquire.html" class="partnership-btn">Partnership</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="lifestyle-header">
+        <div class="container">
+            <h1 style="color: var(--primary);">Mississippi Lifestyle & Culture</h1>
+            <p>Exploring the unique hospitality, food scene, and travel destinations of the Magnolia State.</p>
+        </div>
+    </div>
+
+    <main class="container lifestyle-grid">
+        <article>
+            <div class="article-body">
+                <span class="category-tag">Culinary Arts</span>
+                <h3>The Evolution of Gulf Coast Dining in 2026</h3>
+                <p>From Biloxi to Ocean Springs, the culinary landscape is seeing a surge in farm-to-table innovations, attracting food critics nationwide...</p>
+            </div>
+        </article>
+
+        <article>
+            <div class="article-body">
+                <span class="category-tag">Travel & Tourism</span>
+                <h3>Hidden Gems: 5 Must-Visit State Parks this Spring</h3>
+                <p>Mississippi's natural beauty remains one of its best-kept secrets. We explore the top parks that offer both relaxation and adventure...</p>
+            </div>
+        </article>
+
+        <article>
+            <div class="article-body">
+                <span class="category-tag">Real Estate</span>
+                <h3>Why Young Professionals are Moving to Jackson</h3>
+                <p>Affordability meets culture. Discover how the capital city is reinventing itself as a hub for the modern remote workforce...</p>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+            <div>
+                <h4 style="color: var(--accent);">MISSISSIPPI LEAD</h4>
+                <p style="font-size: 0.85rem; color: #94a3b8;">The premier source for business intelligence and lifestyle updates in the Magnolia State.</p>
+            </div>
+            <div>
+                <h4>Contact & Location</h4>
+                <p style="font-size: 0.85rem; color: #94a3b8;">📍 Jackson Business District, MS 39201, USA</p>
+                <p style="font-size: 0.85rem; color: #94a3b8;">✉️ info@mississippilead.com</p>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <ul style="list-style: none; padding: 0; font-size: 0.85rem; color: #94a3b8;">
+                    <li><a href="about.html" style="color: inherit; text-decoration: none;">Editorial Policy</a></li>
+                    <li><a href="acquire.html" style="color: inherit; text-decoration: none;">Partnership Desk</a></li>
+                </ul>
+            </div>
+        </div>
+        <div style="text-align: center; border-top: 1px solid #1e293b; margin-top: 30px; padding-top: 20px; font-size: 0.8rem; color: #64748b;">
+            <p>&copy; 2026 MississippiLead.com | Dedicated to Excellence</p>
+        </div>
+    </footer>
+
+</body>
+</html>
