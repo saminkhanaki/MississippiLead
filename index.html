@@ -233,6 +233,15 @@
         }
         window.onload = loadFeed;
     </script>
+<script>
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navList = document.getElementById('nav-list');
 
+    mobileMenu.addEventListener('click', () => {
+        navList.classList.toggle('active');
+        // انیمیشن ساده برای تغییر شکل همبرگری (اختیاری)
+        mobileMenu.classList.toggle('is-active');
+    });
+</script>
 </body>
 </html>
