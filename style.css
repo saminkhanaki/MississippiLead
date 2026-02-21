@@ -12,6 +12,35 @@ nav { background: white; padding: 15px 0; border-bottom: 3px solid var(--accent)
 .nav-links { list-style: none; display: flex; gap: 20px; margin: 0; padding: 0; }
 .nav-links a { text-decoration: none; color: var(--primary); font-weight: 600; }
 
+
+/* استایل دکمه کانکت برای هماهنگی با صفحات دیگر */
+        .nav-links { list-style: none; display: flex; gap: 20px; align-items: center; margin: 0; padding: 0; }
+        .nav-links a { text-decoration: none; color: var(--navy-blue); font-weight: 600; font-size: 0.9rem; }
+        
+        .acquire-btn { 
+            background: var(--accent-red) !important; 
+            color: white !important; 
+            padding: 8px 16px !important; 
+            border-radius: 4px; 
+            transition: 0.3s;
+        }
+        
+        .acquire-btn:hover {
+            background: var(--navy-blue) !important;
+            opacity: 0.9;
+        }
+
+        /* اصلاح استایل منوی موبایل برای دکمه */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; flex-direction: column; position: absolute; top: 60px; left: 0; width: 100%;
+                background: white; padding: 20px; box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+            }
+            .nav-links.active { display: flex; }
+            .acquire-btn { text-align: center; margin-top: 10px; }
+        }
+
+
 /* استایل بهینه برای فید خبری */
 #feed-content {
     display: flex;
