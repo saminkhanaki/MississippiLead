@@ -5,18 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mississippi Lead</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
+    
     <style>
-        /* اینجا فقط کدهایی را بنویس که در style.css نیستند */
+        /* تنظیم رنگ‌های اصلی */
+        :root {
+            --navy-blue: #0f172a; /* همان سرمه‌ای مد نظر شما */
+            --accent-red: #b91c1c; /* قرمز LEAD */
+        }
+
+        /* استایل اختصاصی لوگو با فونت مد نظر */
+        .logo-text { 
+            font-family: 'Montserrat', sans-serif; /* یا 'Object Sans' اگر فایلش را داری */
+            font-weight: 900; 
+            font-size: 1.6rem; 
+            letter-spacing: -0.5px;
+            color: var(--navy-blue); /* بخش اول سرمه‌ای */
+        }
+        
+        .logo-text span { 
+            color: var(--accent-red); /* بخش دوم قرمز */
+        }
+
         .hero-news { background: white; padding: 30px 0; border-bottom: 1px solid #e2e8f0; margin-bottom: 30px; }
         .main-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 30px; }
-        .badge { background: var(--accent); color: white; padding: 2px 8px; font-size: 0.7rem; font-weight: bold; border-radius: 2px; }
         
         @media (max-width: 768px) {
             .main-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
-</head>
+
 <body>
 
 <nav>
@@ -37,7 +56,7 @@
             <li><a href="about.html">About Us</a></li>
             <li><a href="business.html">Business</a></li>
             <li><a href="lifestyle.html">Lifestyle</a></li>
-            <li><a href=acquire.html" class="acquire-btn">Contact</a></li>
+            <li><a href="partnership.html" class="acquire-btn">Contact</a></li>
         </ul>
     </div>
 </nav>
