@@ -1,108 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="favicon.png">
-    <meta name="description" content="Mississippi Lead is your premier source for business intelligence, local news, and strategic insights in the Magnolia State.">
-<link rel="icon" type="image/png" href="logo.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lifestyle & Tourism | Mississippi Lead</title>
-     <style>
-        :root { --primary: #0f172a; --accent: #b91c1c; --text: #334155; --bg: #f8fafc; }
-        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: var(--bg); color: var(--text); line-height: 1.6; }
-        .container { width: 90%; max-width: 1100px; margin: auto; }
-
-             /* اصلاح نمایش تصاویر در موبایل */
-.content img, .business-card img, article img {
-    width: 100%;       /* تصویر تمام عرض کادر را پر کند */
-    height: auto;      /* ارتفاع به نسبت عرض تنظیم شود تا تصویر کشیده نشود */
-    max-height: 250px; /* جلوگیری از بیش از حد بزرگ شدن در موبایل */
-    object-fit: cover; /* حفظ کیفیت و بریدن حاشیه‌های اضافی برای فیت شدن */
-    border-radius: 8px;
-    margin-bottom: 15px;
-}
-
-@media (max-width: 768px) {
-    .content, .business-grid { 
-        padding: 10px; 
-    }
-    h2 { font-size: 1.5rem; } /* کوچک کردن تیترها برای موبایل */
-}
-        /* Navbar */
-        nav { background: white; padding: 15px 0; border-bottom: 3px solid var(--accent); }
-        .nav-flex { display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-weight: 900; font-size: 1.6rem; color: var(--primary); text-decoration: none; text-transform: uppercase; }
-        .logo span { color: var(--accent); }
-        .nav-links { list-style: none; display: flex; gap: 20px; margin: 0; padding: 0; }
-        .nav-links a { text-decoration: none; color: var(--primary); font-weight: 600; font-size: 0.9rem; }
-        .partnership-btn { background: var(--accent); color: white !important; padding: 5px 12px; border-radius: 4px; }
-
-        /* Content Layout */
-        .acq-wrapper { max-width: 850px; margin: 60px auto; background: white; padding: 50px; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
-        h1 { color: var(--primary); font-size: 2.5rem; margin-bottom: 20px; text-align: center; }
-        .lead-text { font-size: 1.2rem; text-align: center; margin-bottom: 40px; color: #64748b; }
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="logo.png">
+    
+    <style>
+        /* --- استایل اختصاصی محتوای لایف‌استایل --- */
+        .lifestyle-header { background: white; padding: 40px 0; text-align: center; border-bottom: 1px solid #e2e8f0; }
         
-        /* Ad Options Grid */
-        .ad-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; margin-bottom: 40px; }
-        .ad-card { border: 1px solid #e2e8f0; padding: 25px; border-radius: 12px; transition: 0.3s; }
-        .ad-card:hover { border-color: var(--accent); transform: translateY(-5px); }
-        .ad-card h3 { color: var(--primary); margin-top: 0; }
-        .ad-card p { font-size: 0.95rem; }
+        /* جادوی ۳ ستونه شدن در دسکتاپ */
+        .lifestyle-grid { 
+            display: grid; 
+            grid-template-columns: repeat(3, 1fr); /* ایجاد ۳ ستون مساوی */
+            gap: 25px; 
+            margin-top: 40px;
+            margin-bottom: 60px;
+        }
 
-        /* Call to Action */
-        .cta-section { background: #f1f5f9; padding: 40px; border-radius: 12px; text-align: center; margin-top: 30px; }
-        .direct-link { color: var(--accent); font-weight: bold; text-decoration: none; font-size: 1.4rem; display: block; margin-top: 10px; }
-        
-        footer { background: var(--primary); color: white; padding: 30px 0; margin-top: 60px; text-align: center; }
-        .marketplace-footer { margin-top: 40px; font-size: 0.75rem; color: #94a3b8; border-top: 1px solid #eee; padding-top: 20px; text-align: center; }
-               /* Responsive Navigation (Mobile) */
-        .menu-toggle { display: none; cursor: pointer; flex-direction: column; gap: 5px; z-index: 1001; }
-        .bar { width: 25px; height: 3px; background-color: var(--primary); transition: 0.3s; }
+        .lifestyle-grid article {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* اصلاح استایل عکس‌ها برای جلوگیری از لِه شدن */
+        .lifestyle-grid .article-img {
+            width: 100%;
+            height: 220px; /* ارتفاع ثابت برای هماهنگی */
+            object-fit: cover; /* حفظ نسبت ابعاد تصویر */
+            display: block;
+        }
+
+        .article-body { padding: 20px; flex-grow: 1; }
+        .category-tag { background: #f1f5f9; color: var(--accent); font-size: 0.7rem; font-weight: bold; text-transform: uppercase; padding: 4px 8px; border-radius: 4px; }
+        .article-body h3 { margin: 15px 0 10px 0; font-size: 1.25rem; color: var(--primary); }
+        .article-body p { font-size: 0.9rem; color: var(--text); line-height: 1.5; }
+
+        /* --- استایل فوتر سیستم شبکه --- */
+        .footer-grid-system {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
+        }
+
+        /* --- ریسپانسیو برای موبایل --- */
+        @media (max-width: 992px) {
+            .lifestyle-grid { grid-template-columns: repeat(2, 1fr); } /* در تبلت ۲ ستونه */
+        }
 
         @media (max-width: 768px) {
-            .nav-flex { position: relative; }
-            .menu-toggle { display: flex; } /* نمایش دکمه همبرگری */
-
-            .nav-links {
-                display: none; /* مخفی کردن منو در حالت عادی در موبایل */
-                flex-direction: column;
-                position: absolute;
-                top: 55px;
-                left: -5%;
-                width: 110%;
-                background-color: white;
-                border-bottom: 3px solid var(--accent);
-                padding: 20px 0;
-                text-align: center;
-                box-shadow: 0 10px 15px rgba(0,0,0,0.1);
-                z-index: 1000;
-            }
-
-            /* نمایش منو وقتی کلاس active اضافه می‌شود */
+            .lifestyle-grid { grid-template-columns: 1fr; } /* در موبایل تک ستونه */
+            .footer-grid-system { grid-template-columns: 1fr; text-align: center; }
+            .nav-links { display: none; }
             .nav-links.active { display: flex !important; }
-
-            .nav-links li { margin: 15px 0; }
-            .acq-wrapper { padding: 30px 20px; margin: 30px auto; }
-            h1 { font-size: 1.8rem; }
         }
     </style>
 </head>
 <body>
 
-   <nav>
+<nav>
     <div class="container nav-flex">
         <a href="index.html" class="logo" style="display: flex; align-items: center; gap: 12px; text-decoration: none;">
             <img src="logo.png" alt="Logo" style="height: 40px; width: auto;">
             <span class="logo-text">MISSISSIPPI<span>LEAD</span></span>
         </a>
-        
         <div class="menu-toggle" id="mobile-menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
+            <span class="bar"></span><span class="bar"></span><span class="bar"></span>
         </div>
-
         <ul class="nav-links" id="nav-list">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
@@ -113,104 +83,75 @@
     </div>
 </nav>
 
-    <div class="lifestyle-header">
-        <div class="container">
-            <h1 style="color: var(--primary);">Mississippi Lifestyle & Culture</h1>
-            <p>Exploring the unique hospitality, food scene, and travel destinations of the Magnolia State.</p>
-        </div>
+<div class="lifestyle-header">
+    <div class="container">
+        <h1>Mississippi Lifestyle & Culture</h1>
+        <p>Exploring the unique hospitality, food scene, and travel destinations.</p>
     </div>
+</div>
 
 <main class="container lifestyle-grid">
-        <article>
-            <img src="restaurant.jpg" alt="The Saltine Oyster Bar Jackson MS" class="article-img">
-            <div class="article-body">
-                <span class="category-tag">Weekly Dining Spotlight</span>
-                <h3>The Saltine Oyster Bar, Jackson</h3>
-                <p>The Saltine Oyster Bar is a modern staple of Jackson’s culinary scene, located in the historic Duling School building. Known for its fresh oyster bar and elevated Southern seafood, it offers a sophisticated yet relaxed environment perfect for business networking or family gatherings. With its award-winning craft beer selection and creative seasonal small plates, it continues to define the high-end dining experience in the heart of the capital district.</p>
-                <p style="font-size: 0.8rem; color: var(--accent); font-weight: bold;">📍 622 Duling Ave, Jackson, MS 39216</p>
-            </div>
-        </article>
+    <article>
+        <img src="restaurant.jpg" alt="Restaurant" class="article-img">
+        <div class="article-body">
+            <span class="category-tag">Weekly Dining Spotlight</span>
+            <h3>The Saltine Oyster Bar, Jackson</h3>
+            <p>A modern staple of Jackson’s culinary scene, located in the historic Duling School building. Fresh oysters and elevated seafood.</p>
+            <p style="font-size: 0.8rem; color: var(--accent); font-weight: bold; margin-top: 15px;">📍 Jackson, MS</p>
+        </div>
+    </article>
 
-        <article>
-            <img src="hotel.jpg" alt="The White House Hotel Biloxi" class="article-img">
-            <div class="article-body">
-                <span class="category-tag">Luxury Stays & History</span>
-                <h3>The White House Hotel, Biloxi</h3>
-                <p>Standing as a beacon of Southern elegance since the 1890s, The White House Hotel in Biloxi offers a luxurious escape with stunning views of the Gulf of Mexico. After its premier restoration, this boutique hotel combines historic charm with modern amenities, featuring a rooftop bar and a scenic pool terrace. It remains the top choice for travelers seeking executive stays or a premium waterfront atmosphere on the beautiful Mississippi Coast.</p>
-                <p style="font-size: 0.8rem; color: var(--accent); font-weight: bold;">📍 1230 Beach Blvd, Biloxi, MS 39530</p>
-            </div>
-        </article>
+    <article>
+        <img src="hotel.jpg" alt="Hotel" class="article-img">
+        <div class="article-body">
+            <span class="category-tag">Luxury Stays & History</span>
+            <h3>The White House Hotel, Biloxi</h3>
+            <p>Standing as a beacon of Southern elegance since the 1890s, offering a luxurious escape with stunning Gulf views.</p>
+            <p style="font-size: 0.8rem; color: var(--accent); font-weight: bold; margin-top: 15px;">📍 Biloxi, MS</p>
+        </div>
+    </article>
 
-        <article>
-            <img src="beach.jpg" alt="Ship Island Excursions Mississippi" class="article-img">
-            <div class="article-body">
-                <span class="category-tag">Coastal Escape</span>
-                <h3>Ship Island Excursions, Gulf Coast</h3>
-                <p>Ship Island Excursions provides the premier gateway to Mississippi’s most pristine white-sand beaches. Located within the Gulf Islands National Seashore, these offshore islands offer crystal-clear waters and a serene escape from the mainland hustle. Whether you are looking for world-class bird watching, historic fort tours, or a premium day at the beach, the coastal experience here is unmatched in the Magnolia State and a must-visit for every traveler.</p>
-                <p style="font-size: 0.8rem; color: var(--accent); font-weight: bold;">📍 1040 23rd Ave, Gulfport, MS 39501</p>
-            </div>
-        </article>
-    </main>
+    <article>
+        <img src="beach.jpg" alt="Beach" class="article-img">
+        <div class="article-body">
+            <span class="category-tag">Coastal Escape</span>
+            <h3>Ship Island Excursions</h3>
+            <p>Providing the premier gateway to Mississippi’s most pristine white-sand beaches and crystal-clear waters.</p>
+            <p style="font-size: 0.8rem; color: var(--accent); font-weight: bold; margin-top: 15px;">📍 Gulfport, MS</p>
+        </div>
+    </article>
+</main>
 
 <footer style="background: var(--primary); color: white; padding: 60px 0 30px 0; margin-top: 60px; clear: both;">
     <div class="container footer-grid-system">
-        
         <div class="footer-col">
             <h4 style="color: var(--accent); margin-bottom: 20px;">MISSISSIPPI LEAD</h4>
-            <p style="font-size: 0.9rem; color: #94a3b8; line-height: 1.6;">
-                Exploring the unique hospitality, food scene, and travel destinations of the Magnolia State.
-            </p>
+            <p style="font-size: 0.9rem; color: #94a3b8;">Strategic insights in the Magnolia State.</p>
         </div>
-
         <div class="footer-col">
             <h4 style="color: white; margin-bottom: 20px;">Quick Links</h4>
-            <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.9rem;">
-                <li style="margin-bottom: 10px;"><a href="index.html" style="color: #94a3b8; text-decoration: none;">Home</a></li>
-                <li style="margin-bottom: 10px;"><a href="business.html" style="color: #94a3b8; text-decoration: none;">Business</a></li>
-                <li style="margin-bottom: 10px;"><a href="lifestyle.html" style="color: #94a3b8; text-decoration: none;">Lifestyle</a></li>
+            <ul style="list-style: none; padding: 0; font-size: 0.9rem;">
+                <li><a href="index.html" style="color: #94a3b8; text-decoration: none;">Home</a></li>
+                <li><a href="lifestyle.html" style="color: #94a3b8; text-decoration: none;">Lifestyle</a></li>
             </ul>
         </div>
-
         <div class="footer-col">
             <h4 style="color: white; margin-bottom: 20px;">Contact</h4>
-            <p style="font-size: 0.9rem; color: #94a3b8;">📍 Jackson, MS</p>
             <p style="font-size: 0.9rem; color: #94a3b8;">✉️ info@mississippilead.com</p>
         </div>
-
     </div>
-
     <div class="container" style="border-top: 1px solid rgba(255,255,255,0.1); margin-top: 40px; padding-top: 20px; text-align: center;">
         <p style="font-size: 0.8rem; color: #64748b;">&copy; 2026 MississippiLead.com</p>
     </div>
 </footer>
 
-<style>
-    /* این استایل را یا در انتهای فایل style.css یا در تگ style همین صفحه بگذار */
-    .footer-grid-system {
-        display: grid;
-        grid-template-columns: 2fr 1fr 1fr; /* در دسکتاپ: ۳ ستون با نسبت‌های مختلف */
-        gap: 40px;
-    }
-
-    @media (max-width: 768px) {
-        .footer-grid-system {
-            grid-template-columns: 1fr; /* در موبایل: فقط ۱ ستون */
-            text-align: center;
-        }
-        .footer-col { margin-bottom: 20px; }
-    }
-</style>
-
-    
-    <script>
+<script>
     document.addEventListener('DOMContentLoaded', function() {
         const mobileMenu = document.getElementById('mobile-menu');
-        const navList = document.querySelector('.nav-links');
-
-        if (mobileMenu && navList) {
+        const navList = document.getElementById('nav-list');
+        if (mobileMenu) {
             mobileMenu.addEventListener('click', function() {
                 navList.classList.toggle('active');
-                console.log("Menu clicked!"); // برای تست در کنسول مرورگر
             });
         }
     });
