@@ -1,64 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lifestyle & Tourism | Mississippi Lead</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="logo.png">
-    
+    <meta name="description" content="Mississippi Lead is your premier source for business intelligence, local news, and strategic insights in the Magnolia State.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Partnership | Mississippi Lead</title>
     <style>
-        /* --- استایل اختصاصی محتوای لایف‌استایل --- */
-        .lifestyle-header { background: white; padding: 40px 0; text-align: center; border-bottom: 1px solid #e2e8f0; }
+        :root { --primary: #0f172a; --accent: #b91c1c; --text: #334155; --bg: #f8fafc; }
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: var(--bg); color: var(--text); line-height: 1.6; }
+        .container { width: 90%; max-width: 1100px; margin: auto; }
         
-        /* جادوی ۳ ستونه شدن در دسکتاپ */
-        .lifestyle-grid { 
-            display: grid; 
-            grid-template-columns: repeat(3, 1fr); /* ایجاد ۳ ستون مساوی */
-            gap: 25px; 
-            margin-top: 40px;
-            margin-bottom: 60px;
-        }
+        /* Navbar */
+        nav { background: white; padding: 15px 0; border-bottom: 3px solid var(--accent); }
+        .nav-flex { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-weight: 900; font-size: 1.6rem; color: var(--primary); text-decoration: none; text-transform: uppercase; }
+        .logo span { color: var(--accent); }
+        .nav-links { list-style: none; display: flex; gap: 20px; margin: 0; padding: 0; }
+        .nav-links a { text-decoration: none; color: var(--primary); font-weight: 600; font-size: 0.9rem; }
+        .acquire-btn { background: var(--accent); color: white !important; padding: 5px 12px; border-radius: 4px; }
 
-        .lifestyle-grid article {
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            display: flex;
-            flex-direction: column;
-        }
+        /* Content Layout */
+        .acq-wrapper { max-width: 850px; margin: 60px auto; background: white; padding: 50px; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        h1 { color: var(--primary); font-size: 2.5rem; margin-bottom: 20px; text-align: center; }
+        .lead-text { font-size: 1.2rem; text-align: center; margin-bottom: 40px; color: #64748b; }
+        
+        /* Ad Options Grid */
+        .ad-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; margin-bottom: 40px; }
+        .ad-card { border: 1px solid #e2e8f0; padding: 25px; border-radius: 12px; transition: 0.3s; }
+        .ad-card:hover { border-color: var(--accent); transform: translateY(-5px); }
+        .ad-card h3 { color: var(--primary); margin-top: 0; }
+        .ad-card p { font-size: 0.95rem; }
 
-        /* اصلاح استایل عکس‌ها برای جلوگیری از لِه شدن */
-        .lifestyle-grid .article-img {
-            width: 100%;
-            height: 220px; /* ارتفاع ثابت برای هماهنگی */
-            object-fit: cover; /* حفظ نسبت ابعاد تصویر */
-            display: block;
-        }
-
-        .article-body { padding: 20px; flex-grow: 1; }
-        .category-tag { background: #f1f5f9; color: var(--accent); font-size: 0.7rem; font-weight: bold; text-transform: uppercase; padding: 4px 8px; border-radius: 4px; }
-        .article-body h3 { margin: 15px 0 10px 0; font-size: 1.25rem; color: var(--primary); }
-        .article-body p { font-size: 0.9rem; color: var(--text); line-height: 1.5; }
-
-        /* --- استایل فوتر سیستم شبکه --- */
-        .footer-grid-system {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr;
-            gap: 40px;
-        }
-
-        /* --- ریسپانسیو برای موبایل --- */
-        @media (max-width: 992px) {
-            .lifestyle-grid { grid-template-columns: repeat(2, 1fr); } /* در تبلت ۲ ستونه */
-        }
+        /* Updated Contact Section (No Phone, General Address) */
+        .cta-section { background: #f1f5f9; padding: 40px; border-radius: 12px; text-align: center; margin-top: 30px; }
+        .contact-info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; margin-top: 25px; }
+        .contact-info-grid strong { display: block; color: var(--primary); font-size: 0.8rem; text-transform: uppercase; margin-bottom: 5px; }
+        .direct-link { color: var(--accent); font-weight: bold; text-decoration: none; font-size: 1.2rem; display: block; }
+        
+        footer { background: var(--primary); color: white; padding: 60px 0 30px 0; margin-top: 60px; text-align: center; }
+        .marketplace-footer { margin-top: 40px; font-size: 0.75rem; color: #94a3b8; border-top: 1px solid #eee; padding-top: 20px; }
+        
+        /* Responsive Navigation */
+        .menu-toggle { display: none; cursor: pointer; flex-direction: column; gap: 5px; z-index: 1001; }
+        .bar { width: 25px; height: 3px; background-color: var(--primary); transition: 0.3s; }
 
         @media (max-width: 768px) {
-            .lifestyle-grid { grid-template-columns: 1fr; } /* در موبایل تک ستونه */
-            .footer-grid-system { grid-template-columns: 1fr; text-align: center; }
-            .nav-links { display: none; }
+            .menu-toggle { display: flex; }
+            .nav-links {
+                display: none; flex-direction: column; position: absolute; top: 55px; left: -5%; width: 110%;
+                background-color: white; border-bottom: 3px solid var(--accent); padding: 20px 0; box-shadow: 0 10px 15px rgba(0,0,0,0.1); z-index: 1000;
+            }
             .nav-links.active { display: flex !important; }
+            .acq-wrapper { padding: 30px 20px; margin: 30px auto; }
+            h1 { font-size: 1.8rem; }
         }
     </style>
 </head>
