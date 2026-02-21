@@ -2,12 +2,11 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/png" href="logo.png">
     <meta name="description" content="Mississippi Lead is your premier source for business intelligence, local news, and strategic insights in the Magnolia State.">
-<link rel="icon" type="image/png" href="logo.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Partnership & Advertising | Mississippi Lead</title>
+    <title>Contact & Partnership | Mississippi Lead</title>
     <style>
         :root { --primary: #0f172a; --accent: #b91c1c; --text: #334155; --bg: #f8fafc; }
         body { font-family: 'Segoe UI', sans-serif; margin: 0; background: var(--bg); color: var(--text); line-height: 1.6; }
@@ -20,7 +19,7 @@
         .logo span { color: var(--accent); }
         .nav-links { list-style: none; display: flex; gap: 20px; margin: 0; padding: 0; }
         .nav-links a { text-decoration: none; color: var(--primary); font-weight: 600; font-size: 0.9rem; }
-        .partnership-btn { background: var(--accent); color: white !important; padding: 5px 12px; border-radius: 4px; }
+        .acquire-btn { background: var(--accent); color: white !important; padding: 5px 12px; border-radius: 4px; }
 
         /* Content Layout */
         .acq-wrapper { max-width: 850px; margin: 60px auto; background: white; padding: 50px; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
@@ -34,39 +33,26 @@
         .ad-card h3 { color: var(--primary); margin-top: 0; }
         .ad-card p { font-size: 0.95rem; }
 
-        /* Call to Action */
+        /* Updated Contact Section (No Phone, General Address) */
         .cta-section { background: #f1f5f9; padding: 40px; border-radius: 12px; text-align: center; margin-top: 30px; }
-        .direct-link { color: var(--accent); font-weight: bold; text-decoration: none; font-size: 1.4rem; display: block; margin-top: 10px; }
+        .contact-info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; margin-top: 25px; }
+        .contact-info-grid strong { display: block; color: var(--primary); font-size: 0.8rem; text-transform: uppercase; margin-bottom: 5px; }
+        .direct-link { color: var(--accent); font-weight: bold; text-decoration: none; font-size: 1.2rem; display: block; }
         
-        footer { background: var(--primary); color: white; padding: 30px 0; margin-top: 60px; text-align: center; }
-        .marketplace-footer { margin-top: 40px; font-size: 0.75rem; color: #94a3b8; border-top: 1px solid #eee; padding-top: 20px; text-align: center; }
-               /* Responsive Navigation (Mobile) */
+        footer { background: var(--primary); color: white; padding: 60px 0 30px 0; margin-top: 60px; text-align: center; }
+        .marketplace-footer { margin-top: 40px; font-size: 0.75rem; color: #94a3b8; border-top: 1px solid #eee; padding-top: 20px; }
+        
+        /* Responsive Navigation */
         .menu-toggle { display: none; cursor: pointer; flex-direction: column; gap: 5px; z-index: 1001; }
         .bar { width: 25px; height: 3px; background-color: var(--primary); transition: 0.3s; }
 
         @media (max-width: 768px) {
-            .nav-flex { position: relative; }
-            .menu-toggle { display: flex; } /* نمایش دکمه همبرگری */
-
+            .menu-toggle { display: flex; }
             .nav-links {
-                display: none; /* مخفی کردن منو در حالت عادی در موبایل */
-                flex-direction: column;
-                position: absolute;
-                top: 55px;
-                left: -5%;
-                width: 110%;
-                background-color: white;
-                border-bottom: 3px solid var(--accent);
-                padding: 20px 0;
-                text-align: center;
-                box-shadow: 0 10px 15px rgba(0,0,0,0.1);
-                z-index: 1000;
+                display: none; flex-direction: column; position: absolute; top: 55px; left: -5%; width: 110%;
+                background-color: white; border-bottom: 3px solid var(--accent); padding: 20px 0; box-shadow: 0 10px 15px rgba(0,0,0,0.1); z-index: 1000;
             }
-
-            /* نمایش منو وقتی کلاس active اضافه می‌شود */
             .nav-links.active { display: flex !important; }
-
-            .nav-links li { margin: 15px 0; }
             .acq-wrapper { padding: 30px 20px; margin: 30px auto; }
             h1 { font-size: 1.8rem; }
         }
@@ -74,7 +60,7 @@
 </head>
 <body>
 
-    <nav>
+<nav>
     <div class="container nav-flex">
         <a href="index.html" class="logo" style="display: flex; align-items: center; gap: 12px; text-decoration: none;">
             <img src="logo.png" alt="Logo" style="height: 40px; width: auto;">
@@ -92,94 +78,31 @@
             <li><a href="about.html">About Us</a></li>
             <li><a href="business.html">Business</a></li>
             <li><a href="lifestyle.html">Lifestyle</a></li>
-            <li><a href="acquire.html" class="partnership-btn">Partnership</a></li>
+            <li><a href=acquire.html" class="acquire-btn">Contact</a></li>
         </ul>
     </div>
 </nav>
 
-    <div class="container">
-        <div class="acq-wrapper">
-            <h1>Partner with Mississippi Lead</h1>
-            <p class="lead-text">Reach local business leaders and decision-makers across the state through our strategic advertising opportunities.</p>
+<div class="container">
+    <div class="acq-wrapper">
+        <h1>Partner with Mississippi Lead</h1>
+        <p class="lead-text">Strategic advertising and editorial partnerships to reach Mississippi's business elite.</p>
 
-            <div class="ad-options">
-                <div class="ad-card">
-                    <h3>Sponsored Content</h3>
-                    <p>Publish high-quality articles, industry insights, or business announcements directly on our news feed to boost your authority.</p>
-                </div>
-                <div class="ad-card">
-                    <h3>Display Advertising</h3>
-                    <p>Strategically place your banners on our high-traffic pages to increase brand visibility among Mississippi business owners.</p>
-                </div>
-                <div class="ad-card">
-                    <h3>B2B Lead Gen</h3>
-                    <p>Partner with us for specialized campaigns targeting the finance, infrastructure, and tech sectors in the region.</p>
-                </div>
+        <div class="ad-options">
+            <div class="ad-card">
+                <h3>Sponsored Content</h3>
+                <p>Publish industry insights or business announcements directly on our news feed to boost your authority.</p>
             </div>
-
-            <div class="cta-section">
-                <h2>Ready to grow your brand?</h2>
-                <p>Contact our partnership desk for current rates and media kit:</p>
-                <a href="mailto:info@mississippilead.com" class="direct-link">info@mississippilead.com</a>
+            <div class="ad-card">
+                <h3>Display Advertising</h3>
+                <p>Strategically place your banners on our high-traffic pages to increase visibility among regional decision-makers.</p>
             </div>
-
-            <div class="marketplace-footer">
-                <p>For inquiries regarding brand acquisition or private treaty: 
-                    <a href="https://www.afternic.com/domain/mississippilead.com" target="_blank" style="color: #94a3b8; text-decoration: underline;">Afternic</a> | 
-                    <a href="https://sedo.com/search/details/?domain=mississippilead.com" target="_blank" style="color: #94a3b8; text-decoration: underline;">Sedo</a>
-                </p>
+            <div class="ad-card">
+                <h3>News & Media Tips</h3>
+                <p>Have an insider tip or a business story that needs coverage? Our editorial desk is ready to listen.</p>
             </div>
         </div>
-    </div>
 
- <footer style="background: var(--primary); color: white; padding: 60px 0 30px 0; margin-top: 60px;">
-    <div class="container" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px;">
-        
-        <div style="flex: 1; min-width: 250px;">
-            <h4 style="color: var(--accent); margin-bottom: 20px; text-transform: uppercase;">Mississippi Lead</h4>
-            <p style="font-size: 0.9rem; color: #94a3b8; line-height: 1.8;">
-                The premier source for business intelligence, local news, and strategic insights in the Magnolia State.
-            </p>
-        </div>
-
-        <div style="flex: 1; min-width: 150px;">
-            <h4 style="color: white; margin-bottom: 20px;">Quick Links</h4>
-            <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.9rem;">
-                <li style="margin-bottom: 12px;"><a href="about.html" style="color: #94a3b8; text-decoration: none;">About Us</a></li>
-                <li style="margin-bottom: 12px;"><a href="business.html" style="color: #94a3b8; text-decoration: none;">Business Directory</a></li>
-                <li style="margin-bottom: 12px;"><a href="lifestyle.html" style="color: #94a3b8; text-decoration: none;">Lifestyle</a></li>
-                <li style="margin-bottom: 12px;"><a href="acquire.html" style="color: #94a3b8; text-decoration: none;">Partnership</a></li>
-            </ul>
-        </div>
-
-        <div style="flex: 1; min-width: 200px;">
-            <h4 style="color: white; margin-bottom: 20px;">Contact</h4>
-            <p style="font-size: 0.9rem; color: #94a3b8; margin-bottom: 10px;">📍 Jackson, Mississippi, USA</p>
-            <p style="font-size: 0.9rem; color: #94a3b8;">✉️ info@mississippilead.com</p>
-        </div>
-
-    </div>
-
-    <div class="container" style="border-top: 1px solid rgba(255,255,255,0.1); margin-top: 50px; padding-top: 20px; text-align: center;">
-        <p style="font-size: 0.8rem; color: #64748b; margin: 0;">
-            &copy; 2026 MississippiLead.com | All Rights Reserved.
-        </p>
-    </div>
-</footer>
-
-    
-        <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const mobileMenu = document.getElementById('mobile-menu');
-        const navList = document.querySelector('.nav-links');
-
-        if (mobileMenu && navList) {
-            mobileMenu.addEventListener('click', function() {
-                navList.classList.toggle('active');
-                console.log("Menu clicked!"); // برای تست در کنسول مرورگر
-            });
-        }
-    });
-</script>
-</body>
-</html>
+        <div class="cta-section">
+            <h2>Get in Touch</h2>
+            <p>Our team operates digitally to serve the entire
