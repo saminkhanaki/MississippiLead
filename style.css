@@ -4,6 +4,8 @@
 body { font-family: 'Segoe UI', sans-serif; margin: 0; background: var(--bg); color: var(--text); }
 .container { width: 90%; max-width: 1100px; margin: auto; }
 
+main { min-height: 70vh; } /* تضمین می‌کند فوتر همیشه پایین صفحه بماند */
+.ad-banner { clear: both; margin-bottom: 40px; }
 /* نوار ناوبری - مشترک برای همه */
 nav { background: white; padding: 15px 0; border-bottom: 3px solid var(--accent); position: sticky; top: 0; z-index: 1000; }
 .nav-flex { display: flex; justify-content: space-between; align-items: center; }
