@@ -167,5 +167,44 @@
 
     window.onload = loadFeed;
 </script>
+
+            <script>
+    async function loadSportsFeed() {
+        // جستجو برای فوتبال، بسکتبال و بیسبال دانشگاه‌های میسیسیپی
+        const SPORTS_URL = 'https://news.google.com/rss/search?q=Ole+Miss+MS+State+Southern+Miss+sports&hl=en-US&gl=US&ceid=US:en';
+        
+        try {
+            const res = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(SPORTS_URL)}`);
+            const data = await res.json();
+            
+            let html = '';
+            // نمایش ۳ خبر اول (فوتبال، بسکتبال، بیسبال)
+            data.items.slice(0, 3).forEach((item, index) => {
+                const categories = ['SEC FOOTBALL', 'MSU BASKETBALL', 'BASEBALL UPDATE'];
+                const category = categories[index] || 'SPORTS NEWS';
+                
+                html += `
+                    <div style="margin-bottom: 20px; border-bottom: 1px dashed #f1f5f9; padding-bottom: 10px;">
+                        <span style="color: var(--accent); font-size: 0.7rem; font-weight: bold; text-transform: uppercase;">${category}</span>
+                        <a href="${item.link}" target="_blank" style="display: block; text-decoration: none; color: var(--primary); font-size: 0.9rem; font-weight: 600; margin-top: 5px; line-height: 1.4;">
+                            ${item.title.split(' - ')[0]}
+                        </a>
+                    </div>
+                `;
+            });
+            document.getElementById('sports-feed-content').innerHTML = html;
+        } catch (e) {
+            document.getElementById('sports-feed-content').innerHTML = "Unable to load sports feeds.";
+        }
+    }
+    
+    // فراخوانی تابع (اگر قبلاً loadFeed برای اخبار بیزینس داشتی، این را هم کنارش اضافه کن)
+    window.addEventListener('load', () => {
+        loadFeed(); // فید اخبار بیزینس که قبلاً درست کردیم
+        loadSportsFeed(); // فید ورزشی جدید
+    });
+</script>
+
+    
 </body>
 </html>
