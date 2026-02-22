@@ -8,35 +8,49 @@
   </url>
 
   <url>
-    <loc>https://mississippilead.com/rondale-moore.html</loc>
-    <lastmod>2026-02-23</lastmod>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://mississippilead.com/archive/mississippi-economy-2026.html</loc>
-    <lastmod>2026-02-21</lastmod>
+    <loc>https://mississippilead.com/about.html</loc>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://mississippilead.com/about.html</loc>
-    <priority>0.3</priority>
+    <loc>https://mississippilead.com/business.html</loc>
+    <priority>0.5</priority>
   </url>
 
-   <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
   <url>
-    <loc>https://mississippilead.com/index.html</loc>
-    <lastmod>2026-02-23</lastmod>
-    <priority>1.0</priority>
+    <loc>https://mississippilead.com/lifestyle.html</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://mississippilead.com/archive.html</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://mississippilead.com/acquire.html</loc>
+    <priority>0.3</priority>
   </url>
 
   <url>
     <loc>https://mississippilead.com/rondale-moore.html</loc>
     <lastmod>2026-02-23</lastmod>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://mississippilead.com/news1.html</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://mississippilead.com/news2.html</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://mississippilead.com/news3.html</loc>
+    <priority>0.7</priority>
   </url>
 
   <url>
@@ -46,45 +60,8 @@
   </url>
 
   <url>
-    <loc>https://mississippilead.com/business.html</loc>
-    <priority>0.5</priority>
-  </url>
-
-   <url>
-    <loc>https://mississippilead.com/lifestyle.html</loc>
-    <priority>0.7</priority>
-   </url>
-
-       <url>
-    <loc>https://mississippilead.com/acquire.html</loc>
-    <priority>0.1</priority>
-  </url>
-
-     <url>
-    <loc>https://mississippilead.com/archive.html</loc>
-    <priority>0.5</priority>
-  </url>
-   
-       <url>
     <loc>https://mississippilead.com/archive/incident-report.html</loc>
-    <priority>0.5</priority>
+    <priority>0.4</priority>
   </url>
 
-    <url>
-    <loc>https://mississippilead.com/news1.html</loc>
-    <priority>0.5</priority>
-  </url>
-
-    <url>
-    <loc>https://mississippilead.com/news2.html</loc>
-    <priority>0.5</priority>
-  </url>
-
-    <url>
-    <loc>https://mississippilead.com/news3.html</loc>
-    <priority>0.5</priority>
-  </url>
-
-      
-      
 </urlset>
