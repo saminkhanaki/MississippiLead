@@ -3,61 +3,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mississippi Lead</title>
-    <link rel="stylesheet" href="style.css">
+    <title>News Archive | Mississippi Lead</title>
+    <link rel="stylesheet" href="../style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
     
     <style>
-        /* تنظیم رنگ‌های اصلی */
         :root {
-            --navy-blue: #0f172a; /* همان سرمه‌ای مد نظر شما */
-            --accent-red: #b91c1c; /* قرمز LEAD */
+            --navy-blue: #0f172a;
+            --accent-red: #b91c1c;
+            --text-light: #64748b;
         }
 
-        /* استایل اختصاصی لوگو با فونت مد نظر */
-        .logo-text { 
-            font-family: 'Montserrat', sans-serif; /* یا 'Object Sans' اگر فایلش را داری */
-            font-weight: 900; 
-            font-size: 1.6rem; 
-            letter-spacing: -0.5px;
-            color: var(--navy-blue); /* بخش اول سرمه‌ای */
-        }
-        
-        .logo-text span { 
-            color: var(--accent-red); /* بخش دوم قرمز */
-        }
+        body { margin: 0; font-family: 'Segoe UI', sans-serif; background: #f8fafc; line-height: 1.6; }
+        .container { width: 90%; max-width: 1100px; margin: auto; }
 
-        .hero-news { background: white; padding: 30px 0; border-bottom: 1px solid #e2e8f0; margin-bottom: 30px; }
-        .main-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 30px; }
+        /* Navbar Layout */
+        nav { background: white; padding: 15px 0; border-bottom: 3px solid var(--accent-red); position: sticky; top: 0; z-index: 1000; }
+        .nav-flex { display: flex; justify-content: space-between; align-items: center; }
+
+        .logo-text { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 1.6rem; color: var(--navy-blue); text-decoration: none; text-transform: uppercase; }
+        .logo-text span { color: var(--accent-red); }
+
+        .nav-links { list-style: none; display: flex; gap: 20px; margin: 0; padding: 0; }
+        .nav-links a { text-decoration: none; color: var(--navy-blue); font-weight: 600; font-size: 0.9rem; }
+        .acquire-btn { background: var(--accent-red); color: white !important; padding: 6px 15px; border-radius: 4px; }
+
+        /* Archive UI */
+        .archive-section { padding: 60px 0; }
+        .archive-header { margin-bottom: 40px; border-bottom: 2px solid #e2e8f0; padding-bottom: 20px; }
+        .archive-header h1 { color: var(--navy-blue); font-size: 2.5rem; margin: 0; }
+
+        .archive-list { display: flex; flex-direction: column; gap: 15px; }
+        .archive-card { 
+            background: white; 
+            padding: 20px 30px; 
+            border-radius: 10px; 
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02); 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 1px solid #e2e8f0;
+        }
+        .archive-card:hover { 
+            transform: translateY(-3px); 
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            border-left: 6px solid var(--accent-red);
+        }
         
+        .article-meta { font-size: 0.8rem; color: var(--accent-red); font-weight: 800; text-transform: uppercase; margin-bottom: 5px; display: block; }
+        .article-title { margin: 0; color: var(--navy-blue); font-size: 1.25rem; font-weight: 700; }
+        .arrow-icon { color: var(--accent-red); font-size: 1.4rem; transition: 0.3s; }
+        .archive-card:hover .arrow-icon { transform: translateX(5px); }
+
         @media (max-width: 768px) {
-            .main-grid { grid-template-columns: 1fr; }
+            .nav-links { display: none; }
+            .archive-header h1 { font-size: 1.8rem; }
+            .archive-card { padding: 20px; }
         }
     </style>
 </head>
-
 <body>
 
 <nav>
     <div class="container nav-flex">
-        <a href="index.html" class="logo" style="display: flex; align-items: center; gap: 12px; text-decoration: none;">
-            <img src="assets/logo.png" alt="Logo" style="height: 40px; width: auto;">
+        <a href="../index.html" class="logo" style="display: flex; align-items: center; gap: 12px; text-decoration: none;">
+            <img src="../assets/logo.png" alt="Logo" style="height: 40px; width: auto;">
             <span class="logo-text">MISSISSIPPI<span>LEAD</span></span>
         </a>
-        
-        <div class="menu-toggle" id="mobile-menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
-
-        <ul class="nav-links" id="nav-list">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About Us</a></li>
-    <li><a href="business.html">Business</a></li>
-    <li><a href="lifestyle.html">Lifestyle</a></li>
-    <li><a href="acquire.html" class="acquire-btn">Contact</a></li>
-</ul>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about.html">About Us</a></li>
+            <li><a href="../business.html">Business</a></li>
+            <li><a href="../lifestyle.html">Lifestyle</a></li>
+            <li><a href="../acquire.html" class="acquire-btn">Contact</a></li>
+        </ul>
     </div>
 </nav>
-    
+
+<main class="container archive-section">
+    <div class="archive-header">
+        <h1>News Archive</h1>
+        <p style="color: var(--text-light); font-size: 1.1rem;">A chronological record of our strategic insights and reports.</p>
+    </div>
+
+    <div class="archive-list">
+        <a href="rondale-moore.html" class="archive-card">
+            <div>
+                <span class="article-meta">Feb 22, 2026 • Investigative</span>
+                <h2 class="article-title">The Tragic Passing of Rondale Moore: An Investigation</h2>
+            </div>
+            <span class="arrow-icon">→</span>
+        </a>
+
+        <a href="news3.html" class="archive-card">
+            <div>
+                <span class="article-meta">Feb 21, 2026 • Security</span>
+                <h2 class="article-title">Cybersecurity Alert: Strategic Infrastructure Threats</h2>
+            </div>
+            <span class="arrow-icon">→</span>
+        </a>
+
+        <a href="news2.html" class="archive-card">
+            <div>
+                <span class="article-meta">Feb 21, 2026 • Business</span>
+                <h2 class="article-title">Local Business Spotlight: Growth in Jackson Metro</h2>
+            </div>
+            <span class="arrow-icon">→</span>
+        </a>
+
+        <a href="news1.html" class="archive-card">
+            <div>
+                <span class="article-meta">Feb 21, 2026 • Community</span>
+                <h2 class="article-title">Community Impact: New Educational Initiatives</h2>
+            </div>
+            <span class="arrow-icon">→</span>
+        </a>
+
+        <a href="incident-report.html" class="archive-card">
+            <div>
+                <span class="article-meta">Feb 20, 2026 • Report</span>
+                <h2 class="article-title">Official Incident Report: New Albany Developments</h2>
+            </div>
+            <span class="arrow-icon">→</span>
+        </a>
+
+        <a href="mississippi-economy-2026.html" class="archive-card">
+            <div>
+                <span class="article-meta">Feb 19, 2026 • Analysis</span>
+                <h2 class="article-title">Mississippi Economic Outlook: 2026 Growth Trends</h2>
+            </div>
+            <span class="arrow-icon">→</span>
+        </a>
+    </div>
+</main>
+
+<footer style="background: var(--navy-blue); color: white; padding: 60px 0 30px 0; margin-top: 60px;">
+    <div class="container">
+        <div style="border-top: 1px solid #1e293b; padding-top: 20px; text-align: center; color: #64748b; font-size: 0.85rem;">
+            <p>© 2026 MississippiLead.com | All Rights Reserved. | <a href="../privacy.html" style="color: #64748b; text-decoration: underline;">Privacy Policy</a></p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
