@@ -12,6 +12,7 @@
     <priority>0.5</priority>
   </url>
 
+  
   <url>
     <loc>https://mississippilead.com/business.html</loc>
     <priority>0.5</priority>
@@ -36,7 +37,14 @@
     <loc>https://mississippilead.com/privacy.html</loc>
     <priority>0.3</priority>
   </url>
+  
+  
+ <url>
+    <loc>https://https://mississippilead.com/archive/keifers-jackson.html
+    <priority>0.7</priority>
+  </url>
 
+  
   <url>
     <loc>https://mississippilead.com/archive/rondale-moore.html</loc>
     <lastmod>2026-02-23</lastmod>
