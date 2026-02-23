@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="canonical" href="https://mississippilead.com/archive/[FILE_NAME].html">
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>[ARTICLE_TITLE] | Mississippi Lead</title>
+    
+    <meta name="description" content="[ARTICLE_EXCERPT_FOR_GOOGLE]">
+    
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" type="image/png" href="../assets/favicon.png">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
+  
+    <style>
+        :root { 
+            --primary: #0f172a; 
+            --accent: #b91c1c; 
+            --text: #334155; 
+            --bg: #f8fafc; 
+            --navy-blue: #0f172a;
+            --accent-red: #b91c1c; 
+        }
+        
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.8; color: var(--text); background: var(--bg); margin: 0; }
+        
+        /* استایل هدر */
+        nav { background: white; padding: 20px 0; border-bottom: 3px solid var(--accent-red); }
+        .nav-flex { display: flex; justify-content: center; align-items: center; max-width: 1100px; margin: auto; }
+        
+        .logo-text { 
+            font-family: 'Montserrat', sans-serif; 
+            font-weight: 900; 
+            font-size: 1.8rem; 
+            color: var(--navy-blue);
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        .logo-text span { color: var(--accent-red); }
+
+        /* استایل بدنه مقاله */
+        .article-container { max-width: 800px; margin: 40px auto; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .article-header { border-bottom: 2px solid #f1f5f9; margin-bottom: 25px; padding-bottom: 10px; }
+        .article-title { font-size: 2.3rem; color: var(--primary); line-height: 1.2; margin: 15px 0; }
+        .meta { color: #64748b; font-size: 0.9rem; margin-bottom: 15px; }
+        
+        .main-image { width: 100%; height: auto; border-radius: 8px; margin-bottom: 25px; display: block; }
+        .article-body p { margin-bottom: 20px; font-size: 1.1rem; }
+        .article-body h2 { color: var(--primary); margin-top: 35px; font-size: 1.5rem; }
+        
+        .back-home { display: inline-block; margin-top: 30px; color: var(--accent); text-decoration: none; font-weight: bold; border-bottom: 2px solid var(--accent); }
+        
+        @media (max-width: 768px) {
+            .article-container { width: 92%; padding: 20px; margin: 20px auto; }
+            .article-title { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-flex">
+        <a href="../index.html" class="logo-text">
+            MISSISSIPPI<span>LEAD</span>
+        </a>
+    </div>
+</nav>
+
+<main class="article-container">
+    <a href="../index.html" class="back-home">← Back to Mississippi Lead</a><br><br>
+    
+    <header class="article-header">
+        <span style="background: var(--accent); color: white; padding: 4px 10px; border-radius: 4px; font-size: 0.7rem; font-weight: bold; text-transform: uppercase;">[CATEGORY]</span>
+        
+        <h1 class="article-title">[WRITE_YOUR_MAIN_TITLE_HERE]</h1>
+        
+        <div class="meta">[DATE] • [LOCATION] • By [AUTHOR_NAME]</div>
+    </header>
+
+    <img src="../assets/[IMAGE_NAME].jpg" alt="[IMAGE_DESCRIPTION]" class="main-image">
+    
+    <article class="article-body">
+        
+        <p><strong>[CITY_NAME]</strong> — [START_WRITING_YOUR_STORY_HERE...]</p>
+
+        <h2>[SUBHEADING_HERE]</h2>
+        <p>[CONTINUE_YOUR_ARTICLE...]</p>
+
+        <div style="background: #f1f5f9; border-left: 5px solid var(--primary); padding: 20px; border-radius: 4px; margin: 30px 0; font-size: 0.95rem;">
+            [ADD_A_NOTE_OR_QUOTE_HERE]
+        </div>
+
+        <p>[FINAL_PARAGRAPH_HERE]</p>
+        
+        <a href="../index.html" class="back-home">← Back to Mississippi Lead</a>
+    </article>
+</main>
+  
+<footer style="background: var(--primary); color: white; padding: 30px 0; margin-top: 60px; text-align: center;">
+    <p>&copy; 2026 Mississippi Lead News</p>
+</footer>
+
+</body>
+</html>
