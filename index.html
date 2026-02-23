@@ -221,66 +221,61 @@
 </footer>
 
 <script>
-    // JS برای فید خبری
-    const FEED_URL = 'https://news.google.com/rss/search?q=mississippi+business+news&hl=en-US&gl=US&ceid=US:en';
-    async function loadFeed() {
+    const API_KEY = 'YOUR_FREE_RSS2JSON_API_KEY'; // اختیاری: اگر کلید دارید اینجا بگذارید
+
+    async function fetchData(url, elementId, type) {
+        const targetElement = document.getElementById(elementId);
+        if (!targetElement) return; // اگر المان در صفحه نبود، کد را متوقف نکن
+
         try {
-            const res = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(FEED_URL)}`);
+            const res = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(url)}`);
             const data = await res.json();
+            
+            if (data.status !== 'ok') throw new Error('API Error');
+
             let html = '';
             data.items.slice(0, 5).forEach(item => {
-                html += `<div class="feed-item"><a href="${item.link}" target="_blank">${item.title}</a><span class="feed-date">${item.pubDate.split(' ')[0]}</span></div>`;
+                if (type === 'list') {
+                    // استایل برای Live Updates
+                    html += `<div style="margin-bottom:10px; border-bottom:1px solid #f1f5f9; padding-bottom:5px;">
+                                <a href="${item.link}" target="_blank" style="text-decoration:none; color:#1e293b; font-size:0.85rem;">${item.title}</a>
+                             </div>`;
+                } else if (type === 'event') {
+                    // استایل برای Events
+                    html += `<div style="margin-top: 15px; padding-left: 12px; border-left: 3px solid var(--accent-red);">
+                                <a href="${item.link}" target="_blank" style="text-decoration: none; color: var(--navy-blue); font-size: 0.9rem; font-weight: bold; display: block;">
+                                    ${item.title.split(' - ')[0]}
+                                </a>
+                                <span style="font-size: 0.75rem; color: #64748b;">Mississippi, 2026</span>
+                             </div>`;
+                }
             });
-            document.getElementById('feed-content').innerHTML = html;
+            targetElement.innerHTML = html;
         } catch (e) {
-            document.getElementById('feed-content').innerHTML = "Live updates temporarily unavailable.";
+            targetElement.innerHTML = "<p style='font-size:0.8rem; color:#94a3b8;'>Updates temporarily unavailable.</p>";
         }
     }
 
-
-    async function loadEventsFeed() {
-    // جستجو برای رویدادهای فرهنگی و نمایشگاهی میسیسیپی
-    const EVENTS_URL = 'https://news.google.com/rss/search?q=Mississippi+festivals+events+2026&hl=en-US&gl=US&ceid=US:en';
-    
-    try {
-        const res = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(EVENTS_URL)}`);
-        const data = await res.json();
+    // اجرای همزمان تمام فیدها بعد از لود شدن کامل صفحه
+    window.addEventListener('DOMContentLoaded', () => {
+        // فید اخبار بیزینس
+        fetchData('https://news.google.com/rss/search?q=mississippi+business+news&hl=en-US&gl=US&ceid=US:en', 'feed-content', 'list');
         
-        let html = '';
-        // جدا کردن ۳ رویداد اول
-        data.items.slice(0, 3).forEach(item => {
-            html += `
-                <div style="margin-top: 15px; padding-left: 12px; border-left: 3px solid var(--accent);">
-                    <a href="${item.link}" target="_blank" style="text-decoration: none; color: var(--primary); font-size: 0.9rem; font-weight: bold; display: block;">
-                        ${item.title.split(' - ')[0]}
-                    </a>
-                    <span style="font-size: 0.75rem; color: #64748b;">Mississippi, 2026</span>
-                </div>
-            `;
-        });
-        document.getElementById('events-list-content').innerHTML = html;
-    } catch (e) {
-        document.getElementById('events-list-content').innerHTML = "Check back soon for upcoming events.";
-    }
-}
-
-// اضافه کردن به لیست لود شدن صفحه
-window.addEventListener('load', () => {
-    loadFeed();
-    loadSportsFeed();
-    loadEventsFeed(); // فراخوانی بخش رویدادها
-});
-
-    
-    
-    // JS برای منوی همبرگری
-    const mobileMenu = document.getElementById('mobile-menu');
-    const navList = document.getElementById('nav-list');
-    mobileMenu.addEventListener('click', () => {
-        navList.classList.toggle('active');
+        // فید رویدادها
+        fetchData('https://news.google.com/rss/search?q=Mississippi+festivals+events+2026&hl=en-US&gl=US&ceid=US:en', 'events-list-content', 'event');
+        
+        // نکته: اگر المان sports-feed-content را در HTML ندارید، این خط اجرا نمی‌شود و خطایی هم نمی‌دهد
+        fetchData('https://news.google.com/rss/search?q=Ole+Miss+MS+State+sports&hl=en-US&gl=US&ceid=US:en', 'sports-feed-content', 'list');
     });
 
-    window.onload = loadFeed;
+    // مدیریت منوی موبایل
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navList = document.getElementById('nav-list');
+    if(mobileMenu) {
+        mobileMenu.addEventListener('click', () => {
+            navList.classList.toggle('active');
+        });
+    }
 </script>
 
             <script>
