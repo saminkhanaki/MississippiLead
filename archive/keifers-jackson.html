@@ -9,88 +9,128 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
     
     <style>
-        body { font-family: 'Segoe UI', sans-serif; line-height: 1.8; color: #334155; margin: 0; background: #fff; }
-        .article-container { max-width: 850px; margin: 40px auto; padding: 0 20px; }
+        :root { 
+            --primary: #0f172a; 
+            --accent: #b91c1c; 
+            --text: #334155; 
+            --bg: #f8fafc; 
+            --navy-blue: #0f172a;
+            --accent-red: #b91c1c; 
+        }
         
-        /* تصاویر */
-        .hero-img { width: 100%; height: auto; border-radius: 12px; margin-bottom: 30px; object-fit: cover; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.8; color: var(--text); background: var(--bg); margin: 0; }
+        
+        /* هدر مطابق کد Rondale Moore */
+        nav { background: white; padding: 20px 0; border-bottom: 3px solid var(--accent-red); }
+        .nav-flex { display: flex; justify-content: center; align-items: center; max-width: 1100px; margin: auto; }
+        
+        .logo-text { 
+            font-family: 'Montserrat', sans-serif; 
+            font-weight: 900; 
+            font-size: 1.8rem; 
+            letter-spacing: -0.5px;
+            color: var(--navy-blue);
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        .logo-text span { color: var(--accent-red); }
+
+        /* استایل کانتینر مقاله */
+        .article-container { max-width: 800px; margin: 40px auto; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .article-header { border-bottom: 2px solid #f1f5f9; margin-bottom: 25px; padding-bottom: 10px; }
+        .article-title { font-family: 'Playfair Display', serif; font-size: 2.3rem; color: var(--primary); line-height: 1.2; margin: 15px 0; }
+        .meta { color: #64748b; font-size: 0.9rem; margin-bottom: 15px; }
+        
+        /* استایل تصاویر بر اساس درخواست قبلی */
+        .hero-img { width: 100%; height: auto; border-radius: 8px; margin-bottom: 25px; display: block; box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
         .mid-img { width: 45%; float: left; margin: 0 25px 15px 0; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
 
-        h1 { font-family: 'Playfair Display', serif; font-size: 2.8rem; color: #0f172a; line-height: 1.2; margin-bottom: 15px; }
-        .meta-info { color: #64748b; font-size: 0.9rem; margin-bottom: 25px; border-bottom: 1px solid #e2e8f0; padding-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
-        h2 { color: #0f172a; margin-top: 40px; font-size: 1.8rem; clear: both; } /* clear:both برای جلوگیری از تداخل با عکس شناور */
-        p { margin-bottom: 25px; font-size: 1.1rem; text-align: justify; }
+        .article-body p { margin-bottom: 20px; font-size: 1.1rem; text-align: justify; }
+        .article-body h2 { color: var(--primary); margin-top: 35px; font-size: 1.6rem; clear: both; }
         
-        .highlight-box { background: #f8fafc; border-radius: 12px; padding: 30px; margin: 40px 0; border-top: 5px solid #b91c1c; clear: both; }
-        .visit-card { background: #0f172a; color: white; padding: 40px; border-radius: 15px; text-align: center; }
-        .btn-link { display: inline-block; background: #b91c1c; color: white !important; text-decoration: none; padding: 12px 25px; border-radius: 6px; margin: 10px; font-weight: bold; }
+        .highlight-box { background: #f8fafc; border-radius: 12px; padding: 30px; margin: 30px 0; border-top: 5px solid var(--accent); clear: both; }
+        .back-home { display: inline-block; margin-top: 30px; margin-bottom: 10px; color: var(--accent); text-decoration: none; font-weight: bold; border-bottom: 2px solid var(--accent); }
+        
+        .visit-card { background: var(--primary); color: white; padding: 30px; border-radius: 12px; text-align: center; margin-top: 30px; }
+        .btn-link { display: inline-block; background: var(--accent); color: white !important; text-decoration: none; padding: 10px 20px; border-radius: 5px; margin: 5px; font-weight: bold; }
 
         @media (max-width: 768px) {
+            .article-container { width: 92%; padding: 20px; margin: 20px auto; }
+            .article-title { font-size: 1.8rem; }
+            .logo-text { font-size: 1.4rem; }
             .mid-img { width: 100%; float: none; margin: 0 0 20px 0; }
-            h1 { font-size: 2.2rem; }
         }
     </style>
 </head>
 <body>
 
-<nav style="padding: 20px; border-bottom: 1px solid #eee; text-align: center; background: white;">
-    <a href="../index.html" style="text-decoration: none; font-family: 'Montserrat', sans-serif; font-weight: 900; color: #0f172a; font-size: 1.5rem;">MISSISSIPPI<span style="color: #b91c1c;">LEAD</span></a>
+<nav>
+    <div class="nav-flex">
+        <a href="../index.html" class="logo-text">
+            MISSISSIPPI<span>LEAD</span>
+        </a>
+    </div>
 </nav>
 
-<article class="article-container">
-    <div class="meta-info">Published on Feb 23, 2026 | Lifestyle</div>
-
-    <h1>A Journey Between Two Cultures: Stepping into Keifer’s</h1>
+<main class="article-container">
+    <a href="../index.html" class="back-home">← Back to Mississippi Lead</a><br><br>
+    
+    <header class="article-header">
+        <span style="background: var(--accent); color: white; padding: 4px 10px; border-radius: 4px; font-size: 0.7rem; font-weight: bold; text-transform: uppercase;">Lifestyle & Dining</span>
+        <h1 class="article-title">A Journey Between Two Cultures: Stepping into Keifer’s</h1>
+        <div class="meta">February 23, 2026 • Jackson, MS • By Food & Culture Desk</div>
+    </header>
 
     <img src="../assets/keifers-main.jpg" alt="Keifer's Restaurant Exterior" class="hero-img">
     
-    <p>When you first step into the grounds of Keifer’s, for a moment, you forget that you are in the heart of Mississippi. Here, you encounter a space that delicately intertwines the hospitable spirit of the American South with the authenticity of Mediterranean harbors. This restaurant resembles a dignified old house that seems to have emerged from Jackson’s history, yet at its core, it keeps the vibrant atmosphere of a Greek "Taverna" alive</p>
+    <article class="article-body">
+        <p>When you first step into the grounds of Keifer’s, for a moment, you forget that you are in the heart of Mississippi. Here, you encounter a space that delicately intertwines the hospitable spirit of the American South with the authenticity of Mediterranean harbors. This restaurant resembles a dignified old house that seems to have emerged from Jackson’s history, yet at its core, it keeps the vibrant atmosphere of a Greek "Taverna" alive.</p>
 
-    <h2>A Porch Between Two Worlds</h2>
-    
-    <p>As you make your way toward the famous Patio, the first thing you feel is a gentle breeze stirred by large ceiling fans. This porch is a curious crossroads; the building’s architecture, reminiscent of classic American homes, is paired with a layout that evokes seaside restaurants in Greece. The high ceilings and traditional railings of the porch create a cozy sanctuary where you can immerse yourself in a peaceful atmosphere for hours, far from the city’s hustle.</p>
-    <p>Around you, tropical trees and lush vegetation have built a living green wall. These plants not only spread a pleasant shade over your head but also reinforce the sensation of being in a Mediterranean climate with every gust of wind. Watching the contrast between the green foliage and the sturdy columns of the building offers an insight into a cultural coexistence rarely experienced elsewhere.</p>
-    
-    <img src="../assets/keifers-meal.jpg" alt="Keifer's Patio Atmosphere" class="mid-img">
+        <h2>A Porch Between Two Worlds</h2>
+        <p>As you make your way toward the famous Patio, the first thing you feel is a gentle breeze stirred by large ceiling fans. This porch is a curious crossroads; the building’s architecture, reminiscent of classic American homes, is paired with a layout that evokes seaside restaurants in Greece. The high ceilings and traditional railings of the porch create a cozy sanctuary where you can immerse yourself in a peaceful atmosphere for hours, far from the city’s hustle.</p>
+        
+        <img src="../assets/keifers-meal.jpg" alt="Keifer's Atmosphere" class="mid-img">
 
-    <h2>A Feast of Flavors in an Intimate Atmosphere</h2>
-    
-    <p>As you sit in this semi-open space, the aroma of warm pita bread and meats seasoned with Greek spices reaches you. Here, everything is authentic in its simplicity. You find yourself in an environment that is neither fully American nor fully Greek, but rather a "third identity" born from the fusion of the two.
-The intimacy flowing through the air—that sense of "hominess" which is a hallmark of Southern culture—is tied to the generosity of Greek tables. When plates of Hummus and Gyro sandwiches appear on your table, you realize that this space is not just a restaurant, but a bridge that has placed two distant cultures side-by-side in a memorable frame.</p>
+        <p>Around you, tropical trees and lush vegetation have built a living green wall. These plants not only spread a pleasant shade over your head but also reinforce the sensation of being in a Mediterranean climate with every gust of wind. Watching the contrast between the green foliage and the sturdy columns of the building offers an insight into a cultural coexistence rarely experienced elsewhere.</p>
 
-    <h2>An Experience Beyond a Meal</h2>
-    <p>Ultimately, when you leave Keifer’s, a sense of calm and satisfaction accompanies you. You haven’t just eaten a delicious meal; you’ve spent moments in a space where traditional architecture and tropical nature have narrated a story of the union of civilizations for you. This is a place where you can rediscover the joy of simplicity under the shade of trees and the grandeur of a classic porch.</p>
-    
-    <div class="highlight-box">
-        <h3>🍴 The Must-Haves</h3>
-        <p>If you are stepping into this American-Greek fusion space for the first time, this combination offers the best experience:</p>
-        <p><strong>• Appetizer (The Star of the Menu): Hummus with Hot Pita. </strong> You must undoubtedly try their famous hummus. The warm pita breads served alongside hummus drizzled with olive oil are the restaurant's signature.</p>
-        <p><strong>• Main Course: Gyro Sandwich</strong>A traditional sandwich with thin layers of meat and fresh vegetables. If you love cheese, the <italic>Pita Mozz</italic> (pita bread filled with melted mozzarella) is a tempting and unique choice.</p>
-        <p><strong>• Essential Side: Cottage Fries with Feta Dressing. </strong>Be sure to order the crispy circular fries, but the real secret is the <italic>Feta Dressing</italic>; many believe this sauce transforms the entire meal.</p>
-        <p><strong>• Lighter Option: Chicken Breast Sandwich.</strong> For those who prefer the classic grilled taste over traditional gyros.</p>
-            
-    </div>
+        <p>As you sit in this semi-open space, the aroma of warm pita bread and meats seasoned with Greek spices reaches you. Here, everything is authentic in its simplicity. You find yourself in an environment that is neither fully American nor fully Greek, but rather a "third identity" born from the fusion of the two.</p>
 
-    <h2>✅ Pros </h2>
-    <p><strong>•	Authenticity in Flavor: </strong>Consistency in the quality of hummus and handmade sauces over the years has turned this restaurant into a local icon.</p>
-    <p><strong>•	Unrivaled Atmosphere (Greek Porch): </strong>The fusion of classic Southern home architecture with a Mediterranean soul and the presence of tropical trees creates a space that is relaxing for both business lunches and friendly gatherings.</p>
-    <p><strong>•	Fair Pricing: </strong>Given the quality of ingredients and the Downtown location, the prices are considered very reasonable by customers.</p>
-    <p><strong>•	Freshness of Ingredients: </strong>The use of warm pita bread and fresh vegetables in sandwiches is a prominent feature of every plate.</p>
+        <h2>A Feast of Flavors in an Intimate Atmosphere</h2>
+        <p>The intimacy flowing through the air—that sense of "hominess" which is a hallmark of Southern culture—is tied to the generosity of Greek tables. When plates of Hummus and Gyro sandwiches appear on your table, you realize that this space is not just a restaurant, but a bridge that has placed two distant cultures side-by-side in a memorable frame.</p>
 
-    <h2>❌ Cons</h2>
-    <p><strong>•	Inconsistency in Service: </strong>The most serious criticism is the slow service during certain hours (even off-peak times) and the need for personal follow-up for items like drink refills.</p>
-    <p><strong>•	Limited Operating Hours: </strong>The main Downtown branch is only open during lunch and on weekdays, making it inaccessible for many during weekends or for dinner.</p>
+        <h2>An Experience Beyond a Meal</h2>
+        <p>Ultimately, when you leave Keifer’s, a sense of calm and satisfaction accompanies you. You haven’t just eaten a delicious meal; you’ve spent moments in a space where traditional architecture and tropical nature have narrated a story of the union of civilizations for you. This is a place where you can rediscover the joy of simplicity under the shade of trees and the grandeur of a classic porch.</p>
+        
+        <div class="highlight-box">
+            <h3 style="margin-top:0;">🍴 The Must-Haves</h3>
+            <p><strong>• Hummus with Hot Pita:</strong> The restaurant's signature. Warm pita breads served alongside hummus drizzled with olive oil.</p>
+            <p><strong>• Gyro Sandwich:</strong> A traditional sandwich with thin layers of meat and fresh vegetables. The <i>Pita Mozz</i> is also a unique choice.</p>
+            <p><strong>• Cottage Fries with Feta Dressing:</strong> The real secret; many believe this sauce transforms the entire meal.</p>
+        </div>
 
-    <h2>Final Summary</h2>
-    <p>If you are looking for a place where the calm, green space of the porch matters as much as the taste of the hummus, Keifer’s is an excellent choice—provided you bring a little patience for the service along with your appetite for Mediterranean tranquility.</p>
+        <h2>✅ Pros</h2>
+        <p><strong>• Authenticity:</strong> Consistent quality of handmade sauces and hummus.</p>
+        <p><strong>• Atmosphere:</strong> Fusion of Southern home architecture with a Mediterranean soul.</p>
+        <p><strong>• Pricing:</strong> Very reasonable given the Downtown location.</p>
 
-    <div class="visit-card">
-        <h3>Visit Keifer's Restaurant</h3>
-        <a href="http://www.keifers.com/" target="_blank" class="btn-link">Official Website</a>
-        <a href="https://maps.app.goo.gl/jL7HG3eRK4hDBg6H9" target="_blank" class="btn-link" style="background: #64748b;">Google Maps</a>
-    </div>
+        <h2>❌ Cons</h2>
+        <p><strong>• Service:</strong> Inconsistency and slow service during certain peak hours.</p>
+        <p><strong>• Hours:</strong> Limited operating hours at the Downtown branch (mostly lunch).</p>
 
-</article>
+        <div class="visit-card">
+            <h3>Plan Your Visit</h3>
+            <a href="http://www.keifers.com/" target="_blank" class="btn-link">Official Website</a>
+            <a href="https://maps.app.goo.gl/jL7HG3eRK4hDBg6H9" target="_blank" class="btn-link" style="background: #64748b;">Google Maps</a>
+        </div>
+
+        <br>
+        <a href="../index.html" class="back-home">← Back to Mississippi Lead</a>
+    </article>
+</main>
+  
+<footer style="background: var(--primary); color: white; padding: 30px 0; margin-top: 60px; text-align: center;">
+    <p>&copy; 2026 Mississippi Lead News</p>
+</footer>
 
 </body>
 </html>
