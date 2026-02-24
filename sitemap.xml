@@ -38,36 +38,42 @@
     <priority>0.3</priority>
   </url>
 
+     <url>
+    <loc>https://mississippilead.com/archive/Robert-Carradine.html</loc>
+    <priority>0.9</priority>
+  </url>
+
+  
   <url>
     <loc>https://mississippilead.com/archive/valvoline.html</loc>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   
  <url>
     <loc>https://https://mississippilead.com/archive/keifers-jackson.html
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
 
   
   <url>
     <loc>https://mississippilead.com/archive/rondale-moore.html</loc>
     <lastmod>2026-02-23</lastmod>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://mississippilead.com/archive/news1.html</loc>
-    <priority>0.6</priority>
+    <priority>0.5</priority>
   </url>
 
   <url>
     <loc>https://mississippilead.com/archive/news2.html</loc>
-    <priority>0.6</priority>
+    <priority>0.5</priority>
   </url>
 
   <url>
     <loc>https://mississippilead.com/archive/news3.html</loc>
-    <priority>0.6</priority>
+    <priority>0.5</priority>
   </url>
 
   <url>
