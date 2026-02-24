@@ -50,25 +50,36 @@
 
         /* Business Grid - چیدمان ۳ ستونه */
         .business-grid { 
-            display: grid; 
-            grid-template-columns: repeat(3, 1fr); /* سه ستون مساوی در دسکتاپ */
-            gap: 30px; 
-            margin-bottom: 60px;
-            align-items: start;
-        }
+    display: grid; 
+    /* استفاده از minmax باعث می‌شود ستون‌ها منعطف باشند اما از حد مشخصی کمتر نشوند */
+    grid-template-columns: repeat(3, minmax(0, 1fr)); 
+    gap: 30px; 
+    margin-bottom: 60px;
+    /* این خط باعث می‌شود ردیف‌ها بر اساس بلندترین کارت تنظیم شوند */
+    grid-auto-rows: 1fr; 
+    align-items: stretch; 
+}
 
         .biz-card { 
-            background: white; 
-            border-radius: 12px; 
-            overflow: hidden; 
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
-            transition: transform 0.3s;
-            border: 1px solid #f1f5f9;
-        }
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* تمام کارت‌ها هم‌ارتفاع می‌شوند */
+    background: white; 
+    border-radius: 12px; 
+    overflow: hidden; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
+    transition: transform 0.3s;
+    border: 1px solid #f1f5f9;
+}
         .biz-card:hover { transform: translateY(-5px); }
         
         .article-img { width: 100%; height: 200px; object-fit: cover; }
-        .article-body { padding: 25px; }
+        .article-body { 
+    padding: 25px; 
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* باعث می‌شود بدنه کارت تمام فضای عمودی موجود را پر کند */
+}
         
         .biz-tag { 
             display: inline-block; background: #f1f5f9; color: var(--accent-red); 
@@ -78,7 +89,8 @@
         
         .article-body h3 { margin: 0 0 10px 0; color: var(--navy-blue); }
         .article-body p { font-size: 0.9rem; color: #64748b; margin-bottom: 20px; }
-        .biz-link { text-decoration: none; color: var(--navy-blue); font-size: 0.8rem; font-weight: bold; border-top: 1px solid #eee; pt: 15px; display: block; padding-top: 15px; }
+        .biz-link { margin-top: auto; /* آدرس و دکمه را به تهِ کارت می‌چسباند */
+    padding-top: 15px; text-decoration: none; color: var(--navy-blue); font-size: 0.8rem; font-weight: bold; border-top: 1px solid #eee; pt: 15px; display: block; padding-top: 15px; }
 
         .redirect-tag{ margin-top: 12px; font-size: 0.9rem; color: #b91c1c; font-weight: bold; }
         
