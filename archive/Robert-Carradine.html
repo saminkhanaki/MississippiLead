@@ -25,6 +25,19 @@
             --accent-red: #b91c1c; 
         }
 
+        /* انتخاب اولین حرف از اولین پاراگراف داخل مقاله */
+.article-body p:first-of-type::first-letter {
+    font-family: 'Playfair Display', serif; /* یا هر فونت کلاسیک دیگر */
+    float: left;
+    font-size: 4.5rem; /* سایز حرف بزرگ */
+    line-height: 1;
+    padding-top: 4px;
+    padding-right: 12px;
+    padding-left: 3px;
+    font-weight: 900;
+    color: var(--primary); /* رنگ هماهنگ با تم سایت شما */
+}
+
       .separator {
     border: 0;
     height: 1px;
