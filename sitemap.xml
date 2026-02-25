@@ -40,9 +40,15 @@
     <priority>0.30</priority>
   </url>
 
+  <url>
+    <loc>https://mississippilead.com/archive/UMMC-Cyberattack2.html</loc>
+    <priority>0.80</priority>
+  </url>
+
+  
      <url>
     <loc>https://mississippilead.com/archive/Robert-Carradine.html</loc>
-    <priority>0.90</priority>
+    <priority>0.80</priority>
   </url>
 
   <url>
