@@ -28,18 +28,15 @@
             --accent-red: #b91c1c; 
         }
 
-
-        /* انتخاب اولین حرف از اولین پاراگراف داخل مقاله */
-.article-body p:first-of-type::first-letter {
-    font-family: 'Playfair Display', serif; /* یا هر فونت کلاسیک دیگر */
-    float: left;
-    font-size: 4.5rem; /* سایز حرف بزرگ */
-    line-height: 1;
-    padding-top: 4px;
-    padding-right: 12px;
-    padding-left: 3px;
-    font-weight: 900;
-    color: var(--primary); /* رنگ هماهنگ با تم سایت شما */
+/* این کد فقط حرف اول پاراگرافی که کلاس lead-paragraph دارد را بزرگ می‌کند */
+.lead-paragraph::first-letter {
+    font-size: 3.5rem; /* اندازه حرف */
+    font-weight: 900; /* ضخامت حرف */
+    color: var(--navy-blue); /* رنگ (مثلاً سرمه‌ای سایت شما) */
+    float: left; /* شناور شدن سمت چپ برای متن انگلیسی */
+    line-height: 1; /* فاصله خطی */
+    margin-right: 8px; /* فاصله از متن سمت راست */
+    font-family: 'Montserrat', sans-serif; /* فونت Montserrat که در گزارش دیدیم لود شده است */
 }
 
 
@@ -112,7 +109,7 @@
     <img src="../assets/bobby-j-brown.webp" alt="bobby j brown death" class="main-image">
     
     <article class="article-body">
-<p class="lead-text">
+<p class="lead-paragraph">
         Maryland’s art and sports communities are mourning the loss of a figure who epitomized grit and authenticity. 
         <strong>Bobby J. Brown</strong>, the beloved crime drama actor and former boxing champion, passed away in February 2026 
         following a tragic accident. He was 62.
