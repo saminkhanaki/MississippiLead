@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../style.css">
     <link rel="icon" type="image/png" href="../assets/favicon.png">
     
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&display=swapfamily=Montserrat:wght@800;900" rel="stylesheet">
+    <link href="<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">>
   
     <style>
         :root { 
@@ -46,7 +46,17 @@
     margin: 40px auto;   /* فاصله از بالا و پایین */
     width: 100%;         /* عرض خط */
 }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.8; color: var(--text); background: var(--bg); margin: 0; }
+        body { font-family: 'Playfair Display', serif; /* جایگزین فونت سیستمی قبلی */
+    line-height: 1.8; 
+    color: var(--text); 
+    background: var(--bg); 
+    margin: 0; }
+
+/* اطمینان از اعمال فونت روی تیتر اصلی و زیرتیترها */
+.article-title, .article-body h2, .article-body h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}        
         
         /* استایل هدر */
         nav { background: white; padding: 20px 0; border-bottom: 3px solid var(--accent-red); }
