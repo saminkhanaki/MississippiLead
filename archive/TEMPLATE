@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
+    <meta name="description" content="[META DESCRIPTION]">
+    <meta name="keywords" content="[META KEYWORDS]">
+    <link rel="canonical" href="[ARTICLE ADDRESS]">
+    <meta property="og:title" content="[TITLE NAME]">
+    <meta property="og:description" content="[ARTICLE DESCRIPTION]">
+    <meta property="og:image" content="[IMAGE ADDRESS]">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[ARTICLE TITLE] | Mississippi Lead</title>
+    
     <link rel="stylesheet" href="../style.css">
     <link rel="icon" type="image/png" href="../assets/favicon.png">
-    <link href="<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">>
+    <link href="<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
   
-    <link rel="canonical" href="https://mississippilead.com/archive/pascagoula.html">
-    <meta name="description" content="Looking for jobs in Mississippi? Ingalls Shipbuilding is hiring in March 2026. Explore high-paying trades, engineering roles, and the HII Apprentice School. Start your career in Pascagoula today!"
-    <meta name="keywords" content="Mississippi jobs 2026, hiring in Pascagoula, Ingalls Shipbuilding careers, HII employment Mississippi, high paying trades Mississippi, shipbuilding apprentice school, welder jobs Mississippi, engineering jobs Pascagoula, Gulf Coast careers, Mississippi manufacturing jobs, entry level jobs Mississippi with benefits."
-    <title>Now Hiring: The 2026 Shipbuilding Boom in Mississippi | Mississippi Lead</title>
-
     <style>
         :root { 
             --primary: #0f172a; 
@@ -65,20 +70,20 @@
             .logo-text { font-size: 1.4rem; }
             .mid-img { width: 100%; float: none; margin: 0 0 20px 0; }
         }
-
-        /* این کد فقط حرف اول پاراگرافی که کلاس lead-paragraph دارد را بزرگ می‌کند */
-          .lead-paragraph::first-letter {
-            font-size: 3.5rem; /* اندازه حرف */
-            font-weight: 900; /* ضخامت حرف */
-            color: var(--navy-blue); /* رنگ (مثلاً سرمه‌ای سایت شما) */
-            float: left; /* شناور شدن سمت چپ برای متن انگلیسی */
-            line-height: 1; /* فاصله خطی */
-            margin-right: 8px; /* فاصله از متن سمت راست */
-            font-family: 'Montserrat', sans-serif; /* فونت Montserrat که در گزارش دیدیم لود شده است */
-            }        
+/* این کد فقط حرف اول پاراگرافی که کلاس lead-paragraph دارد را بزرگ می‌کند */
+.lead-paragraph::first-letter {
+    font-size: 3.5rem; /* اندازه حرف */
+    font-weight: 900; /* ضخامت حرف */
+    color: var(--navy-blue); /* رنگ (مثلاً سرمه‌ای سایت شما) */
+    float: left; /* شناور شدن سمت چپ برای متن انگلیسی */
+    line-height: 1; /* فاصله خطی */
+    margin-right: 8px; /* فاصله از متن سمت راست */
+    font-family: 'Montserrat', sans-serif; /* فونت Montserrat که در گزارش دیدیم لود شده است */
+}        
     </style>
 </head>
 <body>
+
 <nav>
     <div class="nav-flex">
         <a href="../index.html" class="logo-text">
@@ -93,22 +98,24 @@
     <header class="article-header">
         <span style="background: var(--accent); color: white; padding: 4px 10px; 
           border-radius: 4px; font-size: 0.7rem; font-weight: bold; text-transform: uppercase;">[CATEGORY TAG]</span>
-          <h1 class="article-title" fontfamily="playfair display">[YOUR ARTICLE TITLE]</h1>
-          <div class="meta">March 1, 2026 • Jackson, MS. • By [AUTHOR]</div>
+        
+        <h1 class="article-title">[ARTICLE TITLE]</h1>
+        
+        <div class="meta">March 1, 2026 • Jackson, MS. • By [AUTHOR]</div>
     </header>
 
-    <img src="../assets/[MAIN IMAGE].webp" alt="[ALT IMAGE DESCRIPTION]" class="main-image">
+    <img src="../assets/[IMAGE FILE NAME]" alt="IMAGE ALT DESCRIPTION" class="hero-img">
     
     <article class="article-body">
-        <p class="lead-paragraph">
-            [YOUR ARTICLE FIRST PARAGRAPH]
-        </p>
-        [CONTINUEATION OF THE ARTICLE]
-    
+<p class="lead-paragraph">
+        [YOUR ARTICLE FIRST PARAGRAPH]
+</p>
+[YOUR ARTICLE CONTINUEATION]
+
  <div class="visit-card">
             <h3>[VISIT CARD TEXT]</h3>
-            <a href="[BUTTON 1 LINK]" target="_blank" class="btn-link">[BUTTON 1 TEXT]</a>
-            <a href="[BUTTON 2 LINK]" target="_blank" class="btn-link" style="background: #64748b;">[BUTTON 2 LINK]</a>
+            <a href="[1ST BUTTON LINK]" target="_blank" class="btn-link">[1ST BUTTON TEXT]</a>
+            <a href="[2ND BUTTON LINK]" target="_blank" class="btn-link" style="background: #64748b;">[2ND BUTTON TEXT]</a>
         </div>
       
         <a href="../index.html" class="back-home">← Back to Mississippi Lead</a>
