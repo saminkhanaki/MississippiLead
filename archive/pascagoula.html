@@ -26,6 +26,49 @@
             --navy-blue: #0f172a;
             --accent-red: #b91c1c; 
         }
+        
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.8; color: var(--text); background: var(--bg); margin: 0; }
+        
+        /* هدر مطابق کد Rondale Moore */
+        nav { background: white; padding: 20px 0; border-bottom: 3px solid var(--accent-red); }
+        .nav-flex { display: flex; justify-content: center; align-items: center; max-width: 1100px; margin: auto; }
+        
+        .logo-text { 
+            font-family: 'Montserrat', sans-serif; 
+            font-weight: 900; 
+            font-size: 1.8rem; 
+            letter-spacing: -0.5px;
+            color: var(--navy-blue);
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        .logo-text span { color: var(--accent-red); }
+
+        /* استایل کانتینر مقاله */
+        .article-container { max-width: 800px; margin: 40px auto; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .article-header { border-bottom: 2px solid #f1f5f9; margin-bottom: 25px; padding-bottom: 10px; }
+        .article-title { font-family: 'Playfair Display', serif; font-size: 2.3rem; color: var(--primary); line-height: 1.2; margin: 15px 0; }
+        .meta { color: #64748b; font-size: 0.9rem; margin-bottom: 15px; }
+        
+        /* استایل تصاویر بر اساس درخواست قبلی */
+        .hero-img { width: 100%; height: auto; border-radius: 8px; margin-bottom: 25px; display: block; box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
+        .mid-img { width: 45%; float: left; margin: 0 25px 15px 0; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
+
+        .article-body p { margin-bottom: 20px; font-size: 1.1rem; text-align: justify; }
+        .article-body h2 { color: var(--primary); margin-top: 35px; font-size: 1.6rem; clear: both; }
+        
+        .highlight-box { background: #f8fafc; border-radius: 12px; padding: 30px; margin: 30px 0; border-top: 5px solid var(--accent); clear: both; }
+        .back-home { display: inline-block; margin-top: 30px; margin-bottom: 10px; color: var(--accent); text-decoration: none; font-weight: bold; border-bottom: 2px solid var(--accent); }
+        
+        .visit-card { background: var(--primary); color: white; padding: 30px; border-radius: 12px; text-align: center; margin-top: 30px; }
+        .btn-link { display: inline-block; background: var(--accent); color: white !important; text-decoration: none; padding: 10px 20px; border-radius: 5px; margin: 5px; font-weight: bold; }
+
+        @media (max-width: 768px) {
+            .article-container { width: 92%; padding: 20px; margin: 20px auto; }
+            .article-title { font-size: 1.8rem; }
+            .logo-text { font-size: 1.4rem; }
+            .mid-img { width: 100%; float: none; margin: 0 0 20px 0; }
+        }
 
 /* این کد فقط حرف اول پاراگرافی که کلاس lead-paragraph دارد را بزرگ می‌کند */
 .lead-paragraph::first-letter {
@@ -36,66 +79,7 @@
     line-height: 1; /* فاصله خطی */
     margin-right: 8px; /* فاصله از متن سمت راست */
     font-family: 'Montserrat', sans-serif; /* فونت Montserrat که در گزارش دیدیم لود شده است */
-}
-
-
-      .separator {
-    border: 0;
-    height: 1px;
-    background: #e2e8f0; /* رنگ خاکستری ملایم مشابه عکس */
-    margin: 40px auto;   /* فاصله از بالا و پایین */
-    width: 100%;         /* عرض خط */
-}
-body { 
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-    line-height: 1.8; 
-    color: var(--text); 
-}
-
-/* اعمال فونت Playfair فقط روی تیترها */
-.article-title, 
-.article-body h2, 
-.article-body h3,
-.article-body h4 {
-    font-family: 'Playfair Display', serif;
-    font-weight: 700;
-    font-style: italic; /* اختیاری: برای مقالات سیاسی این استایل بسیار جذاب است */
-    color: var(--primary);
-}
-        
-        /* استایل هدر */
-        nav { background: white; padding: 20px 0; border-bottom: 3px solid var(--accent-red); }
-        .nav-flex { display: flex; justify-content: center; align-items: center; max-width: 1100px; margin: auto; }
-        
-        .logo-text { 
-            font-family: 'Montserrat', sans-serif; 
-            font-weight: 900; 
-            font-size: 1.8rem; 
-            color: var(--navy-blue);
-            text-decoration: none;
-            text-transform: uppercase;
-        }
-        .logo-text span { color: var(--accent-red); }
-
-        /* استایل بدنه مقاله */
-        .article-container { max-width: 800px; margin: 40px auto; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
-        .article-header { border-bottom: 2px solid #f1f5f9; margin-bottom: 25px; padding-bottom: 10px; }
-        .article-title { font-size: 2.3rem; color: var(--primary); line-height: 1.2; margin: 15px 0; }
-        .meta { color: #64748b; font-size: 0.9rem; margin-bottom: 15px; }
-        
-        .main-image { width: 100%; height: auto; border-radius: 8px; margin-bottom: 25px; display: block; }
-        .article-body p { margin-bottom: 20px; font-size: 1.1rem; }
-        .article-body h2 { color: var(--primary); margin-top: 35px; font-size: 1.5rem; }
-        
-        .back-home { display: inline-block; margin-top: 30px; color: var(--accent); text-decoration: none; font-weight: bold; border-bottom: 2px solid var(--accent); }
-        
-        @media (max-width: 768px) {
-            .article-container { width: 92%; padding: 20px; margin: 20px auto; }
-            .article-title { font-size: 1.8rem; }
-            .article-body p:first-of-type::first-letter {
-        font-size: 3.5rem; /* سایز کمی کوچک‌تر برای موبایل */
-    }
-        }
+}        
     </style>
 </head>
 <body>
