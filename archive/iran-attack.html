@@ -46,17 +46,22 @@
     margin: 40px auto;   /* فاصله از بالا و پایین */
     width: 100%;         /* عرض خط */
 }
-        body { font-family: 'Playfair Display', serif; /* جایگزین فونت سیستمی قبلی */
+body { 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
     line-height: 1.8; 
     color: var(--text); 
-    background: var(--bg); 
-    margin: 0; }
+}
 
-/* اطمینان از اعمال فونت روی تیتر اصلی و زیرتیترها */
-.article-title, .article-body h2, .article-body h3 {
+/* اعمال فونت Playfair فقط روی تیترها */
+.article-title, 
+.article-body h2, 
+.article-body h3,
+.article-body h4 {
     font-family: 'Playfair Display', serif;
     font-weight: 700;
-}        
+    font-style: italic; /* اختیاری: برای مقالات سیاسی این استایل بسیار جذاب است */
+    color: var(--primary);
+}
         
         /* استایل هدر */
         nav { background: white; padding: 20px 0; border-bottom: 3px solid var(--accent-red); }
