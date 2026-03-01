@@ -9,93 +9,104 @@
 
   <url>
     <loc>https://mississippilead.com/about.html</loc>
-    <priority>0.50</priority>
+    <priority>0.48</priority>
   </url>
 
   
   <url>
     <loc>https://mississippilead.com/business.html</loc>
     <lastmod>2026-02-25</lastmod>
-    <priority>0.50</priority>
+    <priority>0.55</priority>
   </url>
 
   <url>
     <loc>https://mississippilead.com/lifestyle.html</loc>
     <lastmod>2026-02-24</lastmod>
-    <priority>0.50</priority>
+    <priority>0.55</priority>
   </url>
 
   <url>
     <loc>https://mississippilead.com/archive.html</loc>
-    <priority>0.60</priority>
+    <priority>0.58</priority>
   </url>
 
   <url>
     <loc>https://mississippilead.com/acquire.html</loc>
-    <priority>0.30</priority>
+    <priority>0.29</priority>
   </url>
 
   <url>
     <loc>https://mississippilead.com/privacy.html</loc>
-    <priority>0.30</priority>
+    <priority>0.25</priority>
   </url>
 
   <url>
+    <loc>https://mississippilead.com/archive/pascagoula.html</loc>
+    <priority>0.80</priority>
+  </url> 
+
+  <url>
+    <loc>https://mississippilead.com/archive/iran-attack.html</loc>
+    <priority>0.80</priority>
+  </url>  
+  
+
+  <url>
     <loc>https://mississippilead.com/archive/bobby-j-brown.html</loc>
-    <priority>0.70</priority>
+    <priority>0.60</priority>
   </url>
 
   <url>
     <loc>https://mississippilead.com/archive/UMMC-Cyberattack2.html</loc>
-    <priority>0.80</priority>
+    <priority>0.70</priority>
   </url>
 
   
      <url>
     <loc>https://mississippilead.com/archive/Robert-Carradine.html</loc>
-    <priority>0.80</priority>
-  </url>
-
-  <url>
-    <loc>https://mississippilead.com/archive/valvoline.html</loc>
     <priority>0.70</priority>
   </url>
 
   <url>
-    <loc>https://mississippilead.com/archive/keifers-jackson.html</loc>
+    <loc>https://mississippilead.com/archive/valvoline.html</loc>
     <priority>0.60</priority>
+  </url>
+
+  <url>
+    <loc>https://mississippilead.com/archive/keifers-jackson.html</loc>
+    <priority>0.50</priority>
   </url>
 
   <url>
     <loc>https://mississippilead.com/archive/rondale-moore.html</loc>
     <lastmod>2026-02-23</lastmod>
-    <priority>0.60</priority>
+    <priority>0.50</priority>
   </url>
 
   <url>
     <loc>https://mississippilead.com/archive/news1.html</loc>
-    <priority>0.50</priority>
+    <priority>0.30</priority>
   </url>
 
   <url>
     <loc>https://mississippilead.com/archive/news2.html</loc>
-    <priority>0.50</priority>
+    <priority>0.30</priority>
   </url>
 
   <url>
     <loc>https://mississippilead.com/archive/news3.html</loc>
-    <priority>0.50</priority>
+    <priority>0.30</priority>
   </url>
 
   <url>
     <loc>https://mississippilead.com/archive/mississippi-economy-2026.html</loc>
     <lastmod>2026-02-21</lastmod>
-    <priority>0.40</priority>
+    <priority>0.30</priority>
   </url>
 
   <url>
     <loc>https://mississippilead.com/archive/incident-report.html</loc>
-    <priority>0.40</priority>
+    <priority>0.30</priority>
   </url>
 
 </urlset>
