@@ -1,153 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<link rel="canonical" href="https://mississippilead.com/archive/[ARTICLE FILE NAME]">
+
+    <title>[YOUR TITLE] | [CITY] </title>
+
     <meta name="description" content="[META DESCRIPTION]">
+
     <meta name="keywords" content="[META KEYWORDS]">
-    <link rel="canonical" href="[ARTICLE ADDRESS]">
-    <meta property="og:title" content="[TITLE NAME]">
-    <meta property="og:description" content="[ARTICLE DESCRIPTION]">
-    <meta property="og:image" content="[IMAGE ADDRESS]">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[ARTICLE TITLE] | Mississippi Lead</title>
-    
-    <link rel="stylesheet" href="../style.css">
-    <link rel="icon" type="image/png" href="../assets/favicon.png">
-    <link href="<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
-  
-    <style>
-        :root { 
-            --primary: #0f172a; 
-            --accent: #b91c1c; 
-            --text: #334155; 
-            --bg: #f8fafc; 
-            --navy-blue: #0f172a;
-            --accent-red: #b91c1c; 
-        }
-        
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.8; color: var(--text); background: var(--bg); margin: 0; }
-        
-        /* هدر مطابق کد Rondale Moore */
-        nav { background: white; padding: 20px 0; border-bottom: 3px solid var(--accent-red); }
-        .nav-flex { display: flex; justify-content: center; align-items: center; max-width: 1100px; margin: auto; }
-        
-        .logo-text { 
-            font-family: 'Montserrat', sans-serif; 
-            font-weight: 900; 
-            font-size: 1.8rem; 
-            letter-spacing: -0.5px;
-            color: var(--navy-blue);
-            text-decoration: none;
-            text-transform: uppercase;
-        }
-        .logo-text span { color: var(--accent-red); }
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="[OG TITLE]">
+    <meta property="og:description" content="[DESCRIPTION]">
+    <meta property="og:image" content="https://mississippilead.com/assets/[PHOTO FILE NAME]">
+    <meta property="og:url" content="https://mississippilead.com/archive/[ARTICLE FILE NAME]">
 
-        /* استایل کانتینر مقاله */
-        .article-container { max-width: 800px; margin: 40px auto; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
-        .article-header { border-bottom: 2px solid #f1f5f9; margin-bottom: 25px; padding-bottom: 10px; }
-        .article-title { font-family: 'Playfair Display', serif; font-size: 2.3rem; color: var(--primary); line-height: 1.2; margin: 15px 0; }
-        .meta { color: #64748b; font-size: 0.9rem; margin-bottom: 15px; }
-        
-        /* استایل تصاویر بر اساس درخواست قبلی */
-        .hero-img { width: 100%; height: auto; border-radius: 8px; margin-bottom: 25px; display: block; box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
-        .mid-img { width: 45%; float: left; margin: 0 25px 15px 0; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
-
-        .article-body p { margin-bottom: 20px; font-size: 1.1rem; text-align: justify; }
-        .article-body h2 { color: var(--primary); margin-top: 35px; font-size: 1.6rem; clear: both; }
-        
-        .highlight-box { background: #f8fafc; border-radius: 12px; padding: 30px; margin: 30px 0; border-top: 5px solid var(--accent); clear: both; }
-        .back-home { display: inline-block; margin-top: 30px; margin-bottom: 10px; color: var(--accent); text-decoration: none; font-weight: bold; border-bottom: 2px solid var(--accent); }
-        
-        .visit-card { background: var(--primary); color: white; padding: 30px; border-radius: 12px; text-align: center; margin-top: 30px; }
-        .btn-link { display: inline-block; background: var(--accent); color: white !important; text-decoration: none; padding: 10px 20px; border-radius: 5px; margin: 5px; font-weight: bold; }
-
-        @media (max-width: 768px) {
-            .article-container { width: 92%; padding: 20px; margin: 20px auto; }
-            .article-title { font-size: 1.8rem; }
-            .logo-text { font-size: 1.4rem; }
-            .mid-img { width: 100%; float: none; margin: 0 0 20px 0; }
-        }
-/* این کد فقط حرف اول پاراگرافی که کلاس lead-paragraph دارد را بزرگ می‌کند */
-.lead-paragraph::first-letter {
-    font-size: 3.5rem; /* اندازه حرف */
-    font-weight: 900; /* ضخامت حرف */
-    color: var(--navy-blue); /* رنگ (مثلاً سرمه‌ای سایت شما) */
-    float: left; /* شناور شدن سمت چپ برای متن انگلیسی */
-    line-height: 1; /* فاصله خطی */
-    margin-right: 8px; /* فاصله از متن سمت راست */
-    font-family: 'Montserrat', sans-serif; /* فونت Montserrat که در گزارش دیدیم لود شده است */
-}        
-    </style>
-</head>
-<body>
-
-<nav>
-    <div class="nav-flex">
-        <a href="../index.html" class="logo-text">
-            MISSISSIPPI<span>LEAD</span>
-        </a>
-    </div>
-</nav>
-
-<main class="article-container">
-    <a href="../index.html" class="back-home">← Back to Mississippi Lead</a><br><br>
-    
-    <header class="article-header">
-        <span style="background: var(--accent); color: white; padding: 4px 10px; 
-          border-radius: 4px; font-size: 0.7rem; font-weight: bold; text-transform: uppercase;">[CATEGORY TAG]</span>
-        
-        <h1 class="article-title">[ARTICLE TITLE]</h1>
-        
-        <div class="meta">March 1, 2026 • Jackson, MS. • By [AUTHOR]</div>
-    </header>
-
-    <img src="../assets/[IMAGE FILE NAME]" alt="IMAGE ALT DESCRIPTION" class="hero-img">
-    
-    <article class="article-body">
-<p class="lead-paragraph">
-        [YOUR ARTICLE FIRST PARAGRAPH]
-</p>
-[YOUR ARTICLE CONTINUEATION]
-
- <div class="visit-card">
-            <h3>[VISIT CARD TEXT]</h3>
-            <a href="[1ST BUTTON LINK]" target="_blank" class="btn-link">[1ST BUTTON TEXT]</a>
-            <a href="[2ND BUTTON LINK]" target="_blank" class="btn-link" style="background: #64748b;">[2ND BUTTON TEXT]</a>
-        </div>
-      
-        <a href="../index.html" class="back-home">← Back to Mississippi Lead</a>
-    </article>
-    
-
-    <div id="disqus_thread"></div>
-<script>
-    /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-    /*
-    var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    */
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://https-mississippilead-com.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-    
-</main>
-  
-<footer style="background: var(--primary); color: white; padding: 30px 0; margin-top: 60px; text-align: center;">
-    <p>&copy; 2026 Mississippi Lead News</p>
-</footer>
-
-</body>
-</html>
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@MississippiLead">
+    <meta name="twitter:title" content="[TITLE]">
+    <meta name="twitter:description" content="[DESCRIPTION]">
+    <meta name="twitter:image" content="https://mississippilead.com/assets/[PHOTO FILE NAME]">
