@@ -17,3 +17,120 @@
     <meta name="twitter:title" content="[TITLE]">
     <meta name="twitter:description" content="[DESCRIPTION]">
     <meta name="twitter:image" content="https://mississippilead.com/assets/[PHOTO FILE NAME]">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" type="image/png" href="../assets/favicon.png">
+    
+    <link href="<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+  
+    <style>
+        :root { 
+            --primary: #0f172a; 
+            --accent: #b91c1c; 
+            --text: #334155; 
+            --bg: #f8fafc; 
+            --navy-blue: #0f172a;
+            --accent-red: #b91c1c; 
+        }
+        
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.8; color: var(--text); background: var(--bg); margin: 0; }
+        
+        /* هدر مطابق کد Rondale Moore */
+        nav { background: white; padding: 20px 0; border-bottom: 3px solid var(--accent-red); }
+        .nav-flex { display: flex; justify-content: center; align-items: center; max-width: 1100px; margin: auto; }
+        
+        .logo-text { 
+            font-family: 'Montserrat', sans-serif; 
+            font-weight: 900; 
+            font-size: 1.8rem; 
+            letter-spacing: -0.5px;
+            color: var(--navy-blue);
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        .logo-text span { color: var(--accent-red); }
+
+        /* استایل کانتینر مقاله */
+        .article-container { max-width: 800px; margin: 40px auto; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .article-header { border-bottom: 2px solid #f1f5f9; margin-bottom: 25px; padding-bottom: 10px; }
+        .article-title { font-family: 'Playfair Display', serif; font-size: 2.3rem; color: var(--primary); line-height: 1.2; margin: 15px 0; }
+        .meta { color: #64748b; font-size: 0.9rem; margin-bottom: 15px; }
+        
+        /* استایل تصاویر بر اساس درخواست قبلی */
+        .hero-img { width: 100%; height: auto; border-radius: 8px; margin-bottom: 25px; display: block; box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
+        .mid-img { width: 45%; float: left; margin: 15px 25px 15px 0; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
+        .mid-right-img { width: 45%; float: right; margin: 15px 0 15px 25px; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
+        .tall-img { width: 45%; height: auto; float: right; margin: 15px 0 15px 25px; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
+        
+
+        .article-body p { margin-bottom: 20px; font-size: 1.1rem; text-align: justify; }
+        .article-body h2 { color: var(--primary); margin-top: 35px; font-size: 1.6rem; clear: both; }
+        
+        .highlight-box { background: #f8fafc; border-radius: 12px; padding: 30px; margin: 30px 0; border-top: 5px solid var(--accent); clear: both; }
+        .back-home { display: inline-block; margin-top: 30px; margin-bottom: 10px; color: var(--accent); text-decoration: none; font-weight: bold; border-bottom: 2px solid var(--accent); }
+        
+        .visit-card { background: var(--primary); color: white; padding: 30px; border-radius: 12px; text-align: center; margin-top: 30px; }
+        .btn-link { display: inline-block; background: var(--accent); color: white !important; text-decoration: none; padding: 10px 20px; border-radius: 5px; margin: 5px; font-weight: bold; }
+
+        @media (max-width: 768px) {
+            .article-container { width: 92%; padding: 20px; margin: 20px auto; }
+            .article-title { font-size: 1.8rem; }
+            .logo-text { font-size: 1.4rem; }
+            .mid-img { width: 100%; float: none; margin: 0 0 20px 0; }
+        }
+/* این کد فقط حرف اول پاراگرافی که کلاس lead-paragraph دارد را بزرگ می‌کند */
+.lead-paragraph::first-letter {
+    font-size: 3.5rem; /* اندازه حرف */
+    font-weight: 900; /* ضخامت حرف */
+    color: var(--navy-blue); /* رنگ (مثلاً سرمه‌ای سایت شما) */
+    float: left; /* شناور شدن سمت چپ برای متن انگلیسی */
+    line-height: 1; /* فاصله خطی */
+    margin-right: 8px; /* فاصله از متن سمت راست */
+    font-family: 'Montserrat', sans-serif; /* فونت Montserrat که در گزارش دیدیم لود شده است */
+}        
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-flex">
+        <a href="../index.html" class="logo-text">
+            MISSISSIPPI<span>LEAD</span>
+        </a>
+    </div>
+</nav>
+
+<main class="article-container">
+    <a href="../index.html" class="back-home">← Back to Mississippi Lead</a><br><br>
+    
+    <header class="article-header">
+        <span style="background: var(--accent); color: white; padding: 4px 10px; border-radius: 4px; font-size: 0.7rem; font-weight: bold; text-transform: uppercase;">[CATEGORY TAG]</span>
+        
+        <h1 class="article-title">[ARTICLE TITLE]</h1>
+        
+        <div class="meta">[DATE] • [CITY] • By [AUTHOR]</div>
+    </header>
+
+    <img src="../assets/[PHOTO FILE NAME]" alt="[PHOTO ALT DESCRIPTION]" class="hero-img">
+    
+    <article class="article-body">
+        
+        <p>[YOUR ARTICLE STARTS HERE]</p>
+
+
+        <a href="../index.html" class="back-home">← Back to Mississippi Lead</a>
+    </article>
+
+    <div id="disqus_thread" style="margin-top: 50px;"></div>
+</main>
+    
+<footer style="background: var(--primary); color: white; padding: 30px 0; margin-top: 60px; text-align: center;">
+    <p>&copy; 2026 Mississippi Lead</p>
+</footer>
+
+</body>
+</html>
