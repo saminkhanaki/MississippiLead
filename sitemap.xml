@@ -142,4 +142,9 @@
     <priority>0.30</priority>
   </url>
 
+  <url>
+    <loc>https://mississippilead.com/404.html</loc>
+    <priority>0.30</priority>
+  </url>
+
 </urlset>
