@@ -40,52 +40,59 @@
     <priority>0.25</priority>
   </url>
 
-  <url>
-    <loc>https://mississippilead.com/archive/kristi-noem.html</loc>
+ <url>
+    <loc>https://mississippilead.com/archive/tax-blueprint.html</loc>
+    <lastmod>2026-03-10</lastmod>
     <priority>0.80</priority>
+ </url>
+
+
+<url>
+    <loc>https://mississippilead.com/archive/kristi-noem.html</loc>
+    <priority>0.70</priority>
   </url>  
 
   <url>
     <loc>https://mississippilead.com/archive/general-atomics-expansion.html</loc>
-    <priority>0.70</priority>
+    <priority>0.60</priority>
   </url>
   
   <url>
     <loc>https://mississippilead.com/archive/facebook-down-2026.html</loc>
     <lastmod>2026-03-04</lastmod>
-    <priority>0.60</priority>
+    <priority>0.50</priority>
   </url>
 
   <url>
     <loc>https://mississippilead.com/archive/robert-carradine2.html</loc>
     <lastmod>2026-03-02</lastmod>
-    <priority>0.60</priority>
+    <priority>0.50</priority>
   </url>
 
   <url>
     <loc>https://mississippilead.com/archive/roosters.html</loc>
     <lastmod>2026-03-03</lastmod>
-    <priority>0.50</priority>
+    <priority>0.40</priority>
   </url>
 
   <url>
     <loc>https://mississippilead.com/archive/pascagoula.html</loc>
-    <priority>0.50</priority>
+    <priority>0.40</priority>
   </url> 
 
   <url>
     <loc>https://mississippilead.com/archive/iran-attack.html</loc>
-    <priority>0.50</priority>
+    <priority>0.40</priority>
   </url>  
 
   <url>
     <loc>https://mississippilead.com/archive/UMMC-Cyberattack2.html</loc>
-    <priority>0.40</priority>
+    <priority>0.30</priority>
   </url>
 
   <url>
     <loc>https://mississippilead.com/archive/Robert-Carradine.html</loc>
-    <priority>0.40</priority>
+    <priority>0.30</priority>
   </url>
 
   <url>
