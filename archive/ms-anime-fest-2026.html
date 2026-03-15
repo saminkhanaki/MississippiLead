@@ -167,52 +167,113 @@
         <p>Mississippi Anime Fest 2026 is over. The wristbands are off, the vendors are packed up, and the Trade Mart has already returned to its normal configuration. But the conversations happening right now — in parking lots, in group chats, in cosplay forums — are already pointing toward next year. That's the best review a regional convention can get.</p>
 
 <section class="photo-gallery" style="margin-top: 40px; border-top: 1px solid #eee; padding-top: 20px;">
-    <h3 style="text-align: center; color: #333;">Event Gallery: MS Anime Fest 2026</h3>
+    <h3 style="text-align: center; color: #333; font-family: sans-serif;">Event Gallery: MS Anime Fest 2026</h3>
     
-    <div class="slider-wrapper" style="position: relative; max-width: 800px; margin: 20px auto; overflow: hidden; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-        
-        <div class="custom-slide fade"><img src="../assets/animefest/MS-animefest-2026-01.webp" style="width:auto; display: block;"></div>
-        <div class="custom-slide fade"><img src="../assets/animefest/MS-animefest-2026-02.webp" style="width:auto; display: block;"></div>
-        <div class="custom-slide fade"><img src="../assets/animefest/MS-animefest-2026-03.webp" style="width:auto; display: block;"></div>
-        <div class="custom-slide fade"><img src="../assets/animefest/MS-animefest-2026-04.webp" style="width:auto; display: block;"></div>
-        <div class="custom-slide fade"><img src="../assets/animefest/MS-animefest-2026-05.webp" style="width:auto; display: block;"></div>
-        <div class="custom-slide fade"><img src="../assets/animefest/MS-animefest-2026-06.webp" style="width:auto; display: block;"></div>
-        <div class="custom-slide fade"><img src="../assets/animefest/MS-animefest-2026-07.webp" style="width:auto; display: block;"></div>
-        <div class="custom-slide fade"><img src="../assets/animefest/MS-animefest-2026-08.webp" style="width:auto; display: block;"></div>
-        <div class="custom-slide fade"><img src="../assets/animefest/MS-animefest-2026-09.webp" style="width:auto; display: block;"></div>
-        <div class="custom-slide fade"><img src="../assets/animefest/MS-animefest-2026-10.webp" style="width:auto; display: block;"></div>
-        <div class="custom-slide fade"><img src="../assets/animefest/MS-animefest-2026-11.webp" style="width:auto; display: block;"></div>
-        <div class="custom-slide fade"><img src="../assets/animefest/MS-animefest-2026-12.webp" style="width:auto; display: block;"></div>
+    <div class="slider-wrapper">
+        <div class="custom-slide fade"><div class="numbertext">1 / 15</div><img src="assets/animefest/MS-animefest-2026-01.webp"></div>
+        <div class="custom-slide fade"><div class="numbertext">2 / 15</div><img src="assets/animefest/MS-animefest-2026-02.webp"></div>
+        <div class="custom-slide fade"><div class="numbertext">3 / 15</div><img src="assets/animefest/MS-animefest-2026-03.webp"></div>
+        <div class="custom-slide fade"><div class="numbertext">4 / 15</div><img src="assets/animefest/MS-animefest-2026-04.webp"></div>
+        <div class="custom-slide fade"><div class="numbertext">5 / 15</div><img src="assets/animefest/MS-animefest-2026-05.webp"></div>
+        <div class="custom-slide fade"><div class="numbertext">6 / 15</div><img src="assets/animefest/MS-animefest-2026-06.webp"></div>
+        <div class="custom-slide fade"><div class="numbertext">7 / 15</div><img src="assets/animefest/MS-animefest-2026-07.webp"></div>
+        <div class="custom-slide fade"><div class="numbertext">8 / 15</div><img src="assets/animefest/MS-animefest-2026-08.webp"></div>
+        <div class="custom-slide fade"><div class="numbertext">9 / 15</div><img src="assets/animefest/MS-animefest-2026-09.webp"></div>
+        <div class="custom-slide fade"><div class="numbertext">10 / 15</div><img src="assets/animefest/MS-animefest-2026-10.webp"></div>
+        <div class="custom-slide fade"><div class="numbertext">11 / 15</div><img src="assets/animefest/MS-animefest-2026-11.webp"></div>
+        <div class="custom-slide fade"><div class="numbertext">12 / 15</div><img src="assets/animefest/MS-animefest-2026-12.webp"></div>
 
-
-        <a onclick="moveSlide(-1)" style="cursor:pointer; position:absolute; top:50%; left:10px; transform:translateY(-50%); padding:12px; background:rgba(0,0,0,0.5); color:white; font-weight:bold; border-radius:50%; user-select:none;">&#10094;</a>
-        <a onclick="moveSlide(1)" style="cursor:pointer; position:absolute; top:50%; right:10px; transform:translateY(-50%); padding:12px; background:rgba(0,0,0,0.5); color:white; font-weight:bold; border-radius:50%; user-select:none;">&#10095;</a>
+        <button class="nav-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="nav-btn next" onclick="moveSlide(1)">&#10095;</button>
     </div>
 
     <style>
-        .custom-slide { display: none; }
-        .fade { animation: fadeKey 0.8s; }
-        @keyframes fadeKey { from {opacity: 0.4} to {opacity: 1} }
+        .slider-wrapper {
+            position: relative;
+            max-width: 800px;
+            width: 100%;
+            aspect-ratio: 4 / 3; /* حفظ نسبت 4:3 */
+            margin: 20px auto;
+            background-color: #1a1a1a; /* پس‌زمینه تیره برای لبه‌های عکس پرتره */
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .custom-slide {
+            display: none;
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .custom-slide img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            display: block;
+        }
+
+        .nav-btn {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 15px;
+            background: rgba(0,0,0,0.4);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 20px;
+            z-index: 10;
+            transition: 0.3s;
+        }
+
+        .nav-btn:hover { background: rgba(0,0,0,0.7); }
+        .prev { left: 15px; }
+        .next { right: 15px; }
+
+        .numbertext {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: #fff;
+            font-size: 12px;
+            background: rgba(0,0,0,0.5);
+            padding: 5px 10px;
+            border-radius: 4px;
+            z-index: 5;
+        }
+
+        .fade { animation: fadeEffect 0.6s; }
+        @keyframes fadeEffect { from {opacity: 0.4} to {opacity: 1} }
     </style>
 
     <script>
         let currentIdx = 0;
-        const allSlides = document.getElementsByClassName("custom-slide");
+        const slides = document.getElementsByClassName("custom-slide");
         
         function showImg(n) {
-            if (n >= allSlides.length) currentIdx = 0;
-            if (n < 0) currentIdx = allSlides.length - 1;
-            for (let i = 0; i < allSlides.length; i++) {
-                allSlides[i].style.display = "none";
+            if (n >= slides.length) currentIdx = 0;
+            if (n < 0) currentIdx = slides.length - 1;
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
             }
-            allSlides[currentIdx].style.display = "block";
+            slides[currentIdx].style.display = "block";
         }
 
         function moveSlide(n) {
             showImg(currentIdx += n);
         }
 
-        // Initialize first slide
+        // Initialize
         showImg(currentIdx);
     </script>
 </section>
