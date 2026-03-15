@@ -37,14 +37,6 @@
             --accent-red: #b91c1c; 
         }
 
-.slider-container { position: relative; max-width: 800px; margin: auto; overflow: hidden; }
-.mySlides { display: none; width: 100%; }
-.mySlides img { width: 100%; height: auto; border-radius: 8px; vertical-align: middle; }
-.prev, .next { cursor: pointer; position: absolute; top: 50%; transform: translateY(-50%); width: auto; padding: 16px; color: white; font-weight: bold; font-size: 20px; background: rgba(0,0,0,0.5); border-radius: 0 3px 3px 0; user-select: none; }
-.next { right: 0; border-radius: 3px 0 0 3px; }
-.numbertext { color: #f2f2f2; font-size: 12px; padding: 8px 12px; position: absolute; top: 0; background: rgba(0,0,0,0.4); }
-.fade { animation: fadeEffect 1s; }
-@keyframes fadeEffect { from {opacity: 0.4} to {opacity: 1} }
         
         
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.8; color: var(--text); background: var(--bg); margin: 0; }
@@ -174,26 +166,55 @@
 
         <p>Mississippi Anime Fest 2026 is over. The wristbands are off, the vendors are packed up, and the Trade Mart has already returned to its normal configuration. But the conversations happening right now — in parking lots, in group chats, in cosplay forums — are already pointing toward next year. That's the best review a regional convention can get.</p>
 
-<section class="photo-gallery">
-    <h3 style="text-align: center;">Event Gallery: MS Anime Fest 2026</h3>
-    <div class="slider-container">
-        <div class="mySlides fade"><div class="numbertext">1 / 15</div><img src="assets/animefest/MS-animefest-2026-01.webp"></div>
-        <div class="mySlides fade"><div class="numbertext">2 / 15</div><img src="assets/animefest/MS-animefest-2026-02.webp"></div>
-        <div class="mySlides fade"><div class="numbertext">3 / 15</div><img src="assets/animefest/MS-animefest-2026-03.webp"></div>
-        <div class="mySlides fade"><div class="numbertext">4 / 15</div><img src="assets/animefest/MS-animefest-2026-04.webp"></div>
-        <div class="mySlides fade"><div class="numbertext">5 / 15</div><img src="assets/animefest/MS-animefest-2026-05.webp"></div>
-        <div class="mySlides fade"><div class="numbertext">6 / 15</div><img src="assets/animefest/MS-animefest-2026-06.webp"></div>
-        <div class="mySlides fade"><div class="numbertext">7 / 15</div><img src="assets/animefest/MS-animefest-2026-07.webp"></div>
-        <div class="mySlides fade"><div class="numbertext">8 / 15</div><img src="assets/animefest/MS-animefest-2026-08.webp"></div>
-        <div class="mySlides fade"><div class="numbertext">9 / 15</div><img src="assets/animefest/MS-animefest-2026-09.webp"></div>
-        <div class="mySlides fade"><div class="numbertext">10 / 15</div><img src="assets/animefest/MS-animefest-2026-10.webp"></div>
-        <div class="mySlides fade"><div class="numbertext">11 / 15</div><img src="assets/animefest/MS-animefest-2026-11.webp"></div>
-        <div class="mySlides fade"><div class="numbertext">12 / 15</div><img src="assets/animefest/MS-animefest-2026-12.webp"></div>
+<section class="photo-gallery" style="margin-top: 40px; border-top: 1px solid #eee; padding-top: 20px;">
+    <h3 style="text-align: center; color: #333;">Event Gallery: MS Anime Fest 2026</h3>
+    
+    <div class="slider-wrapper" style="position: relative; max-width: 800px; margin: 20px auto; overflow: hidden; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+        
+        <div class="custom-slide fade"><img src="assets/animefest/MS-animefest-2026-01.webp" style="width:100%; display: block;"></div>
+        <div class="custom-slide fade"><img src="assets/animefest/MS-animefest-2026-02.webp" style="width:100%; display: block;"></div>
+        <div class="custom-slide fade"><img src="assets/animefest/MS-animefest-2026-03.webp" style="width:100%; display: block;"></div>
+        <div class="custom-slide fade"><img src="assets/animefest/MS-animefest-2026-04.webp" style="width:100%; display: block;"></div>
+        <div class="custom-slide fade"><img src="assets/animefest/MS-animefest-2026-05.webp" style="width:100%; display: block;"></div>
+        <div class="custom-slide fade"><img src="assets/animefest/MS-animefest-2026-06.webp" style="width:100%; display: block;"></div>
+        <div class="custom-slide fade"><img src="assets/animefest/MS-animefest-2026-07.webp" style="width:100%; display: block;"></div>
+        <div class="custom-slide fade"><img src="assets/animefest/MS-animefest-2026-08.webp" style="width:100%; display: block;"></div>
+        <div class="custom-slide fade"><img src="assets/animefest/MS-animefest-2026-09.webp" style="width:100%; display: block;"></div>
+        <div class="custom-slide fade"><img src="assets/animefest/MS-animefest-2026-10.webp" style="width:100%; display: block;"></div>
+        <div class="custom-slide fade"><img src="assets/animefest/MS-animefest-2026-11.webp" style="width:100%; display: block;"></div>
+        <div class="custom-slide fade"><img src="assets/animefest/MS-animefest-2026-12.webp" style="width:100%; display: block;"></div>
 
 
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        <a onclick="moveSlide(-1)" style="cursor:pointer; position:absolute; top:50%; left:10px; transform:translateY(-50%); padding:12px; background:rgba(0,0,0,0.5); color:white; font-weight:bold; border-radius:50%; user-select:none;">&#10094;</a>
+        <a onclick="moveSlide(1)" style="cursor:pointer; position:absolute; top:50%; right:10px; transform:translateY(-50%); padding:12px; background:rgba(0,0,0,0.5); color:white; font-weight:bold; border-radius:50%; user-select:none;">&#10095;</a>
     </div>
+
+    <style>
+        .custom-slide { display: none; }
+        .fade { animation: fadeKey 0.8s; }
+        @keyframes fadeKey { from {opacity: 0.4} to {opacity: 1} }
+    </style>
+
+    <script>
+        let currentIdx = 0;
+        const allSlides = document.getElementsByClassName("custom-slide");
+        
+        function showImg(n) {
+            if (n >= allSlides.length) currentIdx = 0;
+            if (n < 0) currentIdx = allSlides.length - 1;
+            for (let i = 0; i < allSlides.length; i++) {
+                allSlides[i].style.display = "none";
+            }
+            allSlides[currentIdx].style.display = "block";
+        }
+
+        function moveSlide(n) {
+            showImg(currentIdx += n);
+        }
+
+        // Initialize first slide
+        showImg(currentIdx);
+    </script>
 </section>
         
         <hr class="separator">
@@ -211,33 +232,6 @@
 <footer style="background: var(--primary); color: white; padding: 30px 0; margin-top: 60px; text-align: center;">
     <p>&copy; 2026 Mississippi Lead</p>
 </footer>
-
-let slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-}
-      
+  
 </body>
 </html>
