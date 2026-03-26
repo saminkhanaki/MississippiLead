@@ -17,13 +17,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
 
     <style>
-        :root {
-            --navy: #0f172a;
-            --red: #b91c1c;
-            --text: #334155;
-            --bg: #f8fafc;
-        }
-
+        :root { --navy: #0f172a; --red: #b91c1c; --text: #334155; --bg: #f8fafc; }
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); }
 
@@ -32,391 +26,89 @@
         .nav-flex { display: flex; justify-content: space-between; align-items: center; max-width: 1100px; margin: auto; padding: 0 20px; }
         .logo-text { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 1.6rem; letter-spacing: -0.5px; color: var(--navy); text-decoration: none; text-transform: uppercase; }
         .logo-text span { color: var(--red); }
-        .nav-links { list-style: none; display: flex; gap: 28px; }
+        .nav-links { list-style: none; display: flex; gap: 28px; align-items: center; }
         .nav-links a { text-decoration: none; color: var(--navy); font-weight: 600; font-size: 0.9rem; transition: color 0.2s; }
-        .nav-links a:hover, .nav-links a.active { color: var(--red); }
-        .acquire-btn { background: var(--red); color: white !important; padding: 8px 18px; border-radius: 5px; }
-        .nav-links .acquire-btn:hover { background: #991b1b; color: white !important; }
+        .nav-links a:hover { color: var(--red); }
+        .nav-links .sports-active { background: var(--red); color: white !important; padding: 8px 18px; border-radius: 5px; }
+        .nav-links .sports-active:hover { background: #991b1b; }
 
         /* PAGE HEADER */
-        .sports-header {
-            background: var(--navy);
-            padding: 40px 20px 35px;
-            text-align: center;
-        }
-        .sports-header .label {
-            display: inline-block;
-            background: var(--red);
-            color: white;
-            font-size: 0.7rem;
-            font-weight: 800;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            padding: 5px 14px;
-            border-radius: 4px;
-            margin-bottom: 14px;
-        }
-        .sports-header h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 2.8rem;
-            font-weight: 900;
-            color: white;
-            text-transform: uppercase;
-            letter-spacing: -1px;
-            margin-bottom: 10px;
-        }
-        .sports-header p {
-            color: #94a3b8;
-            font-size: 1rem;
-            max-width: 560px;
-            margin: 0 auto;
-            line-height: 1.6;
-        }
+        .sports-header { background: var(--navy); padding: 40px 20px 35px; text-align: center; }
+        .sports-header .label { display: inline-block; background: var(--red); color: white; font-size: 0.7rem; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; padding: 5px 14px; border-radius: 4px; margin-bottom: 14px; }
+        .sports-header h1 { font-family: 'Montserrat', sans-serif; font-size: 2.8rem; font-weight: 900; color: white; text-transform: uppercase; letter-spacing: -1px; margin-bottom: 10px; }
+        .sports-header p { color: #94a3b8; font-size: 1rem; max-width: 560px; margin: 0 auto; line-height: 1.6; }
 
         /* FILTER TABS */
-        .filter-bar {
-            background: white;
-            border-bottom: 2px solid #e2e8f0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-        }
-        .filter-tabs {
-            max-width: 1100px;
-            margin: auto;
-            padding: 0 20px;
-            display: flex;
-            gap: 4px;
-            overflow-x: auto;
-            scrollbar-width: none;
-        }
+        .filter-bar { background: white; border-bottom: 2px solid #e2e8f0; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+        .filter-tabs { max-width: 1100px; margin: auto; padding: 0 20px; display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; }
         .filter-tabs::-webkit-scrollbar { display: none; }
-        .tab-btn {
-            padding: 16px 22px;
-            border: none;
-            background: none;
-            font-weight: 700;
-            font-size: 0.85rem;
-            color: #64748b;
-            cursor: pointer;
-            border-bottom: 3px solid transparent;
-            white-space: nowrap;
-            transition: all 0.2s;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
+        .tab-btn { padding: 16px 22px; border: none; background: none; font-weight: 700; font-size: 0.85rem; color: #64748b; cursor: pointer; border-bottom: 3px solid transparent; white-space: nowrap; transition: all 0.2s; text-transform: uppercase; letter-spacing: 0.5px; }
         .tab-btn:hover { color: var(--navy); }
         .tab-btn.active { color: var(--red); border-bottom-color: var(--red); }
 
         /* MAIN LAYOUT */
-        .sports-main {
-            max-width: 1100px;
-            margin: 40px auto;
-            padding: 0 20px;
-            display: grid;
-            grid-template-columns: 1fr 320px;
-            gap: 36px;
-        }
+        .sports-main { max-width: 1100px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: 1fr 320px; gap: 36px; }
 
-        /* HERO ARTICLE */
-        .hero-article {
-            border-radius: 14px;
-            overflow: hidden;
-            background: white;
-            box-shadow: 0 6px 24px rgba(0,0,0,0.07);
-            margin-bottom: 36px;
-            position: relative;
-            cursor: pointer;
-        }
-        .hero-article .hero-img-wrap {
-            position: relative;
-            height: 420px;
-            overflow: hidden;
-        }
-        .hero-article img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.4s ease;
-        }
+        /* HERO */
+        .hero-article { border-radius: 14px; overflow: hidden; background: white; box-shadow: 0 6px 24px rgba(0,0,0,0.07); margin-bottom: 36px; position: relative; }
+        .hero-article .hero-img-wrap { position: relative; height: 420px; overflow: hidden; }
+        .hero-article img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
         .hero-article:hover img { transform: scale(1.03); }
-        .hero-overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(transparent 30%, rgba(15,23,42,0.92) 100%);
-        }
-        .hero-content {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 30px;
-        }
-        .sport-badge {
-            display: inline-block;
-            background: var(--red);
-            color: white;
-            font-size: 0.68rem;
-            font-weight: 800;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            padding: 4px 10px;
-            border-radius: 4px;
-            margin-bottom: 12px;
-        }
-        .hero-content h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.9rem;
-            color: white;
-            line-height: 1.25;
-            margin-bottom: 12px;
-        }
-        .hero-content p {
-            color: #cbd5e1;
-            font-size: 0.95rem;
-            line-height: 1.6;
-            margin-bottom: 18px;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
-        .hero-meta {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-        }
-        .hero-meta .odds-pill {
-            background: rgba(255,255,255,0.12);
-            border: 1px solid rgba(255,255,255,0.2);
-            border-radius: 20px;
-            padding: 5px 14px;
-            font-size: 0.8rem;
-            color: white;
-            font-weight: 700;
-        }
-        .hero-meta .read-btn {
-            background: white;
-            color: var(--navy);
-            padding: 9px 20px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 800;
-            font-size: 0.85rem;
-            transition: background 0.2s;
-        }
+        .hero-overlay { position: absolute; inset: 0; background: linear-gradient(transparent 30%, rgba(15,23,42,0.92) 100%); }
+        .hero-content { position: absolute; bottom: 0; left: 0; right: 0; padding: 30px; }
+        .sport-badge { display: inline-block; background: var(--red); color: white; font-size: 0.68rem; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 10px; border-radius: 4px; margin-bottom: 12px; }
+        .hero-content h2 { font-family: 'Playfair Display', serif; font-size: 1.9rem; color: white; line-height: 1.25; margin-bottom: 12px; }
+        .hero-content p { color: #cbd5e1; font-size: 0.95rem; line-height: 1.6; margin-bottom: 18px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        .hero-meta { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+        .hero-meta .odds-pill { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2); border-radius: 20px; padding: 5px 14px; font-size: 0.8rem; color: white; font-weight: 700; }
+        .hero-meta .read-btn { background: white; color: var(--navy); padding: 9px 20px; border-radius: 6px; text-decoration: none; font-weight: 800; font-size: 0.85rem; }
         .hero-meta .read-btn:hover { background: #f1f5f9; }
         .hero-meta .date { color: #94a3b8; font-size: 0.82rem; margin-left: auto; }
 
         /* ARTICLES GRID */
-        .articles-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 22px;
-            margin-bottom: 36px;
-        }
-        .article-card {
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            border-bottom: 3px solid #e2e8f0;
-            transition: transform 0.2s, box-shadow 0.2s;
-            cursor: pointer;
-        }
-        .article-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-        }
-        .article-card img {
-            width: 100%;
-            height: 160px;
-            object-fit: cover;
-        }
+        .articles-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; margin-bottom: 36px; }
+        .article-card { background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.05); border-bottom: 3px solid #e2e8f0; transition: transform 0.2s, box-shadow 0.2s; }
+        .article-card:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
+        .article-card img { width: 100%; height: 160px; object-fit: cover; display: block; }
         .article-card .card-body { padding: 18px; }
-        .card-sport-tag {
-            font-size: 0.68rem;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: var(--red);
-            margin-bottom: 8px;
-            display: block;
-        }
-        .article-card h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.05rem;
-            color: var(--navy);
-            line-height: 1.35;
-            margin-bottom: 10px;
-        }
-        .article-card p {
-            font-size: 0.83rem;
-            color: #64748b;
-            line-height: 1.55;
-            margin-bottom: 14px;
-            display: -webkit-box;
-            -webkit-line-clamp: 3;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
-        .article-card a {
-            color: var(--red);
-            text-decoration: none;
-            font-size: 0.82rem;
-            font-weight: 700;
-        }
+        .card-sport-tag { font-size: 0.68rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; color: var(--red); margin-bottom: 8px; display: block; }
+        .article-card h3 { font-family: 'Playfair Display', serif; font-size: 1.05rem; color: var(--navy); line-height: 1.35; margin-bottom: 10px; }
+        .article-card p { font-size: 0.83rem; color: #64748b; line-height: 1.55; margin-bottom: 14px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+        .article-card a.card-link { color: var(--red); text-decoration: none; font-size: 0.82rem; font-weight: 700; }
 
-        /* COMING SOON CARD */
-        .coming-soon-card {
-            background: #f8fafc;
-            border-radius: 10px;
-            padding: 30px 20px;
-            text-align: center;
-            border: 2px dashed #cbd5e1;
-        }
-        .coming-soon-card .icon { font-size: 2rem; margin-bottom: 10px; }
-        .coming-soon-card h4 { color: var(--navy); font-size: 0.95rem; margin-bottom: 6px; }
-        .coming-soon-card p { color: #94a3b8; font-size: 0.82rem; }
+        /* SECTION LABEL */
+        .section-label { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+        .section-label h2 { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 1.1rem; color: var(--navy); text-transform: uppercase; letter-spacing: 0.5px; white-space: nowrap; }
+        .section-label .line { flex: 1; height: 2px; background: #e2e8f0; }
 
         /* SIDEBAR */
         .sports-sidebar { display: flex; flex-direction: column; gap: 28px; }
-
-        /* LIVE FEED */
-        .live-feed {
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 14px rgba(0,0,0,0.06);
-        }
-        .feed-header {
-            background: var(--navy);
-            padding: 16px 20px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .feed-header .live-dot {
-            width: 8px; height: 8px;
-            background: #22c55e;
-            border-radius: 50%;
-            animation: pulse 1.5s infinite;
-        }
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.3; }
-        }
-        .feed-header h3 {
-            color: white;
-            font-size: 0.85rem;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
+        .live-feed { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 14px rgba(0,0,0,0.06); }
+        .feed-header { background: var(--navy); padding: 16px 20px; display: flex; align-items: center; gap: 10px; }
+        .feed-header .live-dot { width: 8px; height: 8px; background: #22c55e; border-radius: 50%; animation: pulse 1.5s infinite; }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+        .feed-header h3 { color: white; font-size: 0.85rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; }
         .feed-body { padding: 16px 20px; }
-        .feed-item {
-            padding: 12px 0;
-            border-bottom: 1px solid #f1f5f9;
-        }
+        .feed-item { padding: 12px 0; border-bottom: 1px solid #f1f5f9; }
         .feed-item:last-child { border-bottom: none; }
-        .feed-item .feed-tag {
-            font-size: 0.65rem;
-            font-weight: 800;
-            text-transform: uppercase;
-            color: var(--red);
-            letter-spacing: 1px;
-            margin-bottom: 4px;
-            display: block;
-        }
-        .feed-item a {
-            text-decoration: none;
-            color: var(--navy);
-            font-size: 0.85rem;
-            font-weight: 600;
-            line-height: 1.4;
-            display: block;
-            transition: color 0.2s;
-        }
+        .feed-item .feed-tag { font-size: 0.65rem; font-weight: 800; text-transform: uppercase; color: var(--red); letter-spacing: 1px; margin-bottom: 4px; display: block; }
+        .feed-item a { text-decoration: none; color: var(--navy); font-size: 0.85rem; font-weight: 600; line-height: 1.4; display: block; transition: color 0.2s; }
         .feed-item a:hover { color: var(--red); }
-        .feed-item .feed-time {
-            font-size: 0.72rem;
-            color: #94a3b8;
-            margin-top: 4px;
-            display: block;
-        }
-
-        /* MARKETS SNAPSHOT */
-        .markets-box {
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 14px rgba(0,0,0,0.06);
-        }
-        .markets-header {
-            background: var(--red);
-            padding: 16px 20px;
-        }
-        .markets-header h3 {
-            color: white;
-            font-size: 0.85rem;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
+        .feed-item .feed-time { font-size: 0.72rem; color: #94a3b8; margin-top: 4px; display: block; }
+        .markets-box { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 14px rgba(0,0,0,0.06); }
+        .markets-header { background: var(--red); padding: 16px 20px; }
+        .markets-header h3 { color: white; font-size: 0.85rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; }
         .markets-header p { color: rgba(255,255,255,0.75); font-size: 0.75rem; margin-top: 2px; }
         .markets-body { padding: 16px 20px; }
-        .market-item {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 10px 0;
-            border-bottom: 1px solid #f1f5f9;
-        }
+        .market-item { display: flex; align-items: center; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #f1f5f9; }
         .market-item:last-child { border-bottom: none; }
         .market-item .m-label { font-size: 0.82rem; font-weight: 700; color: var(--navy); }
         .market-item .m-sub { font-size: 0.72rem; color: #64748b; margin-top: 2px; }
-        .market-item .m-odds {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 900;
-            font-size: 1.1rem;
-            color: var(--red);
-        }
-
-        /* AD */
-        .ad-box {
-            background: white;
-            border-radius: 10px;
-            padding: 20px;
-            border-top: 3px solid var(--red);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-            text-align: center;
-        }
+        .market-item .m-odds { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 1.1rem; color: var(--red); }
+        .ad-box { background: white; border-radius: 10px; padding: 20px; border-top: 3px solid var(--red); box-shadow: 0 4px 10px rgba(0,0,0,0.05); text-align: center; }
         .ad-box .ad-label { font-size: 0.68rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; display: block; }
         .ad-box .ad-inner { padding: 18px; border: 1px dashed #e2e8f0; border-radius: 6px; color: #64748b; }
 
-        /* SECTION LABEL */
-        .section-label {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 20px;
-        }
-        .section-label h2 {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 900;
-            font-size: 1.1rem;
-            color: var(--navy);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        .section-label .line {
-            flex: 1;
-            height: 2px;
-            background: #e2e8f0;
-        }
-
-        /* MOBILE */
         @media (max-width: 768px) {
             .sports-main { grid-template-columns: 1fr; }
             .articles-grid { grid-template-columns: 1fr; }
@@ -429,50 +121,45 @@
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
     <div class="nav-flex">
         <a href="index.html" class="logo-text">MISSISSIPPI<span>LEAD</span></a>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
-            <li><a href="sports.html" class="acquire-btn">Sports</a></li>
+            <li><a href="sports.html" class="sports-active">Sports</a></li>
             <li><a href="business.html">Business</a></li>
             <li><a href="lifestyle.html">Lifestyle</a></li>
         </ul>
     </div>
 </nav>
 
-<!-- PAGE HEADER -->
 <div class="sports-header">
     <span class="label">🏆 Sports Desk</span>
     <h1>Sports Analysis</h1>
     <p>Pre-game breakdowns, prediction market odds, and data-driven analysis for Mississippi sports fans — no hot takes, just numbers.</p>
 </div>
 
-<!-- FILTER TABS -->
 <div class="filter-bar">
     <div class="filter-tabs">
-        <button class="tab-btn active" data-sport="all">All Sports</button>
-        <button class="tab-btn" data-sport="ncaa">🏀 NCAA</button>
-        <button class="tab-btn" data-sport="nba">🏀 NBA</button>
-        <button class="tab-btn" data-sport="nfl">🏈 NFL</button>
-        <button class="tab-btn" data-sport="mlb">⚾ MLB</button>
-        <button class="tab-btn" data-sport="nhl">🏒 NHL</button>
-        <button class="tab-btn" data-sport="soccer">⚽ Soccer</button>
+        <button class="tab-btn active" data-filter="all">All Sports</button>
+        <button class="tab-btn" data-filter="ncaa">🏀 NCAA</button>
+        <button class="tab-btn" data-filter="nba">🏀 NBA</button>
+        <button class="tab-btn" data-filter="nfl">🏈 NFL</button>
+        <button class="tab-btn" data-filter="mlb">⚾ MLB</button>
+        <button class="tab-btn" data-filter="nhl">🏒 NHL</button>
+        <button class="tab-btn" data-filter="soccer">⚽ Soccer</button>
     </div>
 </div>
 
-<!-- MAIN -->
 <div class="sports-main">
     <div class="sports-content">
 
-        <!-- HERO -->
         <div class="section-label">
             <h2>Featured Analysis</h2>
             <div class="line"></div>
         </div>
 
-        <div class="hero-article" data-sport="ncaa" onclick="location.href='sports/houston-vs-illinois-sweet-16-2026.html'">
+        <div class="hero-article" data-cat="ncaa">
             <div class="hero-img-wrap">
                 <img src="assets/houston-illinois-sweet16.webp" alt="Houston vs Illinois Sweet 16 2026">
                 <div class="hero-overlay"></div>
@@ -482,105 +169,95 @@
                     <p>KenPom projects a one-point Houston win. Covers.com says take Illinois. Every major model calls it a coin flip. A deep breakdown of the matchup — and what the prediction markets are pricing that the models aren't.</p>
                     <div class="hero-meta">
                         <span class="odds-pill">HOU 59% · ILL 42% — Polymarket</span>
-                        <a href="sports/houston-vs-illinois-sweet-16-2026.html" class="read-btn" onclick="event.stopPropagation()">Read Analysis →</a>
+                        <a href="sports/houston-vs-illinois-sweet-16-2026.html" class="read-btn">Read Analysis →</a>
                         <span class="date">March 26, 2026</span>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- ARTICLES GRID -->
-        <div class="section-label" style="margin-top: 10px;">
+        <div class="section-label" style="margin-top:10px;">
             <h2>More Analysis</h2>
             <div class="line"></div>
         </div>
 
-        <div class="articles-grid" id="articles-grid">
+        <div class="articles-grid">
 
-            <!-- NBA card -->
-            <div class="article-card" data-sport="nba">
-                <img src="assets/nba-preview.webp" onerror="this.src='https://placehold.co/600x300/0f172a/ffffff?text=NBA+Analysis'" alt="NBA Preview">
+            <div class="article-card" data-cat="nba">
+                <img src="assets/nba-preview.webp" onerror="this.src='https://placehold.co/600x300/0f172a/ffffff?text=NBA+Analysis'" alt="NBA">
                 <div class="card-body">
                     <span class="card-sport-tag">🏀 NBA</span>
                     <h3>Coming Soon: Next NBA Game Analysis</h3>
                     <p>Pre-game breakdown, key matchups, and prediction market odds for the next major NBA matchup on our radar.</p>
-                    <a href="#">Coming Soon →</a>
+                    <a href="#" class="card-link">Coming Soon →</a>
                 </div>
             </div>
 
-            <!-- NFL card -->
-            <div class="article-card" data-sport="nfl">
-                <img src="assets/nfl-preview.webp" onerror="this.src='https://placehold.co/600x300/0f172a/ffffff?text=NFL+Analysis'" alt="NFL Preview">
+            <div class="article-card" data-cat="nfl">
+                <img src="assets/nfl-preview.webp" onerror="this.src='https://placehold.co/600x300/0f172a/ffffff?text=NFL+Analysis'" alt="NFL">
                 <div class="card-body">
                     <span class="card-sport-tag">🏈 NFL</span>
                     <h3>NFL Draft 2026: Mississippi State's Brenen Thompson and What the Combine Told Us</h3>
-                    <p>The fastest 40-yard dash at the 2026 combine came from a Bulldog. A breakdown of Thompson's draft stock, landing spots, and what Mississippi fans should expect.</p>
-                    <a href="#">Coming Soon →</a>
+                    <p>The fastest 40-yard dash at the 2026 combine came from a Bulldog. A breakdown of Thompson's draft stock and landing spots.</p>
+                    <a href="#" class="card-link">Coming Soon →</a>
                 </div>
             </div>
 
-            <!-- MLB card -->
-            <div class="article-card" data-sport="mlb">
-                <img src="assets/mlb-preview.webp" onerror="this.src='https://placehold.co/600x300/0f172a/ffffff?text=MLB+Analysis'" alt="MLB Preview">
+            <div class="article-card" data-cat="mlb">
+                <img src="assets/mlb-preview.webp" onerror="this.src='https://placehold.co/600x300/0f172a/ffffff?text=MLB+Analysis'" alt="MLB">
                 <div class="card-body">
                     <span class="card-sport-tag">⚾ MLB</span>
                     <h3>Opening Day 2026: Yankees vs. Giants — Data Preview and Market Odds</h3>
-                    <p>The season opener that Google Trends in Mississippi is tracking. FanGraphs projections, Baseball Savant pitch data, and what Dimers says about the moneyline.</p>
-                    <a href="#">Coming Soon →</a>
+                    <p>FanGraphs projections, Baseball Savant pitch data, and what Dimers says about the moneyline for Opening Day.</p>
+                    <a href="#" class="card-link">Coming Soon →</a>
                 </div>
             </div>
 
-            <!-- NHL card -->
-            <div class="article-card" data-sport="nhl">
-                <img src="assets/nhl-preview.webp" onerror="this.src='https://placehold.co/600x300/0f172a/ffffff?text=NHL+Analysis'" alt="NHL Preview">
+            <div class="article-card" data-cat="nhl">
+                <img src="assets/nhl-preview.webp" onerror="this.src='https://placehold.co/600x300/0f172a/ffffff?text=NHL+Analysis'" alt="NHL">
                 <div class="card-body">
                     <span class="card-sport-tag">🏒 NHL</span>
                     <h3>Stanley Cup Playoff Race: Who's In, Who's Out, and What MoneyPuck Says</h3>
-                    <p>With the regular season winding down, MoneyPuck's playoff probability model and Daily Faceoff's goalie matchup data paint a clear picture of the postseason field.</p>
-                    <a href="#">Coming Soon →</a>
+                    <p>MoneyPuck's playoff probability model and Daily Faceoff's goalie matchup data paint a clear picture of the postseason field.</p>
+                    <a href="#" class="card-link">Coming Soon →</a>
                 </div>
             </div>
 
-            <!-- NCAA card 2 -->
-            <div class="article-card" data-sport="ncaa">
-                <img src="assets/ncaa-preview.webp" onerror="this.src='https://placehold.co/600x300/0f172a/ffffff?text=NCAA+Analysis'" alt="NCAA Preview">
+            <div class="article-card" data-cat="ncaa">
+                <img src="assets/ncaa-preview.webp" onerror="this.src='https://placehold.co/600x300/0f172a/ffffff?text=NCAA+Analysis'" alt="NCAA">
                 <div class="card-body">
                     <span class="card-sport-tag">🏀 NCAA · Elite Eight Preview</span>
                     <h3>If Houston Advances: Who Awaits in the Elite Eight — and What the Numbers Say</h3>
-                    <p>A look ahead at the South Region Elite Eight matchup, contingent on tonight's result. KenPom win probabilities for every possible opponent.</p>
-                    <a href="#">Coming Soon →</a>
+                    <p>A look ahead at the South Region Elite Eight matchup. KenPom win probabilities for every possible opponent.</p>
+                    <a href="#" class="card-link">Coming Soon →</a>
                 </div>
             </div>
 
-            <!-- Soccer card -->
-            <div class="article-card" data-sport="soccer">
-                <img src="assets/soccer-preview.webp" onerror="this.src='https://placehold.co/600x300/0f172a/ffffff?text=Soccer+Analysis'" alt="Soccer Preview">
+            <div class="article-card" data-cat="soccer">
+                <img src="assets/soccer-preview.webp" onerror="this.src='https://placehold.co/600x300/0f172a/ffffff?text=Soccer+Analysis'" alt="Soccer">
                 <div class="card-body">
                     <span class="card-sport-tag">⚽ Soccer · World Cup 2026</span>
-                    <h3>World Cup 2026: Opta's Win Probabilities for Every Group — and the Value Bets Worth Watching</h3>
-                    <p>With matches coming to American soil this summer, Opta Analyst's supercomputer has released its group-stage win probabilities. Here's where the market is mispriced.</p>
-                    <a href="#">Coming Soon →</a>
+                    <h3>World Cup 2026: Opta's Win Probabilities for Every Group</h3>
+                    <p>With matches coming to American soil this summer, Opta Analyst's supercomputer has released its group-stage win probabilities.</p>
+                    <a href="#" class="card-link">Coming Soon →</a>
                 </div>
             </div>
 
         </div>
     </div>
 
-    <!-- SIDEBAR -->
     <aside class="sports-sidebar">
 
-        <!-- LIVE NEWS FEED -->
         <div class="live-feed">
             <div class="feed-header">
                 <div class="live-dot"></div>
                 <h3>Live Sports News</h3>
             </div>
             <div class="feed-body" id="sports-live-feed">
-                <div style="padding: 20px 0; text-align: center; color: #94a3b8; font-size: 0.85rem;">Loading latest sports news...</div>
+                <div style="padding:20px 0;text-align:center;color:#94a3b8;font-size:0.85rem;">Loading...</div>
             </div>
         </div>
 
-        <!-- PREDICTION MARKETS SNAPSHOT -->
         <div class="markets-box">
             <div class="markets-header">
                 <h3>📊 Prediction Markets</h3>
@@ -588,147 +265,110 @@
             </div>
             <div class="markets-body">
                 <div class="market-item">
-                    <div>
-                        <div class="m-label">Houston vs Illinois</div>
-                        <div class="m-sub">NCAA Sweet 16 · Tonight</div>
-                    </div>
-                    <div style="text-align: right;">
-                        <div class="m-odds">HOU 59¢</div>
-                        <div class="m-sub">Polymarket</div>
-                    </div>
+                    <div><div class="m-label">Houston vs Illinois</div><div class="m-sub">NCAA Sweet 16 · Tonight</div></div>
+                    <div style="text-align:right"><div class="m-odds">HOU 59¢</div><div class="m-sub">Polymarket</div></div>
                 </div>
                 <div class="market-item">
-                    <div>
-                        <div class="m-label">Michigan vs Alabama</div>
-                        <div class="m-sub">NCAA Sweet 16 · Fri Mar 27</div>
-                    </div>
-                    <div style="text-align: right;">
-                        <div class="m-odds">MICH 82%</div>
-                        <div class="m-sub">Kalshi</div>
-                    </div>
+                    <div><div class="m-label">Michigan vs Alabama</div><div class="m-sub">NCAA Sweet 16 · Fri Mar 27</div></div>
+                    <div style="text-align:right"><div class="m-odds">MICH 82%</div><div class="m-sub">Kalshi</div></div>
                 </div>
                 <div class="market-item">
-                    <div>
-                        <div class="m-label">March Madness Champion</div>
-                        <div class="m-sub">NCAA Tournament Futures</div>
-                    </div>
-                    <div style="text-align: right;">
-                        <div class="m-odds">MICH +300</div>
-                        <div class="m-sub">bet365</div>
-                    </div>
+                    <div><div class="m-label">March Madness Champion</div><div class="m-sub">NCAA Futures</div></div>
+                    <div style="text-align:right"><div class="m-odds">MICH +300</div><div class="m-sub">bet365</div></div>
                 </div>
                 <div class="market-item">
-                    <div>
-                        <div class="m-label">Yankees vs Giants</div>
-                        <div class="m-sub">MLB Opening Day</div>
-                    </div>
-                    <div style="text-align: right;">
-                        <div class="m-odds">NYY 58%</div>
-                        <div class="m-sub">Dimers</div>
-                    </div>
+                    <div><div class="m-label">Yankees vs Giants</div><div class="m-sub">MLB Opening Day</div></div>
+                    <div style="text-align:right"><div class="m-odds">NYY 58%</div><div class="m-sub">Dimers</div></div>
                 </div>
-                <p style="font-size: 0.72rem; color: #94a3b8; margin-top: 14px; line-height: 1.5;">
-                    Odds shown for informational purposes only. Mississippi Lead does not facilitate wagering. Update odds manually as markets move.
-                </p>
+                <p style="font-size:0.72rem;color:#94a3b8;margin-top:14px;line-height:1.5;">Odds shown for informational purposes only. Mississippi Lead does not facilitate wagering.</p>
             </div>
         </div>
 
-        <!-- AD -->
         <div class="ad-box">
             <span class="ad-label">Sponsored Content</span>
             <div class="ad-inner">
-                <strong style="color: var(--navy); display: block; margin-bottom: 6px;">AD SPACE AVAILABLE</strong>
-                <small style="font-size: 0.8rem;">(Google AdSense / Adsy Space)</small>
+                <strong style="color:var(--navy);display:block;margin-bottom:6px;">AD SPACE AVAILABLE</strong>
+                <small>(Google AdSense / Adsy Space)</small>
             </div>
         </div>
 
     </aside>
 </div>
 
-<!-- FOOTER -->
-<footer style="background: #0f172a; color: white; padding: 60px 0 30px; margin-top: 60px;">
-    <div style="width: 90%; max-width: 1100px; margin: auto;">
-        <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 40px; margin-bottom: 40px;">
-            <div style="flex: 1; min-width: 250px;">
-                <h3 style="color: #b91c1c; margin-bottom: 16px;">MISSISSIPPI LEAD</h3>
-                <p style="color: #94a3b8; font-size: 0.9rem;">The premier source for business intelligence, local news, and strategic insights in the Magnolia State.</p>
+<footer style="background:#0f172a;color:white;padding:60px 0 30px;margin-top:60px;">
+    <div style="width:90%;max-width:1100px;margin:auto;">
+        <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:40px;margin-bottom:40px;">
+            <div style="flex:1;min-width:250px;">
+                <h3 style="color:#b91c1c;margin-bottom:16px;">MISSISSIPPI LEAD</h3>
+                <p style="color:#94a3b8;font-size:0.9rem;">The premier source for business intelligence, local news, and strategic insights in the Magnolia State.</p>
             </div>
-            <div style="flex: 1; min-width: 150px;">
-                <h3 style="margin-bottom: 16px; font-size: 1rem;">Quick Links</h3>
-                <ul style="list-style: none; font-size: 0.9rem;">
-                    <li style="margin-bottom: 8px;"><a href="about.html" style="color: #94a3b8; text-decoration: none;">About Us</a></li>
-                    <li style="margin-bottom: 8px;"><a href="sports.html" style="color: #94a3b8; text-decoration: none;">Sports Analysis</a></li>
-                    <li style="margin-bottom: 8px;"><a href="business.html" style="color: #94a3b8; text-decoration: none;">Business Directory</a></li>
-                    <li style="margin-bottom: 8px;"><a href="privacy.html" style="color: #94a3b8; text-decoration: none;">Privacy Policy</a></li>
+            <div style="flex:1;min-width:150px;">
+                <h3 style="margin-bottom:16px;font-size:1rem;">Quick Links</h3>
+                <ul style="list-style:none;font-size:0.9rem;">
+                    <li style="margin-bottom:8px;"><a href="about.html" style="color:#94a3b8;text-decoration:none;">About Us</a></li>
+                    <li style="margin-bottom:8px;"><a href="sports.html" style="color:#94a3b8;text-decoration:none;">Sports Analysis</a></li>
+                    <li style="margin-bottom:8px;"><a href="business.html" style="color:#94a3b8;text-decoration:none;">Business Directory</a></li>
+                    <li style="margin-bottom:8px;"><a href="privacy.html" style="color:#94a3b8;text-decoration:none;">Privacy Policy</a></li>
                 </ul>
             </div>
-            <div style="flex: 1; min-width: 200px;">
-                <h3 style="margin-bottom: 16px; font-size: 1rem;">Contact</h3>
-                <p style="color: #94a3b8; font-size: 0.9rem;">📍 Capitol Street, Jackson, MS, USA</p>
-                <p style="color: #94a3b8; font-size: 0.9rem;">✉️ <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f990979f96b994908a8a908a8a90898990959c989dd79a9694">[email&#160;protected]</a></p>
+            <div style="flex:1;min-width:200px;">
+                <h3 style="margin-bottom:16px;font-size:1rem;">Contact</h3>
+                <p style="color:#94a3b8;font-size:0.9rem;">📍 Capitol Street, Jackson, MS, USA</p>
+                <p style="color:#94a3b8;font-size:0.9rem;">✉️ info@mississippilead.com</p>
             </div>
         </div>
-        <div style="border-top: 1px solid #1e293b; padding-top: 20px; text-align: center; color: #64748b; font-size: 0.85rem;">
-            <p>© 2026 MississippiLead.com | All Rights Reserved. | <a href="privacy.html" style="color: #64748b; text-decoration: underline;">Privacy Policy</a></p>
+        <div style="border-top:1px solid #1e293b;padding-top:20px;text-align:center;color:#64748b;font-size:0.85rem;">
+            <p>© 2026 MississippiLead.com | All Rights Reserved. | <a href="privacy.html" style="color:#64748b;text-decoration:underline;">Privacy Policy</a></p>
         </div>
     </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-    // FILTER TABS
-    const tabBtns = document.querySelectorAll('.tab-btn');
-    const heroArticle = document.querySelector('.hero-article');
-    const heroSectionLabel = document.querySelector('.section-label:first-of-type');
-    const articleCards = document.querySelectorAll('.article-card');
-
-    tabBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            // update active tab
-            tabBtns.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-
-            const sport = btn.dataset.sport;
-
-            // show/hide hero
-            if (heroArticle) {
-                const heroSport = heroArticle.getAttribute('data-sport');
-                const showHero = (sport === 'all' || heroSport === sport);
-                heroArticle.style.display = showHero ? '' : 'none';
-            }
-
-            // show/hide grid cards
-            let anyVisible = false;
-            articleCards.forEach(card => {
-                const cardSport = card.getAttribute('data-sport');
-                const show = (sport === 'all' || cardSport === sport);
-                card.style.display = show ? '' : 'none';
-                if (show) anyVisible = true;
-            });
+<script>
+// FILTER TABS
+document.querySelectorAll('.tab-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+        document.querySelectorAll('.tab-btn').forEach(function(b) { b.classList.remove('active'); });
+        this.classList.add('active');
+        var filter = this.getAttribute('data-filter');
+        // filter hero
+        var hero = document.querySelector('.hero-article');
+        if (hero) {
+            hero.style.display = (filter === 'all' || hero.getAttribute('data-cat') === filter) ? '' : 'none';
+        }
+        // filter cards
+        document.querySelectorAll('.article-card').forEach(function(card) {
+            card.style.display = (filter === 'all' || card.getAttribute('data-cat') === filter) ? '' : 'none';
         });
     });
+});
 
-    // LIVE RSS FEED
-    async function loadSportsFeed() {
-        const feedEl = document.getElementById('sports-live-feed');
-        const SPORTS_URL = 'https://news.google.com/rss/search?q=NCAA+tournament+NBA+NFL+MLB+sports+news+2026&hl=en-US&gl=US&ceid=US:en';
-        const tags = ['NCAA', 'NBA', 'NFL', 'MLB', 'NHL', 'SPORTS'];
-        try {
-            const res = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(SPORTS_URL)}`);
-            const data = await res.json();
-            if (data.status !== 'ok') throw new Error();
-            let html = '';
-            data.items.slice(0, 7).forEach((item, i) => {
-                const tag = tags[i % tags.length];
-                const pubDate = new Date(item.pubDate);
-                const timeAgo = Math.round((Date.now() - pubDate) / 60000);
-                const timeStr = timeAgo < 60 ? `${timeAgo}m ago` : `${Math.round(timeAgo/60)}h ago`;
-                html += `
-                    <div class="feed-item">
-                        <span class="feed-tag">${tag}</span>
-                        <a href="${item.link}" target="_blank" rel="noopener">${item.title.split(' - ')[0]}</a>
-                        <span class="feed-time">${timeStr}</span>
-                    </div>`;
-            });
-            feedEl.innerHTML = html;
-        } catch(e) {
-     
+// LIVE RSS FEED
+async function loadSportsFeed() {
+    var feedEl = document.getElementById('sports-live-feed');
+    var tags = ['NCAA', 'NBA', 'NFL', 'MLB', 'NHL', 'SPORTS'];
+    try {
+        var url = 'https://news.google.com/rss/search?q=NCAA+tournament+NBA+NFL+MLB+sports+2026&hl=en-US&gl=US&ceid=US:en';
+        var res = await fetch('https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent(url));
+        var data = await res.json();
+        if (data.status !== 'ok') throw new Error();
+        var html = '';
+        data.items.slice(0, 7).forEach(function(item, i) {
+            var tag = tags[i % tags.length];
+            var mins = Math.round((Date.now() - new Date(item.pubDate)) / 60000);
+            var timeStr = mins < 60 ? mins + 'm ago' : Math.round(mins / 60) + 'h ago';
+            html += '<div class="feed-item">'
+                  + '<span class="feed-tag">' + tag + '</span>'
+                  + '<a href="' + item.link + '" target="_blank" rel="noopener">' + item.title.split(' - ')[0] + '</a>'
+                  + '<span class="feed-time">' + timeStr + '</span>'
+                  + '</div>';
+        });
+        feedEl.innerHTML = html;
+    } catch(e) {
+        feedEl.innerHTML = '<p style="font-size:0.8rem;color:#94a3b8;padding:10px 0;">News feed temporarily unavailable.</p>';
+    }
+}
+window.addEventListener('DOMContentLoaded', loadSportsFeed);
+</script>
+
+</body>
+</html>
