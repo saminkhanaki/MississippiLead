@@ -35,13 +35,8 @@
         .nav-links { list-style: none; display: flex; gap: 28px; }
         .nav-links a { text-decoration: none; color: var(--navy); font-weight: 600; font-size: 0.9rem; transition: color 0.2s; }
         .nav-links a:hover, .nav-links a.active { color: var(--red); }
-        .        .acquire-btn { 
-            background: var(--accent-red) !important; 
-            color: white !important; 
-            padding: 8px 16px !important; 
-            border-radius: 4px; 
-            transition: 0.3s;
-        }
+        .acquire-btn { background: var(--red); color: white !important; padding: 8px 18px; border-radius: 5px; }
+        .nav-links .acquire-btn:hover { background: #991b1b; color: white !important; }
 
         /* PAGE HEADER */
         .sports-header {
@@ -136,7 +131,7 @@
         }
         .hero-article .hero-img-wrap {
             position: relative;
-            height: 300px;
+            height: 420px;
             overflow: hidden;
         }
         .hero-article img {
@@ -503,7 +498,7 @@
         <div class="articles-grid" id="articles-grid">
 
             <!-- NBA card -->
-            <div class="article-card" data-sport="nba" onclick="location.href='#'">
+            <div class="article-card" data-sport="nba">
                 <img src="assets/nba-preview.webp" onerror="this.src='https://placehold.co/600x300/0f172a/ffffff?text=NBA+Analysis'" alt="NBA Preview">
                 <div class="card-body">
                     <span class="card-sport-tag">🏀 NBA</span>
@@ -514,7 +509,7 @@
             </div>
 
             <!-- NFL card -->
-            <div class="article-card" data-sport="nfl" onclick="location.href='#'">
+            <div class="article-card" data-sport="nfl">
                 <img src="assets/nfl-preview.webp" onerror="this.src='https://placehold.co/600x300/0f172a/ffffff?text=NFL+Analysis'" alt="NFL Preview">
                 <div class="card-body">
                     <span class="card-sport-tag">🏈 NFL</span>
@@ -525,7 +520,7 @@
             </div>
 
             <!-- MLB card -->
-            <div class="article-card" data-sport="mlb" onclick="location.href='#'">
+            <div class="article-card" data-sport="mlb">
                 <img src="assets/mlb-preview.webp" onerror="this.src='https://placehold.co/600x300/0f172a/ffffff?text=MLB+Analysis'" alt="MLB Preview">
                 <div class="card-body">
                     <span class="card-sport-tag">⚾ MLB</span>
@@ -536,7 +531,7 @@
             </div>
 
             <!-- NHL card -->
-            <div class="article-card" data-sport="nhl" onclick="location.href='#'">
+            <div class="article-card" data-sport="nhl">
                 <img src="assets/nhl-preview.webp" onerror="this.src='https://placehold.co/600x300/0f172a/ffffff?text=NHL+Analysis'" alt="NHL Preview">
                 <div class="card-body">
                     <span class="card-sport-tag">🏒 NHL</span>
@@ -547,7 +542,7 @@
             </div>
 
             <!-- NCAA card 2 -->
-            <div class="article-card" data-sport="ncaa" onclick="location.href='#'">
+            <div class="article-card" data-sport="ncaa">
                 <img src="assets/ncaa-preview.webp" onerror="this.src='https://placehold.co/600x300/0f172a/ffffff?text=NCAA+Analysis'" alt="NCAA Preview">
                 <div class="card-body">
                     <span class="card-sport-tag">🏀 NCAA · Elite Eight Preview</span>
@@ -558,7 +553,7 @@
             </div>
 
             <!-- Soccer card -->
-            <div class="article-card" data-sport="soccer" onclick="location.href='#'">
+            <div class="article-card" data-sport="soccer">
                 <img src="assets/soccer-preview.webp" onerror="this.src='https://placehold.co/600x300/0f172a/ffffff?text=Soccer+Analysis'" alt="Soccer Preview">
                 <div class="card-body">
                     <span class="card-sport-tag">⚽ Soccer · World Cup 2026</span>
@@ -680,10 +675,11 @@
 </footer>
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-    // FILTER TABS — tabs always visible, only active state changes
+    // FILTER TABS
     const tabBtns = document.querySelectorAll('.tab-btn');
     const heroArticle = document.querySelector('.hero-article');
-    const articleCards = document.querySelectorAll('.articles-grid .article-card');
+    const heroSectionLabel = document.querySelector('.section-label:first-of-type');
+    const articleCards = document.querySelectorAll('.article-card');
 
     tabBtns.forEach(btn => {
         btn.addEventListener('click', () => {
@@ -695,12 +691,18 @@
 
             // show/hide hero
             if (heroArticle) {
-                heroArticle.style.display = (sport === 'all' || heroArticle.dataset.sport === sport) ? '' : 'none';
+                const heroSport = heroArticle.getAttribute('data-sport');
+                const showHero = (sport === 'all' || heroSport === sport);
+                heroArticle.style.display = showHero ? '' : 'none';
             }
 
             // show/hide grid cards
+            let anyVisible = false;
             articleCards.forEach(card => {
-                card.style.display = (sport === 'all' || card.dataset.sport === sport) ? '' : 'none';
+                const cardSport = card.getAttribute('data-sport');
+                const show = (sport === 'all' || cardSport === sport);
+                card.style.display = show ? '' : 'none';
+                if (show) anyVisible = true;
             });
         });
     });
