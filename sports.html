@@ -664,7 +664,7 @@
             <div style="flex: 1; min-width: 200px;">
                 <h3 style="margin-bottom: 16px; font-size: 1rem;">Contact</h3>
                 <p style="color: #94a3b8; font-size: 0.9rem;">📍 Capitol Street, Jackson, MS, USA</p>
-                <p style="color: #94a3b8; font-size: 0.9rem;">✉️ info@mississippilead.com</p>
+                <p style="color: #94a3b8; font-size: 0.9rem;">✉️ <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f990979f96b994908a8a908a8a90898990959c989dd79a9694">[email&#160;protected]</a></p>
             </div>
         </div>
         <div style="border-top: 1px solid #1e293b; padding-top: 20px; text-align: center; color: #64748b; font-size: 0.85rem;">
@@ -673,22 +673,28 @@
     </div>
 </footer>
 
-<script>
-    // FILTER TABS
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    // FILTER TABS — tabs always visible, only active state changes
     const tabBtns = document.querySelectorAll('.tab-btn');
-    const cards = document.querySelectorAll('[data-sport]');
+    const heroArticle = document.querySelector('.hero-article');
+    const articleCards = document.querySelectorAll('.articles-grid .article-card');
 
     tabBtns.forEach(btn => {
         btn.addEventListener('click', () => {
+            // update active tab
             tabBtns.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
+
             const sport = btn.dataset.sport;
-            cards.forEach(card => {
-                if (sport === 'all' || card.dataset.sport === sport) {
-                    card.style.display = '';
-                } else {
-                    card.style.display = 'none';
-                }
+
+            // show/hide hero
+            if (heroArticle) {
+                heroArticle.style.display = (sport === 'all' || heroArticle.dataset.sport === sport) ? '' : 'none';
+            }
+
+            // show/hide grid cards
+            articleCards.forEach(card => {
+                card.style.display = (sport === 'all' || card.dataset.sport === sport) ? '' : 'none';
             });
         });
     });
@@ -717,12 +723,3 @@
             });
             feedEl.innerHTML = html;
         } catch(e) {
-            feedEl.innerHTML = '<p style="font-size:0.8rem;color:#94a3b8;padding:10px 0;">News feed temporarily unavailable.</p>';
-        }
-    }
-
-    window.addEventListener('DOMContentLoaded', loadSportsFeed);
-</script>
-
-</body>
-</html>
