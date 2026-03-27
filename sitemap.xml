@@ -4,13 +4,19 @@
   <!-- Core Pages -->
   <url>
     <loc>https://mississippilead.com/</loc>
-    <lastmod>2026-03-23</lastmod>
+    <lastmod>2026-03-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.00</priority>
   </url>
   <url>
     <loc>https://mississippilead.com/archive.html</loc>
-    <lastmod>2026-03-23</lastmod>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://mississippilead.com/sports.html</loc>
+    <lastmod>2026-03-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.80</priority>
   </url>
@@ -37,7 +43,15 @@
     <priority>0.25</priority>
   </url>
 
-  <!-- March 2026 — New Articles -->
+  <!-- Sports Articles -->
+  <url>
+    <loc>https://mississippilead.com/sports/houston-vs-illinois-sweet-16-2026.html</loc>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- March 2026 — Archive Articles -->
   <url>
     <loc>https://mississippilead.com/archive/dibiase-verdict-2026.html</loc>
     <lastmod>2026-03-23</lastmod>
@@ -46,7 +60,7 @@
   </url>
   <url>
     <loc>https://mississippilead.com/archive/international-paper-mississippi-2026.html</loc>
-    <lastmod>2026-03-23</lastmod>
+    <lastmod>2026-03-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
