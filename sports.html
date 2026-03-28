@@ -5,12 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sports Analysis | Mississippi Lead</title>
     <meta name="description" content="Pre-game analysis, prediction market odds, and data-driven sports coverage for Mississippi fans — NCAA, NBA, NFL, MLB, NHL and Soccer.">
-    <meta name="keywords" content="mississippi sports analysis, march madness predictions 2026, NBA picks mississippi, SEC football analysis, sports betting odds mississippi">
     <link rel="canonical" href="https://mississippilead.com/sports.html">
-    <meta property="og:title" content="Sports Analysis | Mississippi Lead">
-    <meta property="og:description" content="Pre-game analysis and prediction market coverage for Mississippi sports fans.">
-    <meta property="og:url" content="https://mississippilead.com/sports.html">
-    <meta property="og:image" content="https://mississippilead.com/assets/sports-og.webp">
     <link rel="icon" type="image/png" href="assets/favicon.png">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,8 +23,8 @@
         .nav-links { list-style: none; display: flex; gap: 28px; align-items: center; }
         .nav-links a { text-decoration: none; color: var(--navy); font-weight: 600; font-size: 0.9rem; transition: color 0.2s; }
         .nav-links a:hover { color: var(--red); }
-        .nav-links .sports-active { background: var(--red); color: white !important; padding: 8px 18px; border-radius: 5px; }
-        .nav-links .sports-active:hover { background: #991b1b; }
+        .sports-active { background: var(--red); color: white !important; padding: 8px 18px; border-radius: 5px; }
+        .sports-active:hover { background: #991b1b !important; }
 
         /* PAGE HEADER */
         .sports-header { background: var(--navy); padding: 40px 20px 35px; text-align: center; }
@@ -53,8 +48,6 @@
         .hero-article .hero-img-wrap { position: relative; height: 300px; overflow: hidden; }
         .hero-article img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; display: block; }
         .hero-article:hover img { transform: scale(1.03); }
-
-        /* hero content below image */
         .hero-content-below { padding: 24px 28px 28px; background: white; }
         .sport-badge { display: inline-block; background: var(--red); color: white; font-size: 0.68rem; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 10px; border-radius: 4px; margin-bottom: 14px; }
         .hero-content-below h2 { font-family: 'Playfair Display', serif; font-size: 1.75rem; color: var(--navy); line-height: 1.25; margin-bottom: 12px; }
@@ -124,7 +117,7 @@
 <nav>
     <div class="nav-flex">
         <a href="index.html" class="logo" style="display: flex; align-items: center; gap: 12px; text-decoration: none;">
-            <img src="assets/logo.png" width="1000" height="1000" alt="Logo" style="height: 40px; width: auto;">
+            <img src="assets/logo.png" alt="Logo" style="height: 40px; width: auto;">
             <span class="logo-text">MISSISSIPPI<span>LEAD</span></span>
         </a>
         <ul class="nav-links">
@@ -148,7 +141,7 @@
         <button class="tab-btn" data-filter="ncaa">🏀 NCAA</button>
         <button class="tab-btn" data-filter="nba">🏀 NBA</button>
         <button class="tab-btn" data-filter="nfl">🏈 NFL</button>
-        <button class="tab-btn" data-filter="mlb">⚾ MLB</button>
+        <button class="tab-btn" data-filter="mlb">⚾ Baseball</button>
         <button class="tab-btn" data-filter="nhl">🏒 NHL</button>
         <button class="tab-btn" data-filter="soccer">⚽ Soccer</button>
     </div>
@@ -162,16 +155,19 @@
             <div class="line"></div>
         </div>
 
-        <div class="hero-article" data-cat="ncaa">
+        <!-- HERO — MSState vs Ole Miss -->
+        <div class="hero-article" data-cat="mlb">
             <div class="hero-img-wrap">
-                <img src="assets/msstate-olemiss-game2.webp" onerror="this.src='https://placehold.co/1200x400/0f172a/ffffff?text=MSState+vs+Ole+Miss'" alt="Mississippi State vs Ole Miss Baseball Game 2 Swayze Field 2026">
+                <img src="assets/msstate-olemiss-game2.webp"
+                     onerror="this.src='https://placehold.co/1200x300/0f172a/ffffff?text=MSState+vs+Ole+Miss'"
+                     alt="Mississippi State vs Ole Miss Baseball Game 2 Swayze Field 2026">
             </div>
             <div class="hero-content-below">
                 <span class="sport-badge">⚾ SEC Baseball · Game 2 of 3</span>
                 <h2>The Ace vs. The Unknown: Breaking Down Mississippi State vs. Ole Miss Game 2 at Swayze Field</h2>
                 <p>No. 6 Mississippi State sends undefeated Tomas Valincius (5-0, 1.04 ERA) to the mound. Ole Miss hasn't named a starter. MSU leads the series 1-0 after a dramatic ninth-inning comeback on Friday. Everything you need to know before 1:30 PM CT.</p>
                 <div class="hero-meta">
-                    <span class="odds-pill">⚾ #6 MSU vs #18 Ole Miss · 1:30 PM CT</span>
+                    <span class="odds-pill">⚾ #6 MSU vs #18 Ole Miss · 1:30 PM CT · Swayze Field</span>
                     <a href="sports/msstate-vs-olemiss-game2-2026.html" class="read-btn">Read Analysis →</a>
                     <span class="date">March 28, 2026</span>
                 </div>
@@ -185,18 +181,24 @@
 
         <div class="articles-grid">
 
+            <!-- NCAA: Houston vs Illinois -->
             <div class="article-card" data-cat="ncaa">
-                <img src="assets/houston-illinois-sweet16.webp" onerror="this.src='https://placehold.co/600x300/0f172a/ffffff?text=NCAA+Analysis'" alt="Houston vs Illinois">
+                <img src="assets/houston-illinois-sweet16.webp"
+                     onerror="this.src='https://placehold.co/600x300/0f172a/ffffff?text=NCAA+Sweet+16'"
+                     alt="Houston vs Illinois Sweet 16 2026">
                 <div class="card-body">
                     <span class="card-sport-tag">🏀 NCAA · Sweet 16</span>
                     <h3>Immovable Object vs. Unstoppable Force: Houston vs. Illinois Sweet 16</h3>
-                    <p>KenPom projects a one-point Houston win. Covers.com says take Illinois. A full pre-game breakdown of the best matchup of the Sweet 16.</p>
+                    <p>KenPom projects a one-point Houston win. Covers.com says take Illinois. Every major model calls it a coin flip. A full pre-game breakdown.</p>
                     <a href="sports/houston-vs-illinois-sweet-16-2026.html" class="card-link">Read Analysis →</a>
                 </div>
             </div>
 
+            <!-- NBA -->
             <div class="article-card" data-cat="nba">
-                <img src="assets/nba-preview.webp" onerror="this.src='https://placehold.co/600x300/0f172a/ffffff?text=NBA+Analysis'" alt="NBA">
+                <img src="assets/nba-preview.webp"
+                     onerror="this.src='https://placehold.co/600x300/0f172a/ffffff?text=NBA+Analysis'"
+                     alt="NBA">
                 <div class="card-body">
                     <span class="card-sport-tag">🏀 NBA</span>
                     <h3>Coming Soon: Next NBA Game Analysis</h3>
@@ -205,8 +207,11 @@
                 </div>
             </div>
 
+            <!-- NFL -->
             <div class="article-card" data-cat="nfl">
-                <img src="assets/nfl-preview.webp" onerror="this.src='https://placehold.co/600x300/0f172a/ffffff?text=NFL+Analysis'" alt="NFL">
+                <img src="assets/nfl-preview.webp"
+                     onerror="this.src='https://placehold.co/600x300/0f172a/ffffff?text=NFL+Analysis'"
+                     alt="NFL">
                 <div class="card-body">
                     <span class="card-sport-tag">🏈 NFL</span>
                     <h3>NFL Draft 2026: Mississippi State's Brenen Thompson and What the Combine Told Us</h3>
@@ -215,8 +220,11 @@
                 </div>
             </div>
 
+            <!-- MLB -->
             <div class="article-card" data-cat="mlb">
-                <img src="assets/mlb-preview.webp" onerror="this.src='https://placehold.co/600x300/0f172a/ffffff?text=MLB+Analysis'" alt="MLB">
+                <img src="assets/mlb-preview.webp"
+                     onerror="this.src='https://placehold.co/600x300/0f172a/ffffff?text=Baseball+Analysis'"
+                     alt="Baseball">
                 <div class="card-body">
                     <span class="card-sport-tag">⚾ MLB</span>
                     <h3>Opening Day 2026: Yankees vs. Giants — Data Preview and Market Odds</h3>
@@ -225,8 +233,11 @@
                 </div>
             </div>
 
+            <!-- NHL -->
             <div class="article-card" data-cat="nhl">
-                <img src="assets/nhl-preview.webp" onerror="this.src='https://placehold.co/600x300/0f172a/ffffff?text=NHL+Analysis'" alt="NHL">
+                <img src="assets/nhl-preview.webp"
+                     onerror="this.src='https://placehold.co/600x300/0f172a/ffffff?text=NHL+Analysis'"
+                     alt="NHL">
                 <div class="card-body">
                     <span class="card-sport-tag">🏒 NHL</span>
                     <h3>Stanley Cup Playoff Race: Who's In, Who's Out, and What MoneyPuck Says</h3>
@@ -235,18 +246,11 @@
                 </div>
             </div>
 
-            <div class="article-card" data-cat="ncaa">
-                <img src="assets/ncaa-preview.webp" onerror="this.src='https://placehold.co/600x300/0f172a/ffffff?text=NCAA+Analysis'" alt="NCAA">
-                <div class="card-body">
-                    <span class="card-sport-tag">🏀 NCAA · Elite Eight Preview</span>
-                    <h3>If Houston Advances: Who Awaits in the Elite Eight — and What the Numbers Say</h3>
-                    <p>A look ahead at the South Region Elite Eight matchup. KenPom win probabilities for every possible opponent.</p>
-                    <a href="#" class="card-link">Coming Soon →</a>
-                </div>
-            </div>
-
+            <!-- Soccer -->
             <div class="article-card" data-cat="soccer">
-                <img src="assets/soccer-preview.webp" onerror="this.src='https://placehold.co/600x300/0f172a/ffffff?text=Soccer+Analysis'" alt="Soccer">
+                <img src="assets/soccer-preview.webp"
+                     onerror="this.src='https://placehold.co/600x300/0f172a/ffffff?text=Soccer+Analysis'"
+                     alt="Soccer">
                 <div class="card-body">
                     <span class="card-sport-tag">⚽ Soccer · World Cup 2026</span>
                     <h3>World Cup 2026: Opta's Win Probabilities for Every Group</h3>
@@ -258,6 +262,7 @@
         </div>
     </div>
 
+    <!-- SIDEBAR -->
     <aside class="sports-sidebar">
 
         <div class="live-feed">
@@ -272,16 +277,16 @@
 
         <div class="markets-box">
             <div class="markets-header">
-                <h3>📊 Prediction Markets</h3>
-                <p>Live odds from Polymarket &amp; Kalshi</p>
+                <h3>📊 Today's Games</h3>
+                <p>Win probabilities from models &amp; markets</p>
             </div>
             <div class="markets-body">
                 <div class="market-item">
-                    <div><div class="m-label">MSState vs Ole Miss G2</div><div class="m-sub">⚾ SEC Baseball · Today 1:30 PM CT</div></div>
+                    <div><div class="m-label">MSState vs Ole Miss</div><div class="m-sub">⚾ SEC Baseball · 1:30 PM CT</div></div>
                     <div style="text-align:right"><div class="m-odds">MSU FAV</div><div class="m-sub">Valincius 5-0</div></div>
                 </div>
                 <div class="market-item">
-                    <div><div class="m-label">Arizona vs Purdue</div><div class="m-sub">🏀 Elite Eight · Today 8:49 PM</div></div>
+                    <div><div class="m-label">Arizona vs Purdue</div><div class="m-sub">🏀 Elite Eight · 8:49 PM ET</div></div>
                     <div style="text-align:right"><div class="m-odds">ARIZ 70%</div><div class="m-sub">Kalshi</div></div>
                 </div>
                 <div class="market-item">
@@ -322,15 +327,15 @@
                 <h3 style="margin-bottom:20px;font-size:1.1rem;">Quick Links</h3>
                 <ul style="list-style:none;padding:0;font-size:0.9rem;">
                     <li style="margin-bottom:10px;"><a href="about.html" style="color:#94a3b8;text-decoration:none;">About Us</a></li>
+                    <li style="margin-bottom:10px;"><a href="sports.html" style="color:#94a3b8;text-decoration:none;">Sports Analysis</a></li>
                     <li style="margin-bottom:10px;"><a href="business.html" style="color:#94a3b8;text-decoration:none;">Business Directory</a></li>
-                    <li style="margin-bottom:10px;"><a href="lifestyle.html" style="color:#94a3b8;text-decoration:none;">Lifestyle</a></li>
                     <li style="margin-bottom:10px;"><a href="privacy.html" style="color:#94a3b8;text-decoration:none;">Privacy Policy</a></li>
                 </ul>
             </div>
             <div style="flex:1;min-width:200px;">
                 <h3 style="margin-bottom:20px;font-size:1.1rem;">Contact</h3>
                 <p style="color:#94a3b8;font-size:0.9rem;">📍 Capitol Street, Jackson, MS, USA</p>
-                <p style="color:#94a3b8;font-size:0.9rem;">✉️ <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="9cf5f2faf3dcf1f5efeff5efeff5ececf5f0f9fdf8b2fff3f1">[email&#160;protected]</a></p>
+                <p style="color:#94a3b8;font-size:0.9rem;">✉️ info@mississippilead.com</p>
             </div>
         </div>
         <div style="border-top:1px solid #1e293b;padding-top:20px;text-align:center;color:#64748b;font-size:0.85rem;">
@@ -339,42 +344,72 @@
     </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-// FILTER TABS
-document.querySelectorAll('.tab-btn').forEach(function(btn) {
-    btn.addEventListener('click', function() {
-        document.querySelectorAll('.tab-btn').forEach(function(b) { b.classList.remove('active'); });
-        this.classList.add('active');
-        var filter = this.getAttribute('data-filter');
-        var hero = document.querySelector('.hero-article');
-        if (hero) {
-            hero.style.display = (filter === 'all' || hero.getAttribute('data-cat') === filter) ? '' : 'none';
-        }
-        document.querySelectorAll('.article-card').forEach(function(card) {
-            card.style.display = (filter === 'all' || card.getAttribute('data-cat') === filter) ? '' : 'none';
+<script>
+// ── FILTER TABS ──────────────────────────────────────────────────────────────
+// هر المان که data-cat داره رو می‌گیریم
+// وقتی روی tab کلیک میشه:
+//   - active class رو جابجا می‌کنیم
+//   - هر المان با data-cat که match نمی‌کنه پنهان می‌شه
+//   - "all" همه رو نشان میده
+
+(function() {
+    var tabs = document.querySelectorAll('.tab-btn');
+    var hero = document.querySelector('.hero-article');
+    var cards = document.querySelectorAll('.article-card');
+
+    tabs.forEach(function(tab) {
+        tab.addEventListener('click', function() {
+
+            // 1. آپدیت active class
+            tabs.forEach(function(t) { t.classList.remove('active'); });
+            this.classList.add('active');
+
+            var filter = this.getAttribute('data-filter');
+
+            // 2. hero
+            if (hero) {
+                var heroCat = hero.getAttribute('data-cat');
+                hero.style.display = (filter === 'all' || heroCat === filter) ? '' : 'none';
+            }
+
+            // 3. cards
+            cards.forEach(function(card) {
+                var cardCat = card.getAttribute('data-cat');
+                card.style.display = (filter === 'all' || cardCat === filter) ? '' : 'none';
+            });
+
         });
     });
-});
+})();
 
-// LIVE RSS FEED
-async function loadSportsFeed() {
+// ── LIVE RSS FEED ─────────────────────────────────────────────────────────────
+(function() {
     var feedEl = document.getElementById('sports-live-feed');
-    var tags = ['NCAA', 'NBA', 'NFL', 'MLB', 'NHL', 'SPORTS'];
-    try {
-        var url = 'https://news.google.com/rss/search?q=NCAA+tournament+NBA+NFL+MLB+sports+2026&hl=en-US&gl=US&ceid=US:en';
-        var res = await fetch('https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent(url));
-        var data = await res.json();
-        if (data.status !== 'ok') throw new Error();
-        var html = '';
-        data.items.slice(0, 7).forEach(function(item, i) {
-            var tag = tags[i % tags.length];
-            var mins = Math.round((Date.now() - new Date(item.pubDate)) / 60000);
-            var timeStr = mins < 60 ? mins + 'm ago' : Math.round(mins / 60) + 'h ago';
-            html += '<div class="feed-item">'
-                  + '<span class="feed-tag">' + tag + '</span>'
-                  + '<a href="' + item.link + '" target="_blank" rel="noopener">' + item.title.split(' - ')[0] + '</a>'
-                  + '<span class="feed-time">' + timeStr + '</span>'
-                  + '</div>';
+    var tags = ['SEC', 'NCAA', 'NBA', 'NFL', 'MLB', 'NHL', 'SPORTS'];
+    var url = 'https://news.google.com/rss/search?q=NCAA+tournament+SEC+baseball+NBA+NFL+sports+2026&hl=en-US&gl=US&ceid=US:en';
+
+    fetch('https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent(url))
+        .then(function(res) { return res.json(); })
+        .then(function(data) {
+            if (data.status !== 'ok') throw new Error();
+            var html = '';
+            data.items.slice(0, 7).forEach(function(item, i) {
+                var tag = tags[i % tags.length];
+                var mins = Math.round((Date.now() - new Date(item.pubDate)) / 60000);
+                var timeStr = mins < 60 ? mins + 'm ago' : Math.round(mins / 60) + 'h ago';
+                html += '<div class="feed-item">'
+                      + '<span class="feed-tag">' + tag + '</span>'
+                      + '<a href="' + item.link + '" target="_blank" rel="noopener">' + item.title.split(' - ')[0] + '</a>'
+                      + '<span class="feed-time">' + timeStr + '</span>'
+                      + '</div>';
+            });
+            feedEl.innerHTML = html;
+        })
+        .catch(function() {
+            feedEl.innerHTML = '<p style="font-size:0.8rem;color:#94a3b8;padding:10px 0;">News feed temporarily unavailable.</p>';
         });
-        feedEl.innerHTML = html;
-    }
+})();
+</script>
+
+</body>
+</html>
