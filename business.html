@@ -3,227 +3,388 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Business Directory | Mississippi Lead</title>
+    <title>Business | Mississippi Lead — Economy, Jobs & Local Business in Mississippi</title>
+    <meta name="description" content="Mississippi business news and analysis — covering the local economy, job market, major employers, and financial guides for Jackson and the Gulf Coast.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Mississippi Lead">
+    <link rel="canonical" href="https://mississippilead.com/business.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Mississippi Lead">
+    <meta property="og:title" content="Business | Mississippi Lead">
+    <meta property="og:description" content="Mississippi business news and analysis — covering the local economy, job market, major employers, and financial guides for Jackson and the Gulf Coast.">
+    <meta property="og:url" content="https://mississippilead.com/business.html">
+    <meta property="og:image" content="https://mississippilead.com/assets/og-home-banner.webp">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Business — Mississippi Lead",
+      "url": "https://mississippilead.com/business.html",
+      "description": "Mississippi business news and analysis covering the local economy, job market, and financial guides.",
+      "publisher": {
+        "@type": "NewsMediaOrganization",
+        "name": "Mississippi Lead",
+        "url": "https://mississippilead.com/"
+      }
+    }
+    </script>
+    <link rel="icon" type="image/png" href="assets/favicon.png">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="assets/logo.png">
-    <meta name="description" content="Mississippi Lead Business Directory - Connecting you with leading enterprises in the Magnolia State.">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
-    
-    <style>
-        :root { 
-            --navy-blue: #0f172a; 
-            --accent-red: #b91c1c; 
-            --text: #334155; 
-            --bg: #f8fafc; 
-        }
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
 
-        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: var(--bg); color: var(--text); line-height: 1.6; }
-        .container { width: 90%; max-width: 1100px; margin: auto; }
-        
-        /* Navbar - هماهنگ با صفحات قبلی */
-        nav { background: white; padding: 15px 0; border-bottom: 3px solid var(--accent-red); position: relative; }
-        .nav-flex { display: flex; justify-content: space-between; align-items: center; }
-        
-        .logo-text { 
-            font-family: 'Montserrat', sans-serif; 
-            font-weight: 900; font-size: 1.6rem; letter-spacing: -0.5px;
-            color: var(--navy-blue); text-decoration: none; text-transform: uppercase;
-        }
-        .logo-text span { color: var(--accent-red); }
-        
-        .nav-links { list-style: none; display: flex; gap: 20px; align-items: center; margin: 0; padding: 0; }
-        .nav-links a { text-decoration: none; color: var(--navy-blue); font-weight: 600; font-size: 0.9rem; }
-        
-        .acquire-btn { 
-            background: var(--accent-red) !important; 
-            color: white !important; 
-            padding: 8px 16px !important; 
-            border-radius: 4px; 
-            transition: 0.3s;
-        }
+<style>
+:root {
+    --navy-blue: #0f172a;
+    --accent-red: #b91c1c;
+}
+.logo-text {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 1.6rem;
+    letter-spacing: -0.5px;
+    color: var(--navy-blue);
+}
+.logo-text span { color: var(--accent-red); }
 
-        /* Business Header */
-        .business-header { background: white; padding: 60px 0; text-align: center; border-bottom: 1px solid #e2e8f0; margin-bottom: 40px; }
-        .business-header h1 { color: var(--navy-blue); font-size: 2.5rem; margin-bottom: 10px; }
-        .business-header p { color: #64748b; font-size: 1.1rem; }
-
-        /* Business Grid - چیدمان ۳ ستونه */
-        .business-grid { 
-    display: grid; 
-    /* استفاده از minmax باعث می‌شود ستون‌ها منعطف باشند اما از حد مشخصی کمتر نشوند */
-    grid-template-columns: repeat(3, minmax(0, 1fr)); 
-    gap: 30px; 
-    margin-bottom: 60px;
-    /* این خط باعث می‌شود ردیف‌ها بر اساس بلندترین کارت تنظیم شوند */
-    grid-auto-rows: 1fr; 
-    align-items: stretch; 
+.page-wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
 }
 
-        .biz-card { 
+/* Section header */
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+.section-header .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent-red);
+    flex-shrink: 0;
+}
+.section-header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--navy-blue);
+    margin: 0;
+}
+.section-header .line {
+    flex: 1;
+    height: 1px;
+    background: #e2e8f0;
+}
+
+/* Hero card */
+.hero-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    border-top: 4px solid var(--accent-red);
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 32px;
+}
+.hero-text {
+    flex: 1.2;
+    min-width: 280px;
+    padding: 36px;
     display: flex;
     flex-direction: column;
-    height: 100%; /* تمام کارت‌ها هم‌ارتفاع می‌شوند */
-    background: white; 
-    border-radius: 12px; 
-    overflow: hidden; 
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
+    justify-content: center;
+    box-sizing: border-box;
+}
+.hero-img {
+    flex: 1;
+    min-width: 280px;
+    height: 360px;
+}
+.hero-img a { display: block; height: 100%; }
+.hero-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.category-badge {
+    display: inline-block;
+    background: var(--accent-red);
+    color: white;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 14px;
+    width: fit-content;
+}
+.hero-text h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.75rem;
+    color: var(--navy-blue);
+    line-height: 1.3;
+    margin: 0 0 14px;
+}
+.hero-text p {
+    font-size: 0.95rem;
+    color: #334155;
+    line-height: 1.65;
+    margin-bottom: 22px;
+}
+.btn-primary {
+    display: inline-block;
+    background: var(--accent-red);
+    color: white;
+    padding: 11px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.88rem;
+    width: fit-content;
+    transition: background 0.2s;
+}
+.btn-primary:hover { background: #991b1b; }
+
+/* Archive grid */
+.grid-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.68rem;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #94a3b8;
+    margin-bottom: 16px;
+}
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.article-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    border-bottom: 3px solid #e2e8f0;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+.article-card:hover {
+    border-color: var(--accent-red);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+.article-card a.card-img-link {
+    display: block;
+    overflow: hidden;
+    height: 160px;
+}
+.article-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    display: block;
     transition: transform 0.3s;
-    border: 1px solid #f1f5f9;
 }
-        .biz-card:hover { transform: translateY(-5px); }
-        
-        .article-img { width: 100%; height: 200px; object-fit: cover; }
-        .article-body { 
-    padding: 25px; 
-    display: flex;
-    flex-direction: column;
-    flex: 1; /* باعث می‌شود بدنه کارت تمام فضای عمودی موجود را پر کند */
+.article-card:hover img { transform: scale(1.03); }
+.article-card .card-body {
+    padding: 16px;
 }
-        
-        .biz-tag { 
-            display: inline-block; background: #f1f5f9; color: var(--accent-red); 
-            font-size: 0.7rem; font-weight: 800; text-transform: uppercase; 
-            padding: 4px 10px; border-radius: 4px; margin-bottom: 12px;
-        }
-        
-        .article-body h3 { margin: 0 0 10px 0; color: var(--navy-blue); }
-        .article-body p { font-size: 0.9rem; color: #64748b; margin-bottom: 20px; }
-        .biz-link { margin-top: auto; /* آدرس و دکمه را به تهِ کارت می‌چسباند */
-    padding-top: 15px; text-decoration: none; color: var(--navy-blue); font-size: 0.8rem; font-weight: bold; border-top: 1px solid #eee; pt: 15px; display: block; padding-top: 15px; }
+.article-card .card-date {
+    font-size: 0.72rem;
+    color: #94a3b8;
+    margin-bottom: 6px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+.article-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    color: var(--navy-blue);
+    line-height: 1.4;
+    margin: 0 0 8px;
+}
+.article-card p {
+    font-size: 0.82rem;
+    color: #64748b;
+    line-height: 1.55;
+    margin-bottom: 12px;
+}
+.link-red {
+    color: var(--accent-red);
+    text-decoration: none;
+    font-size: 0.82rem;
+    font-weight: 700;
+}
+.link-red:hover { opacity: 0.75; }
 
-        .redirect-tag{ margin-top: 12px; font-size: 0.9rem; color: #b91c1c; font-weight: bold; }
-        
-        /* Responsive Navigation & Grid */
-        .menu-toggle { display: none; cursor: pointer; flex-direction: column; gap: 5px; }
-        .bar { width: 25px; height: 3px; background-color: var(--navy-blue); }
-
-        @media (max-width: 992px) {
-            .business-grid { grid-template-columns: repeat(2, 1fr); } /* دو ستون برای تبلت */
-        }
-
-        @media (max-width: 768px) {
-            .menu-toggle { display: flex; }
-            .nav-links {
-                display: none; flex-direction: column; position: absolute; top: 60px; left: 0; width: 100%;
-                background: white; padding: 20px; box-shadow: 0 10px 15px rgba(0,0,0,0.1); z-index: 1000;
-            }
-            .nav-links.active { display: flex; }
-            .business-grid { grid-template-columns: 1fr; } /* تک ستون برای موبایل */
-            .business-header h1 { font-size: 1.8rem; }
-        }
-    </style>
+@media (max-width: 900px) {
+    .articles-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+    .hero-card { flex-direction: column; }
+    .hero-img { height: 240px; }
+}
+@media (max-width: 520px) {
+    .articles-grid { grid-template-columns: 1fr; }
+}
+</style>
 </head>
-<body>
 
+<body>
 <nav>
     <div class="container nav-flex">
-        <a href="index.html" class="logo" style="display: flex; align-items: center; gap: 12px; text-decoration: none;">
-            <img src="assets/logo.png" alt="Logo" style="height: 40px; width: auto;">
+        <a href="index.html" class="logo" style="display:flex;align-items:center;gap:12px;text-decoration:none;">
+            <img src="assets/logo.png" width="1000" height="1000" alt="Logo" style="height:40px;width:auto;">
             <span class="logo-text">MISSISSIPPI<span>LEAD</span></span>
         </a>
-        
         <div class="menu-toggle" id="mobile-menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
+            <span class="bar"></span><span class="bar"></span><span class="bar"></span>
         </div>
-
         <ul class="nav-links" id="nav-list">
             <li><a href="index.html">Home</a></li>
-            <li><a href="sports.html">Sports</a></li>
+            <li><a href="news.html">News</a></li>
             <li><a href="business.html" class="acquire-btn">Business</a></li>
             <li><a href="lifestyle.html">Lifestyle</a></li>
         </ul>
     </div>
 </nav>
 
-<div class="business-header">
-    <div class="container">
-        <h1>Mississippi Business Directory</h1>
-        <p>Connecting you with the leading enterprises across the state.</p>
+<div class="page-wrap">
+
+    <div class="section-header">
+        <div class="dot"></div>
+        <h1>Business</h1>
+        <div class="line"></div>
+    </div>
+
+    <!-- Hero: most recent business article -->
+    <article class="hero-card">
+        <div class="hero-text">
+            <span class="category-badge">Economy & Jobs</span>
+            <h2>International Paper's $225 Million Mississippi Bet: What It Means for Local Jobs and the State Economy</h2>
+            <p>A major investment announcement from one of the world's largest paper companies — and what it signals for Mississippi's manufacturing future.</p>
+            <a href="archive/international-paper-mississippi-2026.html" class="btn-primary">Read Full Analysis</a>
+        </div>
+        <div class="hero-img">
+            <a href="archive/international-paper-mississippi-2026.html">
+                <img src="assets/international-paper-ms.webp" width="1200" height="800" fetchpriority="high" alt="International Paper Mississippi investment 2026">
+            </a>
+        </div>
+    </article>
+
+    <!-- Archive grid -->
+    <div class="grid-label">Earlier coverage</div>
+    <div class="articles-grid">
+
+        <article class="article-card">
+            <a href="archive/general-atomics-expansion.html" class="card-img-link">
+                <img src="assets/general-atomics.webp" width="700" height="467" loading="lazy" alt="General Atomics Mississippi defense expansion 2026">
+            </a>
+            <div class="card-body">
+                <div class="card-date">Mar 6, 2026</div>
+                <h3>Mississippi Locks In Its Role as America's Defense Backbone</h3>
+                <p>General Atomics is expanding in Mississippi. What it means for local jobs and the state's defense economy.</p>
+                <a href="archive/general-atomics-expansion.html" class="link-red">Read Full Analysis →</a>
+            </div>
+        </article>
+
+        <article class="article-card">
+            <a href="archive/pascagoula.html" class="card-img-link">
+                <img src="assets/pascagoula.webp" width="700" height="467" loading="lazy" alt="Ingalls Shipbuilding Pascagoula hiring 2026">
+            </a>
+            <div class="card-body">
+                <div class="card-date">Mar 1, 2026</div>
+                <h3>Now Hiring: The 2026 Shipbuilding Boom in Mississippi</h3>
+                <p>Ingalls Shipbuilding in Pascagoula is expanding its workforce. Here's what the jobs look like and who qualifies.</p>
+                <a href="archive/pascagoula.html" class="link-red">Read Full Report →</a>
+            </div>
+        </article>
+
+        <article class="article-card">
+            <a href="archive/tax-blueprint.html" class="card-img-link">
+                <img src="assets/taxprep.webp" width="700" height="467" loading="lazy" alt="Jackson MS tax filing guide 2026">
+            </a>
+            <div class="card-body">
+                <div class="card-date">Mar 10, 2026</div>
+                <h3>The 2026 Jackson Tax Blueprint: How to File Smart and Avoid Loan Traps</h3>
+                <p>A complete guide for Jackson residents on choosing the right filing method and what refund advances actually cost.</p>
+                <a href="archive/tax-blueprint.html" class="link-red">Read Full Guide →</a>
+            </div>
+        </article>
+
+        <article class="article-card">
+            <a href="archive/best-tax-services-jackson-ms-2026.html" class="card-img-link">
+                <img src="assets/jackson-tax-services.webp" width="700" height="467" loading="lazy" alt="Best tax services Jackson MS 2026">
+            </a>
+            <div class="card-body">
+                <div class="card-date">Mar 22, 2026</div>
+                <h3>Best Tax Services in Jackson, MS: Top 7 Picks and 3 to Avoid in 2026</h3>
+                <p>The most trusted tax preparation services in Jackson — and three providers with documented red flags.</p>
+                <a href="archive/best-tax-services-jackson-ms-2026.html" class="link-red">Read Full Guide →</a>
+            </div>
+        </article>
+
+        <article class="article-card">
+            <a href="archive/valvoline.html" class="card-img-link">
+                <img src="assets/valvoline.webp" width="700" height="467" loading="lazy" alt="Valvoline Mississippi locations 2026">
+            </a>
+            <div class="card-body">
+                <div class="card-date">Feb 23, 2026</div>
+                <h3>Valvoline's Comprehensive Guide to Quick Auto Services in Mississippi</h3>
+                <p>Locations across Jackson, Ridgeland, Pearl, and Brookhaven — what to expect and how to get the best price.</p>
+                <a href="archive/valvoline.html" class="link-red">Read Full Guide →</a>
+            </div>
+        </article>
+
     </div>
 </div>
 
-<main class="container">
-    <div class="business-grid">
-        
-        <article class="biz-card">
-            <img src="assets/general-atomics.webp" alt="General atomics shannon MS" class="article-img">
-            <div class="article-body">
-                <span class="biz-tag">Defense & Aerospace</span>
-                <h3>General Atomics Electromagnetic Systems </h3>
-                <p>
-                    GA-EMS is a leading American defense technology company specializing in the development and manufacturing of advanced precision weapon systems. Founded as part of the broader General Atomics group, GA-EMS has built a strong reputation for delivering cutting-edge solutions to the U.S. Department of Defense. The company's Electromagnetic Systems Group has operated in Shannon, Mississippi since 2005, expanding its operations more than a dozen times over two decades. Its key products include the Bullseye™ precision-guided strike missile and the Long-Range Maneuvering Projectile (LRMP), systems designed to meet the demands of modern, high-threat combat environments.
-                </p>
-                <a href="https://maps.app.goo.gl/orsSZLkvEERcwvdQ8" class="biz-link">📍 112 Bryan Blvd, Shannon, MS 38868</a>
-                <a href="archive/general-atomics-expansion.html" class="redirect-tag">Read More →</a>
+<footer style="background:#0f172a;color:white;padding:60px 0 30px;margin-top:0;">
+    <div style="width:90%;max-width:1100px;margin:auto;">
+        <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:40px;margin-bottom:40px;">
+            <div style="flex:1;min-width:250px;">
+                <h3 style="color:#b91c1c;margin-bottom:20px;">MISSISSIPPI LEAD</h3>
+                <p style="color:#94a3b8;font-size:0.9rem;line-height:1.6;">The premier source for business intelligence, local news, and strategic insights in the Magnolia State.</p>
             </div>
-        </article>
-        
-        <article class="biz-card">
-            <img src="assets/valvoline.webp" alt="valvoline instant oil change" class="article-img">
-            <div class="article-body">
-                <span class="biz-tag">Mississippi Local Services</span>
-                <h3>Valvoline Instant Oil Change</h3>
-                    <p>VIOC locations in Jackson, Ridgeland, Pearl, and Brookhaven have redefined car maintenance with their "Stay-in-Your-Car" model. Drivers can enjoy professional oil changes in under 15 minutes without leaving their vehicles. Known for expert staff like "Earl" in Pearl and a rigorous 18-point safety protocol, these centers prioritize both speed and precision. Beyond oil, they offer essential services like battery testing and A/C checks, backed by a double-check system to ensure quality. By using digital coupons, Mississippi drivers can access this premium, stress-free service at highly competitive prices.</p>
-                <a href="#" class="biz-link">📍 300 US-51, Brookhaven, MS 39601</a>
-                <a href="archive/valvoline.html" class="redirect-tag">Read More →</a>
-            </div>
-        </article>
-
-        <article class="biz-card">
-            <img src="assets/pascagoula.webp" alt="Ingalls Shipbuilding is hiring in March 2026" class="article-img">
-            <div class="article-body">
-                <span class="biz-tag">Maritime & Naval Engineering</span>
-                <h3>Ingalls Shipbuilding</h3>
-                <p>
-                    Based in Pascagoula, Mississippi, Ingalls Shipbuilding stands as a premier powerhouse of American maritime defense. For over 85 years, this 800-acre facility has served as the state's largest employer, specialized in forging the most advanced war machines for the U.S. Navy and Coast Guard. As a division of Huntington Ingalls Industries, the yard’s diverse portfolio includes Arleigh Burke-class destroyers and massive amphibious assault ships. By integrating cutting-edge Physical AI and digital modeling, Ingalls continues to lead the industry, offering stable and high-tech employment opportunities for the hardworking people of the Gulf Coast.
-                </p>
-                <a href="#" class="biz-link">📍 Port Rd, Pascagoula, MS 39581</a>
-                <a href="archive/pascagoula.html" class="redirect-tag">Read More →</a>
-            </div>
-        </article>
-
-    </div>
-</main>
-
-<footer style="background: #0f172a; color: white; padding: 60px 0 30px 0; margin-top: 60px;">
-    <div style="width: 90%; max-width: 1100px; margin: auto;">
-        <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 40px; margin-bottom: 40px;">
-            <div style="flex: 1; min-width: 250px;">
-                <h3 style="color: #b91c1c; margin-bottom: 20px;">MISSISSIPPI LEAD</h3>
-                <p style="color: #94a3b8; font-size: 0.9rem;">The premier source for business intelligence, local news, and strategic insights in the Magnolia State.</p>
-            </div>
-            <div style="flex: 1; min-width: 150px;">
-                <h3 style="margin-bottom: 20px; font-size: 1.1rem;">Quick Links</h3>
-                <ul style="list-style: none; padding: 0; font-size: 0.9rem;">
-                    <li style="margin-bottom: 10px;"><a href="about.html" style="color: #94a3b8; text-decoration: none;">About Us</a></li>
-                    <li style="margin-bottom: 10px;"><a href="business.html" style="color: #94a3b8; text-decoration: none;">Business Directory</a></li>
-                    <li style="margin-bottom: 10px;"><a href="lifestyle.html" style="color: #94a3b8; text-decoration: none;">Lifestyle</a></li>
-                    <li style="margin-bottom: 10px;"><a href="privacy.html" style="color: #94a3b8; text-decoration: none;">Privacy Policy</a></li>
+            <div style="flex:1;min-width:150px;">
+                <h3 style="margin-bottom:20px;font-size:1.1rem;">Quick Links</h3>
+                <ul style="list-style:none;padding:0;font-size:0.9rem;">
+                    <li style="margin-bottom:10px;"><a href="about.html" style="color:#94a3b8;text-decoration:none;">About Us</a></li>
+                    <li style="margin-bottom:10px;"><a href="archive.html" style="color:#94a3b8;text-decoration:none;">Archive</a></li>
+                    <li style="margin-bottom:10px;"><a href="acquire.html" style="color:#94a3b8;text-decoration:none;">Contact</a></li>
                 </ul>
             </div>
-            <div style="flex: 1; min-width: 200px;">
-                <h3 style="margin-bottom: 20px; font-size: 1.1rem;">Contact</h3>
-                <p style="color: #94a3b8; font-size: 0.9rem;">📍 Capitol Street, Jackson, MS, USA</p>
-                <p style="color: #94a3b8; font-size: 0.9rem;">✉️ info@mississippilead.com</p>
+            <div style="flex:1;min-width:200px;">
+                <h3 style="margin-bottom:20px;font-size:1.1rem;">Contact</h3>
+                <p style="color:#94a3b8;font-size:0.9rem;">📍 Jackson, Mississippi</p>
+                <p style="color:#94a3b8;font-size:0.9rem;">✉️ <a href="mailto:info@mississippilead.com" style="color:#94a3b8;">info@mississippilead.com</a></p>
             </div>
         </div>
-
-        <div style="border-top: 1px solid #1e293b; padding-top: 20px; text-align: center; color: #64748b; font-size: 0.85rem;">
-            <p>© 2026 MississippiLead.com | All Rights Reserved. | <a href="privacy.html" style="color: #64748b; text-decoration: underline;">Privacy Policy</a></p>
+        <div style="border-top:1px solid #1e293b;padding-top:20px;text-align:center;color:#64748b;font-size:0.85rem;">
+            <p>© 2026 MississippiLead.com | All Rights Reserved. | <a href="privacy.html" style="color:#64748b;text-decoration:underline;">Privacy Policy</a></p>
         </div>
     </div>
 </footer>
 
-    
 <script>
     const mobileMenu = document.getElementById('mobile-menu');
     const navList = document.getElementById('nav-list');
-    mobileMenu.addEventListener('click', () => {
-        navList.classList.toggle('active');
-    });
+    if (mobileMenu) {
+        mobileMenu.addEventListener('click', () => { navList.classList.toggle('active'); });
+    }
 </script>
 </body>
 </html>
