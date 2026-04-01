@@ -4,64 +4,155 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy | Mississippi Lead</title>
+    <meta name="description" content="Privacy Policy for Mississippi Lead — how we collect, use, and protect visitor information on mississippilead.com.">
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://mississippilead.com/privacy.html">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="assets/logo.png">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
-    
-    <style>
-        :root { --navy-blue: #0f172a; --accent-red: #b91c1c; --text: #334155; --bg: #f8fafc; }
-        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: var(--bg); color: var(--text); line-height: 1.6; }
-        .container { width: 90%; max-width: 900px; margin: auto; }
-        
-        nav { background: white; padding: 20px 0; border-bottom: 3px solid var(--accent-red); }
-        .nav-flex { display: flex; justify-content: center; align-items: center; }
-        .logo-text { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 1.8rem; color: var(--navy-blue); text-decoration: none; text-transform: uppercase; }
-        .logo-text span { color: var(--accent-red); }
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
 
-        .content-wrapper { background: white; padding: 50px; margin: 40px auto; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
-        h1 { color: var(--navy-blue); border-bottom: 2px solid #f1f5f9; padding-bottom: 15px; }
-        h2 { color: var(--navy-blue); margin-top: 30px; font-size: 1.4rem; }
-        p { margin-bottom: 20px; }
-        .last-updated { color: #64748b; font-size: 0.9rem; margin-bottom: 30px; }
-    </style>
+<style>
+:root { --navy-blue: #0f172a; --accent-red: #b91c1c; }
+.logo-text { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 1.6rem; letter-spacing: -0.5px; color: var(--navy-blue); }
+.logo-text span { color: var(--accent-red); }
+
+.privacy-wrap {
+    max-width: 740px;
+    margin: 60px auto;
+    padding: 0 20px 80px;
+}
+.privacy-wrap .kicker {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 900;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent-red);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.privacy-wrap .kicker::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #e2e8f0;
+}
+.privacy-wrap h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--navy-blue);
+    line-height: 1.25;
+    margin: 0 0 8px;
+}
+.privacy-wrap .last-updated {
+    font-size: 0.82rem;
+    color: #94a3b8;
+    margin-bottom: 36px;
+    font-family: 'Montserrat', sans-serif;
+}
+.privacy-wrap h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    color: var(--navy-blue);
+    margin: 36px 0 12px;
+}
+.privacy-wrap p {
+    font-size: 0.95rem;
+    color: #475569;
+    line-height: 1.8;
+    margin-bottom: 16px;
+}
+.privacy-wrap hr {
+    border: none;
+    border-top: 1px solid #e2e8f0;
+    margin: 40px 0;
+}
+</style>
 </head>
-<body>
 
+<body>
 <nav>
     <div class="container nav-flex">
-        <a href="index.html" class="logo-text">MISSISSIPPI<span>LEAD</span></a>
+        <a href="index.html" class="logo" style="display:flex;align-items:center;gap:12px;text-decoration:none;">
+            <img src="assets/logo.png" width="1000" height="1000" alt="Logo" style="height:40px;width:auto;">
+            <span class="logo-text">MISSISSIPPI<span>LEAD</span></span>
+        </a>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        </div>
+        <ul class="nav-links" id="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="business.html">Business</a></li>
+            <li><a href="lifestyle.html">Lifestyle</a></li>
+        </ul>
     </div>
 </nav>
 
-<main class="container">
-    <div class="content-wrapper">
-        <h1>Privacy Policy</h1>
-        <p class="last-updated">Last Updated: February 23, 2026</p>
+<div class="privacy-wrap">
 
-        <p>At <strong>Mississippi Lead</strong>, accessible from mississippilead.com, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by Mississippi Lead and how we use it.</p>
+    <div class="kicker">Legal</div>
+    <h1>Privacy Policy</h1>
+    <p class="last-updated">Last updated: February 23, 2026</p>
 
-        <h2>Log Files</h2>
-        <p>Mississippi Lead follows a standard procedure of using log files. These files log visitors when they visit websites. The information collected by log files include internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks. These are not linked to any information that is personally identifiable.</p>
+    <p>At Mississippi Lead, accessible from mississippilead.com, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by Mississippi Lead and how we use it.</p>
 
-        <h2>Cookies and Web Beacons</h2>
-        <p>Like any other website, Mississippi Lead uses 'cookies'. These cookies are used to store information including visitors' preferences, and the pages on the website that the visitor accessed or visited. The information is used to optimize the users' experience by customizing our web page content based on visitors' browser type and/or other information.</p>
+    <hr>
 
-        <h2>Third Party Privacy Policies</h2>
-        <p>Mississippi Lead's Privacy Policy does not apply to other advertisers or websites. Thus, we are advising you to consult the respective Privacy Policies of these third-party ad servers for more detailed information. It may include their practices and instructions about how to opt-out of certain options.</p>
+    <h2>Log files</h2>
+    <p>Mississippi Lead follows a standard procedure of using log files. These files log visitors when they visit websites. The information collected by log files includes internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks. These are not linked to any information that is personally identifiable. The purpose of the information is for analyzing trends, administering the site, tracking users' movement on the website, and gathering demographic information.</p>
 
-        <h2>Children's Information</h2>
-        <p>Another part of our priority is adding protection for children while using the internet. We encourage parents and guardians to observe, participate in, and/or monitor and guide their online activity.</p>
+    <h2>Cookies and web beacons</h2>
+    <p>Like any other website, Mississippi Lead uses cookies. These cookies are used to store information including visitors' preferences, and the pages on the website that the visitor accessed or visited. The information is used to optimize the users' experience by customizing our web page content based on visitors' browser type and/or other information. For more general information on cookies, please read the Cookies Policy on the Cookie Consent website.</p>
 
-        <h2>Consent</h2>
-        <p>By using our website, you hereby consent to our Privacy Policy and agree to its terms.</p>
+    <h2>Third party privacy policies</h2>
+    <p>Mississippi Lead's Privacy Policy does not apply to other advertisers or websites. We advise you to consult the respective Privacy Policies of these third-party ad servers for more detailed information. It may include their practices and instructions about how to opt-out of certain options. You can choose to disable cookies through your individual browser options.</p>
 
-        <a href="index.html" style="display: inline-block; margin-top: 30px; color: var(--accent-red); text-decoration: none; font-weight: bold;">← Back to Home</a>
+    <h2>Children's information</h2>
+    <p>Another part of our priority is adding protection for children while using the internet. We encourage parents and guardians to observe, participate in, and/or monitor and guide their online activity. Mississippi Lead does not knowingly collect any Personal Identifiable Information from children under the age of 13.</p>
+
+    <h2>Consent</h2>
+    <p>By using our website, you hereby consent to our Privacy Policy and agree to its terms.</p>
+
+</div>
+
+<footer style="background:#0f172a;color:white;padding:60px 0 30px;margin-top:0;">
+    <div style="width:90%;max-width:1100px;margin:auto;">
+        <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:40px;margin-bottom:40px;">
+            <div style="flex:1;min-width:250px;">
+                <h3 style="color:#b91c1c;margin-bottom:20px;">MISSISSIPPI LEAD</h3>
+                <p style="color:#94a3b8;font-size:0.9rem;line-height:1.6;">The premier source for business intelligence, local news, and strategic insights in the Magnolia State.</p>
+            </div>
+            <div style="flex:1;min-width:150px;">
+                <h3 style="margin-bottom:20px;font-size:1.1rem;">Quick Links</h3>
+                <ul style="list-style:none;padding:0;font-size:0.9rem;">
+                    <li style="margin-bottom:10px;"><a href="about.html" style="color:#94a3b8;text-decoration:none;">About Us</a></li>
+                    <li style="margin-bottom:10px;"><a href="archive.html" style="color:#94a3b8;text-decoration:none;">Archive</a></li>
+                    <li style="margin-bottom:10px;"><a href="acquire.html" style="color:#94a3b8;text-decoration:none;">Contact</a></li>
+                </ul>
+            </div>
+            <div style="flex:1;min-width:200px;">
+                <h3 style="margin-bottom:20px;font-size:1.1rem;">Contact</h3>
+                <p style="color:#94a3b8;font-size:0.9rem;">📍 Jackson, Mississippi</p>
+                <p style="color:#94a3b8;font-size:0.9rem;">✉️ <a href="mailto:info@mississippilead.com" style="color:#94a3b8;">info@mississippilead.com</a></p>
+            </div>
+        </div>
+        <div style="border-top:1px solid #1e293b;padding-top:20px;text-align:center;color:#64748b;font-size:0.85rem;">
+            <p>© 2026 MississippiLead.com | All Rights Reserved. | <a href="privacy.html" style="color:#64748b;text-decoration:underline;">Privacy Policy</a></p>
+        </div>
     </div>
-</main>
-
-<footer style="background: var(--navy-blue); color: white; padding: 30px; text-align: center; margin-top: 50px;">
-    &copy; 2026 Mississippi Lead
 </footer>
 
+<script>
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navList = document.getElementById('nav-list');
+    if (mobileMenu) {
+        mobileMenu.addEventListener('click', () => { navList.classList.toggle('active'); });
+    }
+</script>
 </body>
 </html>
