@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News | Mississippi Lead — Local News & Investigative Reports from Jackson & the Gulf Coast</title>
+    <meta name="description" content="Local news and investigative reports from Jackson, the Gulf Coast, and communities across Mississippi — covering public affairs, local incidents, and the stories that matter to residents.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Mississippi Lead">
+    <link rel="canonical" href="https://mississippilead.com/news.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Mississippi Lead">
+    <meta property="og:title" content="News | Mississippi Lead">
+    <meta property="og:description" content="Local news and investigative reports from Jackson, the Gulf Coast, and communities across Mississippi.">
+    <meta property="og:url" content="https://mississippilead.com/news.html">
+    <meta property="og:image" content="https://mississippilead.com/assets/og-home-banner.webp">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "News — Mississippi Lead",
+      "url": "https://mississippilead.com/news.html",
+      "description": "Local news and investigative reports from Jackson, the Gulf Coast, and communities across Mississippi.",
+      "publisher": {
+        "@type": "NewsMediaOrganization",
+        "name": "Mississippi Lead",
+        "url": "https://mississippilead.com/"
+      }
+    }
+    </script>
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+
+<style>
+:root { --navy-blue: #0f172a; --accent-red: #b91c1c; }
+.logo-text { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 1.6rem; letter-spacing: -0.5px; color: var(--navy-blue); }
+.logo-text span { color: var(--accent-red); }
+.page-wrap { max-width: 1100px; margin: 0 auto; padding: 40px 20px 80px; }
+.section-header { display: flex; align-items: center; gap: 12px; margin-bottom: 24px; }
+.section-header .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent-red); flex-shrink: 0; }
+.section-header h1 { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--navy-blue); margin: 0; }
+.section-header .line { flex: 1; height: 1px; background: #e2e8f0; }
+.hero-card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.06); border-top: 4px solid var(--accent-red); display: flex; flex-wrap: wrap; width: 100%; box-sizing: border-box; margin-bottom: 32px; }
+.hero-text { flex: 1.2; min-width: 280px; padding: 36px; display: flex; flex-direction: column; justify-content: center; box-sizing: border-box; }
+.hero-img { flex: 1; min-width: 280px; height: 360px; }
+.hero-img a { display: block; height: 100%; }
+.hero-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.category-badge { display: inline-block; background: var(--accent-red); color: white; padding: 4px 10px; border-radius: 4px; font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 14px; width: fit-content; }
+.hero-text h2 { font-family: 'Playfair Display', serif; font-size: 1.75rem; color: var(--navy-blue); line-height: 1.3; margin: 0 0 14px; }
+.hero-text p { font-size: 0.95rem; color: #334155; line-height: 1.65; margin-bottom: 22px; }
+.btn-primary { display: inline-block; background: var(--accent-red); color: white; padding: 11px 24px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 0.88rem; width: fit-content; transition: background 0.2s; }
+.btn-primary:hover { background: #991b1b; }
+.grid-label { font-family: 'Montserrat', sans-serif; font-size: 0.68rem; font-weight: 900; letter-spacing: 0.12em; text-transform: uppercase; color: #94a3b8; margin-bottom: 16px; }
+.articles-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.article-card { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.05); border-bottom: 3px solid #e2e8f0; transition: border-color 0.2s, box-shadow 0.2s; }
+.article-card:hover { border-color: var(--accent-red); box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
+.article-card a.card-img-link { display: block; overflow: hidden; height: 160px; }
+.article-card img { width: 100%; height: 160px; object-fit: cover; display: block; transition: transform 0.3s; }
+.article-card:hover img { transform: scale(1.03); }
+.article-card .card-body { padding: 16px; }
+.article-card .card-date { font-size: 0.72rem; color: #94a3b8; margin-bottom: 6px; font-family: 'Montserrat', sans-serif; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; }
+.article-card h3 { font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--navy-blue); line-height: 1.4; margin: 0 0 8px; }
+.article-card p { font-size: 0.82rem; color: #64748b; line-height: 1.55; margin-bottom: 12px; }
+.link-red { color: var(--accent-red); text-decoration: none; font-size: 0.82rem; font-weight: 700; }
+.link-red:hover { opacity: 0.75; }
+@media (max-width: 900px) { .articles-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 768px) { .hero-card { flex-direction: column; } .hero-img { height: 240px; } }
+@media (max-width: 520px) { .articles-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+
+<body>
+<nav>
+    <div class="container nav-flex">
+        <a href="index.html" class="logo" style="display:flex;align-items:center;gap:12px;text-decoration:none;">
+            <img src="assets/logo.png" width="1000" height="1000" alt="Logo" style="height:40px;width:auto;">
+            <span class="logo-text">MISSISSIPPI<span>LEAD</span></span>
+        </a>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        </div>
+        <ul class="nav-links" id="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="news.html" class="acquire-btn">News</a></li>
+            <li><a href="business.html">Business</a></li>
+            <li><a href="lifestyle.html">Lifestyle</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="page-wrap">
+
+    <div class="section-header">
+        <div class="dot"></div>
+        <h1>News</h1>
+        <div class="line"></div>
+    </div>
+
+    <article class="hero-card">
+        <div class="hero-text">
+            <span class="category-badge">Incident Investigation</span>
+            <h2>Not Guilty Is Not the Same as Innocent: The Questions the DiBiase Verdict Leaves Unanswered</h2>
+            <p>Ted DiBiase Jr. walked free. The welfare money is still gone. The jury's decision settles the legal question — but leaves the larger one wide open.</p>
+            <a href="archive/dibiase-verdict-2026.html" class="btn-primary">Read Full Investigation</a>
+        </div>
+        <div class="hero-img">
+            <a href="archive/dibiase-verdict-2026.html">
+                <img src="assets/dibiase-verdict.webp" width="1200" height="800" fetchpriority="high" alt="DiBiase verdict Mississippi welfare fraud 2026">
+            </a>
+        </div>
+    </article>
+
+    <div class="grid-label">Earlier coverage</div>
+    <div class="articles-grid">
+
+        <article class="article-card">
+            <a href="archive/mississippi-fire-weather-watch-2026.html" class="card-img-link">
+                <img src="assets/fire-weather-ms.webp" width="700" height="467" loading="lazy" alt="Mississippi wildfire red flag warning 2026">
+            </a>
+            <div class="card-body">
+                <div class="card-date">Mar 27, 2026</div>
+                <h3>Red Flag Warning Mississippi: Dangerous Fire Conditions in Effect Through the Weekend</h3>
+                <p>Statewide burn ban in effect. Four weeks of drought, 20 mph gusts, and humidity dropping below 20%.</p>
+                <a href="archive/mississippi-fire-weather-watch-2026.html" class="link-red">Read Full Alert →</a>
+            </div>
+        </article>
+
+        <article class="article-card">
+            <a href="archive/mississippi-medicaid-2026.html" class="card-img-link">
+                <img src="assets/medicaid-2026.webp" width="700" height="467" loading="lazy" alt="Mississippi Medicaid 2026 eligibility guide">
+            </a>
+            <div class="card-body">
+                <div class="card-date">Mar 16, 2026</div>
+                <h3>Mississippi Medicaid 2026: Who Qualifies, What's Covered, and What Are Your Real Options</h3>
+                <p>Income limits, eligibility rules, and practical alternatives for Mississippians who fall outside the system.</p>
+                <a href="archive/mississippi-medicaid-2026.html" class="link-red">Read Full Article →</a>
+            </div>
+        </article>
+
+        <article class="article-card">
+            <a href="archive/ms-anime-fest-2026.html" class="card-img-link">
+                <img src="assets/ms-anime-fest.webp" width="700" height="467" loading="lazy" alt="Mississippi Anime Fest 2026 Jackson">
+            </a>
+            <div class="card-body">
+                <div class="card-date">Mar 15, 2026</div>
+                <h3>Jackson Showed Up: Mississippi Anime Fest 2026 Delivers a Weekend Worth the Wait</h3>
+                <p>The biggest anime and manga event in the state returned to Jackson — and this year it delivered.</p>
+                <a href="archive/ms-anime-fest-2026.html" class="link-red">Read Full Report →</a>
+            </div>
+        </article>
+
+        <article class="article-card">
+            <a href="archive/Robert-Carradine.html" class="card-img-link">
+                <img src="assets/robert-carradine.webp" width="700" height="467" loading="lazy" alt="Robert Carradine death investigation 2026">
+            </a>
+            <div class="card-body">
+                <div class="card-date">Feb 24, 2026</div>
+                <h3>Robert Carradine: From a Simple Suicide to a Planned Murder?</h3>
+                <p>Five days of solitude. A family with a history of violent deaths. The questions that official accounts leave open.</p>
+                <a href="archive/Robert-Carradine.html" class="link-red">Read Full Investigation →</a>
+            </div>
+        </article>
+
+        <article class="article-card">
+            <a href="archive/robert-carradine2.html" class="card-img-link">
+                <img src="assets/robert-carradine2.webp" width="700" height="467" loading="lazy" alt="Robert Carradine Carradine curse 2026">
+            </a>
+            <div class="card-body">
+                <div class="card-date">Mar 2, 2026</div>
+                <h3>Robert Carradine's Suicide Method or Family Rhetoric? An Autopsy of 5 Days of Solitude</h3>
+                <p>The Carradine curse revisited — and the details that national coverage missed entirely.</p>
+                <a href="archive/robert-carradine2.html" class="link-red">Read Full Investigation →</a>
+            </div>
+        </article>
+
+        <article class="article-card">
+            <a href="archive/UMMC-Cyberattack2.html" class="card-img-link">
+                <img src="assets/ummc-cyberattack.webp" width="700" height="467" loading="lazy" alt="UMMC cyberattack Mississippi 2026">
+            </a>
+            <div class="card-body">
+                <div class="card-date">Feb 25, 2026</div>
+                <h3>UMMC Cyberattack: How 100,000 Patient Records Leaked</h3>
+                <p>A major security breach at Mississippi's largest hospital — what patients need to know.</p>
+                <a href="archive/UMMC-Cyberattack2.html" class="link-red">Read Full Report →</a>
+            </div>
+        </article>
+
+        <article class="article-card">
+            <a href="archive/rondale-moore.html" class="card-img-link">
+                <img src="assets/rondale-moore.webp" width="700" height="467" loading="lazy" alt="Rondale Moore death investigation 2026">
+            </a>
+            <div class="card-body">
+                <div class="card-date">Feb 23, 2026</div>
+                <h3>The Tragic Passing of Rondale Moore: An Investigation</h3>
+                <p>What the initial reports said, what they left out, and the questions that remain unanswered.</p>
+                <a href="archive/rondale-moore.html" class="link-red">Read Full Investigation →</a>
+            </div>
+        </article>
+
+        <article class="article-card">
+            <a href="archive/bobby-j-brown.html" class="card-img-link">
+                <img src="assets/bobby-j-brown.webp" width="700" height="467" loading="lazy" alt="Bobby J Brown Baltimore boxing 2026">
+            </a>
+            <div class="card-body">
+                <div class="card-date">Feb 27, 2026</div>
+                <h3>Bobby J. Brown: From the Boxing Ring to the Heart of Baltimore</h3>
+                <p>The story of a fighter whose journey beyond the ring is the more compelling one.</p>
+                <a href="archive/bobby-j-brown.html" class="link-red">Read Full Report →</a>
+            </div>
+        </article>
+
+        <article class="article-card">
+            <a href="archive/news3.html" class="card-img-link">
+                <img src="assets/wes-rucker.webp" width="700" height="467" loading="lazy" alt="Wes Rucker 247Sports controversy 2026">
+            </a>
+            <div class="card-body">
+                <div class="card-date">Feb 21, 2026</div>
+                <h3>The Fall of Wes Rucker: Inside the Controversy That Shook SEC Sports Media</h3>
+                <p>What happened, what 247Sports said, and what the silence around it suggests.</p>
+                <a href="archive/news3.html" class="link-red">Read Full Report →</a>
+            </div>
+        </article>
+
+        <article class="article-card">
+            <a href="archive/facebook-down-2026.html" class="card-img-link">
+                <img src="assets/facebook-down-2026.webp" width="700" height="467" loading="lazy" alt="Facebook down Meta 2026">
+            </a>
+            <div class="card-body">
+                <div class="card-date">Mar 4, 2026</div>
+                <h3>Is Facebook Down? Anatomy of Meta's 2026 "Forced Logout" Crisis</h3>
+                <p>Millions logged out simultaneously. What actually happened and what it means for users.</p>
+                <a href="archive/facebook-down-2026.html" class="link-red">Read Full Report →</a>
+            </div>
+        </article>
+
+        <article class="article-card">
+            <a href="archive/kristi-noem.html" class="card-img-link">
+                <img src="assets/kristi-noem.webp" width="700" height="467" loading="lazy" alt="Kristi Noem DHS 2026">
+            </a>
+            <div class="card-body">
+                <div class="card-date">Mar 6, 2026</div>
+                <h3>A Course Correction at DHS: Trump Replaces Noem with a Serious Operator</h3>
+                <p>What the leadership change signals for border and homeland security policy going forward.</p>
+                <a href="archive/kristi-noem.html" class="link-red">Read Full Analysis →</a>
+            </div>
+        </article>
+
+        <article class="article-card">
+            <a href="archive/iran-attack.html" class="card-img-link">
+                <img src="assets/iran-attack.webp" width="700" height="467" loading="lazy" alt="Tehran Iran US analysis 2026">
+            </a>
+            <div class="card-body">
+                <div class="card-date">Feb 28, 2026</div>
+                <h3>The Tehran Reckoning: A Moral Mandate and a Strategic Necessity for the American Household</h3>
+                <p>The case for a harder line — and what it would cost American families if it's ignored.</p>
+                <a href="archive/iran-attack.html" class="link-red">Read Full Analysis →</a>
+            </div>
+        </article>
+
+    </div>
+</div>
+
+<footer style="background:#0f172a;color:white;padding:60px 0 30px;margin-top:0;">
+    <div style="width:90%;max-width:1100px;margin:auto;">
+        <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:40px;margin-bottom:40px;">
+            <div style="flex:1;min-width:250px;">
+                <h3 style="color:#b91c1c;margin-bottom:20px;">MISSISSIPPI LEAD</h3>
+                <p style="color:#94a3b8;font-size:0.9rem;line-height:1.6;">The premier source for business intelligence, local news, and strategic insights in the Magnolia State.</p>
+            </div>
+            <div style="flex:1;min-width:150px;">
+                <h3 style="margin-bottom:20px;font-size:1.1rem;">Quick Links</h3>
+                <ul style="list-style:none;padding:0;font-size:0.9rem;">
+                    <li style="margin-bottom:10px;"><a href="about.html" style="color:#94a3b8;text-decoration:none;">About Us</a></li>
+                    <li style="margin-bottom:10px;"><a href="archive.html" style="color:#94a3b8;text-decoration:none;">Archive</a></li>
+                    <li style="margin-bottom:10px;"><a href="acquire.html" style="color:#94a3b8;text-decoration:none;">Contact</a></li>
+                </ul>
+            </div>
+            <div style="flex:1;min-width:200px;">
+                <h3 style="margin-bottom:20px;font-size:1.1rem;">Contact</h3>
+                <p style="color:#94a3b8;font-size:0.9rem;">📍 Jackson, Mississippi</p>
+                <p style="color:#94a3b8;font-size:0.9rem;">✉️ <a href="mailto:info@mississippilead.com" style="color:#94a3b8;">info@mississippilead.com</a></p>
+            </div>
+        </div>
+        <div style="border-top:1px solid #1e293b;padding-top:20px;text-align:center;color:#64748b;font-size:0.85rem;">
+            <p>© 2026 MississippiLead.com | All Rights Reserved. | <a href="privacy.html" style="color:#64748b;text-decoration:underline;">Privacy Policy</a></p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navList = document.getElementById('nav-list');
+    if (mobileMenu) {
+        mobileMenu.addEventListener('click', () => { navList.classList.toggle('active'); });
+    }
+</script>
+</body>
+</html>
