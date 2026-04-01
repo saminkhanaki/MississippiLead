@@ -3,215 +3,344 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lifestyle & Culture | Mississippi Lead</title>
+    <title>Lifestyle | Mississippi Lead — Dining, Health & Local Services in Mississippi</title>
+    <meta name="description" content="Mississippi lifestyle coverage — honest reviews of local restaurants, healthcare providers, and community institutions across Jackson and the Gulf Coast.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Mississippi Lead">
+    <link rel="canonical" href="https://mississippilead.com/lifestyle.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Mississippi Lead">
+    <meta property="og:title" content="Lifestyle | Mississippi Lead">
+    <meta property="og:description" content="Mississippi lifestyle coverage — honest reviews of local restaurants, healthcare providers, and community institutions across Jackson and the Gulf Coast.">
+    <meta property="og:url" content="https://mississippilead.com/lifestyle.html">
+    <meta property="og:image" content="https://mississippilead.com/assets/og-home-banner.webp">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Lifestyle — Mississippi Lead",
+      "url": "https://mississippilead.com/lifestyle.html",
+      "description": "Mississippi lifestyle coverage — restaurants, healthcare, and local services across Jackson and the Gulf Coast.",
+      "publisher": {
+        "@type": "NewsMediaOrganization",
+        "name": "Mississippi Lead",
+        "url": "https://mississippilead.com/"
+      }
+    }
+    </script>
+    <link rel="icon" type="image/png" href="assets/favicon.png">
     <link rel="stylesheet" href="style.css">
-        <link rel="icon" type="image/png" href="assets/favicon.png">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
-    
-    <style>
-        :root { 
-            --navy-blue: #0f172a; 
-            --accent-red: #b91c1c; 
-            --text: #334155; 
-            --bg: #f8fafc; 
-        }
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
 
-        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: var(--bg); color: var(--text); line-height: 1.6; }
-        .container { width: 90%; max-width: 1100px; margin: auto; }
-        
-        /* Navbar یکسان‌سازی شده */
-        nav { background: white; padding: 15px 0; border-bottom: 3px solid var(--accent-red); position: relative; }
-        .nav-flex { display: flex; justify-content: space-between; align-items: center; }
-        
-        .logo-text { 
-            font-family: 'Montserrat', sans-serif; 
-            font-weight: 900; font-size: 1.6rem; letter-spacing: -0.5px;
-            color: var(--navy-blue); text-decoration: none; text-transform: uppercase;
-        }
-        .logo-text span { color: var(--accent-red); }
-        
-        .nav-links { list-style: none; display: flex; gap: 20px; align-items: center; margin: 0; padding: 0; }
-        .nav-links a { text-decoration: none; color: var(--navy-blue); font-weight: 600; font-size: 0.9rem; }
-        
-        .biz-link { text-decoration: none; color: var(--navy-blue); font-size: 0.8rem; font-weight: bold; border-top: 1px solid #eee; pt: 15px; display: block; padding-top: 15px; }
-        
-        .acquire-btn { 
-            background: var(--accent-red) !important; 
-            color: white !important; 
-            padding: 8px 16px !important; 
-            border-radius: 4px; 
-            transition: 0.3s;
-        }
+<style>
+:root {
+    --navy-blue: #0f172a;
+    --accent-red: #b91c1c;
+}
+.logo-text {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 1.6rem;
+    letter-spacing: -0.5px;
+    color: var(--navy-blue);
+}
+.logo-text span { color: var(--accent-red); }
 
-        /* Lifestyle Header */
-        .lifestyle-header { background: white; padding: 60px 0; text-align: center; border-bottom: 1px solid #e2e8f0; margin-bottom: 40px; }
-        .lifestyle-header h1 { color: var(--navy-blue); font-size: 2.5rem; margin-bottom: 10px; }
-        .lifestyle-header p { color: #64748b; font-size: 1.1rem; }
+.page-wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+}
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+.section-header .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent-red);
+    flex-shrink: 0;
+}
+.section-header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--navy-blue);
+    margin: 0;
+}
+.section-header .line {
+    flex: 1;
+    height: 1px;
+    background: #e2e8f0;
+}
+.hero-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    border-top: 4px solid var(--accent-red);
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 32px;
+}
+.hero-text {
+    flex: 1.2;
+    min-width: 280px;
+    padding: 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+}
+.hero-img {
+    flex: 1;
+    min-width: 280px;
+    height: 360px;
+}
+.hero-img a { display: block; height: 100%; }
+.hero-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.category-badge {
+    display: inline-block;
+    background: var(--accent-red);
+    color: white;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 14px;
+    width: fit-content;
+}
+.hero-text h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.75rem;
+    color: var(--navy-blue);
+    line-height: 1.3;
+    margin: 0 0 14px;
+}
+.hero-text p {
+    font-size: 0.95rem;
+    color: #334155;
+    line-height: 1.65;
+    margin-bottom: 22px;
+}
+.btn-primary {
+    display: inline-block;
+    background: var(--accent-red);
+    color: white;
+    padding: 11px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.88rem;
+    width: fit-content;
+    transition: background 0.2s;
+}
+.btn-primary:hover { background: #991b1b; }
+.grid-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.68rem;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #94a3b8;
+    margin-bottom: 16px;
+}
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.article-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    border-bottom: 3px solid #e2e8f0;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+.article-card:hover {
+    border-color: var(--accent-red);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+.article-card a.card-img-link {
+    display: block;
+    overflow: hidden;
+    height: 160px;
+}
+.article-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s;
+}
+.article-card:hover img { transform: scale(1.03); }
+.article-card .card-body { padding: 16px; }
+.article-card .card-date {
+    font-size: 0.72rem;
+    color: #94a3b8;
+    margin-bottom: 6px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+.article-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    color: var(--navy-blue);
+    line-height: 1.4;
+    margin: 0 0 8px;
+}
+.article-card p {
+    font-size: 0.82rem;
+    color: #64748b;
+    line-height: 1.55;
+    margin-bottom: 12px;
+}
+.link-red {
+    color: var(--accent-red);
+    text-decoration: none;
+    font-size: 0.82rem;
+    font-weight: 700;
+}
+.link-red:hover { opacity: 0.75; }
 
-        /* Lifestyle Grid - چیدمان ۳ ستونه */
-        .lifestyle-grid { 
-            display: grid; 
-            grid-template-columns: repeat(3, 1fr); 
-            gap: 30px; 
-            margin-bottom: 60px;
-        }
-
-        .life-card { 
-            background: white; 
-            border-radius: 12px; 
-            overflow: hidden; 
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
-            display: flex;
-            flex-direction: column;
-            transition: transform 0.3s;
-        }
-        .life-card:hover { transform: translateY(-5px); }
-        
-        .article-img { width: 100%; height: 220px; object-fit: cover; }
-        .article-body { padding: 25px; flex-grow: 1; display: flex; flex-direction: column; }
-        
-        .category-tag { 
-            display: inline-block; background: #fff1f2; color: var(--accent-red); 
-            font-size: 0.7rem; font-weight: 800; text-transform: uppercase; 
-            padding: 4px 10px; border-radius: 4px; margin-bottom: 12px; align-self: flex-start;
-        }
-        
-        .article-body h3 { margin: 0 0 12px 0; color: var(--navy-blue); font-size: 1.25rem; }
-        .article-body p { font-size: 0.9rem; color: #64748b; margin-bottom: 15px; }
-        .location-tag { margin-top: auto; font-size: 0.8rem; color: var(--accent-red); font-weight: bold; }
-        .redirect-tag{ margin-top: 12px; font-size: 0.9rem; color: #b91c1c; font-weight: bold; }
-
-
-        /* Responsive Navigation & Grid */
-        .menu-toggle { display: none; cursor: pointer; flex-direction: column; gap: 5px; }
-        .bar { width: 25px; height: 3px; background-color: var(--navy-blue); }
-
-        @media (max-width: 992px) {
-            .lifestyle-grid { grid-template-columns: repeat(2, 1fr); }
-        }
-
-        @media (max-width: 768px) {
-            .menu-toggle { display: flex; }
-            .nav-links {
-                display: none; flex-direction: column; position: absolute; top: 60px; left: 0; width: 100%;
-                background: white; padding: 20px; box-shadow: 0 10px 15px rgba(0,0,0,0.1); z-index: 1000;
-            }
-            .nav-links.active { display: flex; }
-            .lifestyle-grid { grid-template-columns: 1fr; }
-            .lifestyle-header h1 { font-size: 1.8rem; }
-        }
-    </style>
+@media (max-width: 900px) {
+    .articles-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+    .hero-card { flex-direction: column; }
+    .hero-img { height: 240px; }
+}
+@media (max-width: 520px) {
+    .articles-grid { grid-template-columns: 1fr; }
+}
+</style>
 </head>
-<body>
 
+<body>
 <nav>
     <div class="container nav-flex">
-        <a href="index.html" class="logo" style="display: flex; align-items: center; gap: 12px; text-decoration: none;">
-            <img src="assets/logo.png" alt="Logo" style="height: 40px; width: auto;">
+        <a href="index.html" class="logo" style="display:flex;align-items:center;gap:12px;text-decoration:none;">
+            <img src="assets/logo.png" width="1000" height="1000" alt="Logo" style="height:40px;width:auto;">
             <span class="logo-text">MISSISSIPPI<span>LEAD</span></span>
         </a>
-        
         <div class="menu-toggle" id="mobile-menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
+            <span class="bar"></span><span class="bar"></span><span class="bar"></span>
         </div>
-
         <ul class="nav-links" id="nav-list">
             <li><a href="index.html">Home</a></li>
-            <li><a href="sports.html">Sports</a></li>
+            <li><a href="news.html">News</a></li>
             <li><a href="business.html">Business</a></li>
             <li><a href="lifestyle.html" class="acquire-btn">Lifestyle</a></li>
         </ul>
     </div>
 </nav>
 
-<div class="lifestyle-header">
-    <div class="container">
-        <h1>Mississippi Lifestyle & Culture</h1>
-        <p>Exploring the unique hospitality, food scene, and travel destinations.</p>
+<div class="page-wrap">
+
+    <div class="section-header">
+        <div class="dot"></div>
+        <h1>Lifestyle</h1>
+        <div class="line"></div>
+    </div>
+
+    <!-- Hero: most recent lifestyle article -->
+    <article class="hero-card">
+        <div class="hero-text">
+            <span class="category-badge">Health & Local Services</span>
+            <h2>Best Dentists in Gulfport, MS: Top 10 Dental Practices Reviewed and Ranked for 2026</h2>
+            <p>Clinical quality, patient experience, and pricing transparency — independently reviewed across Gulfport's leading dental practices, plus three offices residents should approach with caution.</p>
+            <a href="archive/gulfport-dentists-reveiw.html" class="btn-primary">Read Full Article</a>
+        </div>
+        <div class="hero-img">
+            <a href="archive/gulfport-dentists-reveiw.html">
+                <img src="assets/gulfport-dentist03.webp" width="1200" height="800" fetchpriority="high" alt="Best dentists Gulfport MS 2026">
+            </a>
+        </div>
+    </article>
+
+    <!-- Archive grid -->
+    <div class="grid-label">Earlier coverage</div>
+    <div class="articles-grid">
+
+        <article class="article-card">
+            <a href="archive/roosters.html" class="card-img-link">
+                <img src="assets/roosters-hero.webp" width="700" height="467" loading="lazy" alt="Roosters restaurant Fondren Jackson MS">
+            </a>
+            <div class="card-body">
+                <div class="card-date">Mar 3, 2026</div>
+                <h3>The Truth of Food in the Heart of Fondren: Exploring the Roots at Rooster's</h3>
+                <p>What makes Rooster's more than a restaurant — and why Fondren's food culture is worth paying attention to.</p>
+                <a href="archive/roosters.html" class="link-red">Read Full Article →</a>
+            </div>
+        </article>
+
+        <article class="article-card">
+            <a href="archive/keifers-jackson.html" class="card-img-link">
+                <img src="assets/keifers-jackson.webp" width="700" height="467" loading="lazy" alt="Keifers Greek restaurant Jackson MS">
+            </a>
+            <div class="card-body">
+                <div class="card-date">Feb 22, 2026</div>
+                <h3>A Journey Between Two Cultures: Stepping into Keifer's</h3>
+                <p>Jackson's beloved Greek restaurant — what keeps it a landmark after decades in the heart of the city.</p>
+                <a href="archive/keifers-jackson.html" class="link-red">Read Full Article →</a>
+            </div>
+        </article>
+
     </div>
 </div>
 
-<main class="container">
-    <div class="lifestyle-grid">
-        
-        <article class="life-card">
-            <img src="assets/keifers.jpg" alt="The Saltine" class="article-img">
-            <div class="article-body">
-                <span class="category-tag">Dining Spotlight</span>
-                <h3>Keifer's</h3>
-                <p> A long-standing pillar of Jackson’s dining landscape, Keifer’s is a cherished staple nestled in the heart of the historic Belhaven neighborhood. This iconic eatery masterfully pairs a nostalgic, laid-back ambiance with a Mediterranean-inspired menu that has captivated locals for decades. From their legendary gyro wraps and signature feta dressing to the famous homemade hummus, every plate emphasizes fresh ingredients and authentic tradition. Whether enjoying a sunny afternoon on their popular outdoor deck or a quick business lunch, guests find Keifer’s to be the ultimate destination for consistent quality and classic Mississippi hospitality.</p>
-                <a href="#" class="biz-link">📍 710 Poplar Blvd, Jackson, MS 39202</a>
-                <a href="archive/keifers-jackson.html" class="redirect-tag">Read Full Article →"</a>
-        </article>
-
-        <article class="life-card">
-            <img src="assets/hotel.jpg" alt="White House Hotel" class="article-img">
-            <div class="article-body">
-                <span class="category-tag">Luxury Stays & History</span>
-                <h3>The White House Hotel</h3>
-                <p>
-                    Standing as a beacon of Southern elegance since the 1890s, The White House Hotel in Biloxi offers a luxurious escape that bridges Mississippi’s storied past with modern coastal luxury. After a meticulous multi-million dollar renovation, this historic landmark has reclaimed its title as the premier destination for discerning travelers on the Gulf Coast. Guests can enjoy panoramic views of the Mississippi Sound from the rooftop lounge or relax under the canopy of ancient moss-draped oaks. With its blend of Victorian architecture and contemporary amenities, it serves as a sophisticated hub for local galas, corporate retreats, and serene weekend getaways.
-                </p>
-                <a href="#" class="biz-link">📍 1230 Beach Blvd, Biloxi, MS 39530</a>
-             </div>
-        </article>
-
-        <article class="life-card">
-            <a href="archive/roosters.html" class="redirect-tag">
-                <img src="assets/roosters-hero.webp" alt="Rooster's Fondren restaurant in Jackson, MS" class="article-img">
-            </a>
-            <div class="article-body">
-                <span class="category-tag">Dining Spotlight</span>
-                <h3>Rooster's Fondren Restaurant</h3>
-                <p>
-                    Sometimes, to find the soul of a city, you must bypass the opulent restaurants with their multi-page leather menus. Instead, you go where the scent of freshly baked bread intertwines with the hum of the neighborhood. In Jackson, Mississippi, if you find yourself on State Street, a building with a striking azure facade will make you stop in your tracks. This is Rooster’s—a sanctuary in the heart of the Fondren arts district that serves its guests with "honesty and intimacy" rather than glitz and glamour. Entering this restaurant is not a simple choice for lunch; it is an experience of contrast between industrial cool and the nostalgic warmth of the South. It is a place where garage-style windows open up to the rhythm of life, and every corner tells a story of the city’s deep roots.
-                </p>
-                <a href="https://maps.app.goo.gl/GxCy3iKDf6Anzt5u9/" class="biz-link">📍 2906 N State St #104, Jackson, MS 39216</a>
-                 <a href="archive/roosters.html" class="redirect-tag">Read Full Article →"</a>                
+<footer style="background:#0f172a;color:white;padding:60px 0 30px;margin-top:0;">
+    <div style="width:90%;max-width:1100px;margin:auto;">
+        <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:40px;margin-bottom:40px;">
+            <div style="flex:1;min-width:250px;">
+                <h3 style="color:#b91c1c;margin-bottom:20px;">MISSISSIPPI LEAD</h3>
+                <p style="color:#94a3b8;font-size:0.9rem;line-height:1.6;">The premier source for business intelligence, local news, and strategic insights in the Magnolia State.</p>
             </div>
-        </article>
-    </div>
-</main>
-
-    
-<footer style="background: #0f172a; color: white; padding: 60px 0 30px 0; margin-top: 60px;">
-    <div style="width: 90%; max-width: 1100px; margin: auto;">
-        <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 40px; margin-bottom: 40px;">
-            <div style="flex: 1; min-width: 250px;">
-                <h3 style="color: #b91c1c; margin-bottom: 20px;">MISSISSIPPI LEAD</h3>
-                <p style="color: #94a3b8; font-size: 0.9rem;">The premier source for business intelligence, local news, and strategic insights in the Magnolia State.</p>
-            </div>
-            <div style="flex: 1; min-width: 150px;">
-                <h3 style="margin-bottom: 20px; font-size: 1.1rem;">Quick Links</h3>
-                <ul style="list-style: none; padding: 0; font-size: 0.9rem;">
-                    <li style="margin-bottom: 10px;"><a href="about.html" style="color: #94a3b8; text-decoration: none;">About Us</a></li>
-                    <li style="margin-bottom: 10px;"><a href="business.html" style="color: #94a3b8; text-decoration: none;">Business Directory</a></li>
-                    <li style="margin-bottom: 10px;"><a href="lifestyle.html" style="color: #94a3b8; text-decoration: none;">Lifestyle</a></li>
-                    <li style="margin-bottom: 10px;"><a href="privacy.html" style="color: #94a3b8; text-decoration: none;">Privacy Policy</a></li>
+            <div style="flex:1;min-width:150px;">
+                <h3 style="margin-bottom:20px;font-size:1.1rem;">Quick Links</h3>
+                <ul style="list-style:none;padding:0;font-size:0.9rem;">
+                    <li style="margin-bottom:10px;"><a href="about.html" style="color:#94a3b8;text-decoration:none;">About Us</a></li>
+                    <li style="margin-bottom:10px;"><a href="archive.html" style="color:#94a3b8;text-decoration:none;">Archive</a></li>
+                    <li style="margin-bottom:10px;"><a href="acquire.html" style="color:#94a3b8;text-decoration:none;">Contact</a></li>
                 </ul>
             </div>
-            <div style="flex: 1; min-width: 200px;">
-                <h3 style="margin-bottom: 20px; font-size: 1.1rem;">Contact</h3>
-                <p style="color: #94a3b8; font-size: 0.9rem;">📍 Capitol Street, Jackson, MS, USA</p>
-                <p style="color: #94a3b8; font-size: 0.9rem;">✉️ info@mississippilead.com</p>
+            <div style="flex:1;min-width:200px;">
+                <h3 style="margin-bottom:20px;font-size:1.1rem;">Contact</h3>
+                <p style="color:#94a3b8;font-size:0.9rem;">📍 Jackson, Mississippi</p>
+                <p style="color:#94a3b8;font-size:0.9rem;">✉️ <a href="mailto:info@mississippilead.com" style="color:#94a3b8;">info@mississippilead.com</a></p>
             </div>
         </div>
-
-        <div style="border-top: 1px solid #1e293b; padding-top: 20px; text-align: center; color: #64748b; font-size: 0.85rem;">
-            <p>© 2026 MississippiLead.com | All Rights Reserved. | <a href="privacy.html" style="color: #64748b; text-decoration: underline;">Privacy Policy</a></p>
+        <div style="border-top:1px solid #1e293b;padding-top:20px;text-align:center;color:#64748b;font-size:0.85rem;">
+            <p>© 2026 MississippiLead.com | All Rights Reserved. | <a href="privacy.html" style="color:#64748b;text-decoration:underline;">Privacy Policy</a></p>
         </div>
     </div>
 </footer>
-    
+
 <script>
     const mobileMenu = document.getElementById('mobile-menu');
     const navList = document.getElementById('nav-list');
-    mobileMenu.addEventListener('click', () => {
-        navList.classList.toggle('active');
-    });
+    if (mobileMenu) {
+        mobileMenu.addEventListener('click', () => { navList.classList.toggle('active'); });
+    }
 </script>
 </body>
 </html>
