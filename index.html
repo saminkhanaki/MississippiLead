@@ -40,7 +40,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
-
 <style>
 :root {
     --navy-blue: #0f172a;
@@ -54,8 +53,6 @@
     color: var(--navy-blue);
 }
 .logo-text span { color: var(--accent-red); }
-
-/* ── Section labels ── */
 .section-label {
     display: flex;
     align-items: center;
@@ -83,8 +80,6 @@
     background: var(--accent-red);
     flex-shrink: 0;
 }
-
-/* ── Hero news card ── */
 .hero-card {
     background: white;
     border-radius: 12px;
@@ -156,8 +151,6 @@
     transition: background 0.2s;
 }
 .btn-primary:hover { background: #991b1b; }
-
-/* ── Two-column equal grid (Business + Lifestyle) ── */
 .two-col {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -215,8 +208,6 @@
     transition: opacity 0.2s;
 }
 .link-red:hover { opacity: 0.75; }
-
-/* ── Archive grid (3 cards) ── */
 .archive-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -252,8 +243,6 @@
     line-height: 1.55;
     margin-bottom: 12px;
 }
-
-/* ── View all link ── */
 .view-all-wrap {
     text-align: center;
     margin: 40px 0 60px;
@@ -270,8 +259,6 @@
     transition: background 0.2s;
 }
 .btn-dark:hover { background: #1e293b; }
-
-/* ── Responsive ── */
 @media (max-width: 900px) {
     .four-col { grid-template-columns: 1fr 1fr !important; }
 }
@@ -288,7 +275,6 @@
 }
 </style>
 </head>
-
 <body>
 <nav>
     <div class="container nav-flex">
@@ -307,7 +293,6 @@
         </ul>
     </div>
 </nav>
-
 <main class="container" style="max-width:1100px;margin:40px auto;padding:0 20px;">
 
     <!-- ═══════════════════════════════════════
@@ -318,7 +303,6 @@
         <h2>News</h2>
         <div class="line"></div>
     </div>
-
     <article class="hero-card">
         <div class="hero-text">
             <span class="category-badge">Incident Investigation</span>
@@ -393,14 +377,14 @@
             </div>
         </article>
         <article class="feature-card">
-            <a href="archive/roosters.html">
-                <img src="assets/roosters-hero.webp" width="800" height="533" loading="lazy" alt="Roosters restaurant Fondren Jackson MS" style="width:100%;height:220px;object-fit:cover;display:block;">
+            <a href="lifestyle/world-catfish-festival-2026.html">
+                <img src="assets/lifestyle/catfish-festival-hero.webp" width="800" height="533" loading="lazy" alt="World Catfish Festival Belzoni Mississippi 2026" style="width:100%;height:220px;object-fit:cover;display:block;">
             </a>
             <div class="card-body">
                 <span class="cat-label">Lifestyle</span>
-                <h3>The Truth of Food in the Heart of Fondren: Exploring the Roots at Rooster's</h3>
-                <p>What makes Rooster's more than a restaurant — and why Fondren's food culture is worth paying attention to.</p>
-                <a href="archive/roosters.html" class="link-red">Read Full Article →</a>
+                <h3>Fifty Years of Fried Fish and Community Pride: Your Complete Guide to the 49th World Catfish Festival</h3>
+                <p>Everything you need to know about the April 11, 2026 festival in Belzoni — history, events, and why the Catfish Capital of the World is worth the drive.</p>
+                <a href="lifestyle/world-catfish-festival-2026.html" class="link-red">Read Full Article →</a>
             </div>
         </article>
     </div>
@@ -428,6 +412,16 @@
             </div>
         </article>
         <article class="archive-card">
+            <a href="archive/roosters.html">
+                <img src="assets/roosters-hero.webp" width="700" height="467" loading="lazy" alt="Roosters restaurant Fondren Jackson MS">
+            </a>
+            <div class="card-body">
+                <h4>The Truth of Food in the Heart of Fondren: Exploring the Roots at Rooster's</h4>
+                <p>What makes Rooster's more than a restaurant — and why Fondren's food culture is worth paying attention to.</p>
+                <a href="archive/roosters.html" class="link-red">Read Full Article →</a>
+            </div>
+        </article>
+        <article class="archive-card">
             <a href="archive/gulfport-dentists-reveiw.html">
                 <img src="assets/gulfport-dentist03.webp" width="700" height="467" loading="lazy" alt="Best dentists Gulfport MS 2026">
             </a>
@@ -437,24 +431,12 @@
                 <a href="archive/gulfport-dentists-reveiw.html" class="link-red">Read Full Article →</a>
             </div>
         </article>
-        <article class="archive-card">
-            <a href="archive/keifers-jackson.html">
-                <img src="assets/keifers-main.webp" width="700" height="467" loading="lazy" alt="Keifers restaurant Jackson MS">
-            </a>
-            <div class="card-body">
-                <h4>A Journey Between Two Cultures: Stepping into Keifer's</h4>
-                <p>Jackson's beloved Greek restaurant — what keeps it a landmark after decades.</p>
-                <a href="archive/keifers-jackson.html" class="link-red">Read Full Article →</a>
-            </div>
-        </article>
     </div>
 
     <div class="view-all-wrap">
         <a href="archive.html" class="btn-dark">View Full Archive →</a>
     </div>
-
 </main>
-
 <footer style="background:#0f172a;color:white;padding:60px 0 30px;margin-top:0;">
     <div style="width:90%;max-width:1100px;margin:auto;">
         <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:40px;margin-bottom:40px;">
@@ -479,3 +461,14 @@
         <div style="border-top:1px solid #1e293b;padding-top:20px;text-align:center;color:#64748b;font-size:0.85rem;">
             <p>© 2026 MississippiLead.com | All Rights Reserved. | <a href="privacy.html" style="color:#64748b;text-decoration:underline;">Privacy Policy</a></p>
         </div>
+    </div>
+</footer>
+<script>
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navList = document.getElementById('nav-list');
+    if (mobileMenu) {
+        mobileMenu.addEventListener('click', () => { navList.classList.toggle('active'); });
+    }
+</script>
+</body>
+</html>
