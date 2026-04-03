@@ -33,7 +33,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
-
 <style>
 :root {
     --navy-blue: #0f172a;
@@ -47,13 +46,11 @@
     color: var(--navy-blue);
 }
 .logo-text span { color: var(--accent-red); }
-
 .page-wrap {
     max-width: 1100px;
     margin: 0 auto;
     padding: 40px 20px 80px;
 }
-
 /* Section header */
 .section-header {
     display: flex;
@@ -82,7 +79,6 @@
     height: 1px;
     background: #e2e8f0;
 }
-
 /* Hero card */
 .hero-card {
     background: white;
@@ -156,7 +152,6 @@
     transition: background 0.2s;
 }
 .btn-primary:hover { background: #991b1b; }
-
 /* Archive grid */
 .grid-label {
     font-family: 'Montserrat', sans-serif;
@@ -229,7 +224,6 @@
     font-weight: 700;
 }
 .link-red:hover { opacity: 0.75; }
-
 @media (max-width: 900px) {
     .articles-grid { grid-template-columns: repeat(2, 1fr); }
 }
@@ -242,7 +236,6 @@
 }
 </style>
 </head>
-
 <body>
 <nav>
     <div class="container nav-flex">
@@ -261,9 +254,7 @@
         </ul>
     </div>
 </nav>
-
 <div class="page-wrap">
-
     <div class="section-header">
         <div class="dot"></div>
         <h1>Business</h1>
@@ -273,14 +264,14 @@
     <!-- Hero: most recent business article -->
     <article class="hero-card">
         <div class="hero-text">
-            <span class="category-badge">Economy & Jobs</span>
-            <h2>International Paper's $225 Million Mississippi Bet: What It Means for Local Jobs and the State Economy</h2>
-            <p>A major investment announcement from one of the world's largest paper companies — and what it signals for Mississippi's manufacturing future.</p>
-            <a href="archive/international-paper-mississippi-2026.html" class="btn-primary">Read Full Analysis</a>
+            <span class="category-badge">Business & Tech</span>
+            <h2>Oxford's Quiet Tech Revolution: Why Ole Miss Is Building Mississippi's Best Startup Ecosystem</h2>
+            <p>How a college town of fewer than 30,000 people produced Mississippi's largest tech exit — and what it's building next.</p>
+            <a href="business/oxford-quiet-tech-revolution.html" class="btn-primary">Read Full Analysis</a>
         </div>
         <div class="hero-img">
-            <a href="archive/international-paper-mississippi-2026.html">
-                <img src="assets/international-paper-ms.webp" width="1200" height="800" fetchpriority="high" alt="International Paper Mississippi investment 2026">
+            <a href="business/oxford-quiet-tech-revolution.html">
+                <img src="assets/business/oxford-tech-hero.webp" width="1200" height="800" fetchpriority="high" alt="Oxford Mississippi town square tech startup ecosystem">
             </a>
         </div>
     </article>
@@ -288,7 +279,17 @@
     <!-- Archive grid -->
     <div class="grid-label">Earlier coverage</div>
     <div class="articles-grid">
-
+        <article class="article-card">
+            <a href="archive/international-paper-mississippi-2026.html" class="card-img-link">
+                <img src="assets/international-paper-ms.webp" width="700" height="467" loading="lazy" alt="International Paper Mississippi investment 2026">
+            </a>
+            <div class="card-body">
+                <div class="card-date">Apr 1, 2026</div>
+                <h3>International Paper's $225 Million Mississippi Bet: What It Means for Local Jobs and the State Economy</h3>
+                <p>A major investment announcement from one of the world's largest paper companies — and what it signals for Mississippi's manufacturing future.</p>
+                <a href="archive/international-paper-mississippi-2026.html" class="link-red">Read Full Analysis →</a>
+            </div>
+        </article>
         <article class="article-card">
             <a href="archive/general-atomics-expansion.html" class="card-img-link">
                 <img src="assets/general-atomics.webp" width="700" height="467" loading="lazy" alt="General Atomics Mississippi defense expansion 2026">
@@ -300,7 +301,6 @@
                 <a href="archive/general-atomics-expansion.html" class="link-red">Read Full Analysis →</a>
             </div>
         </article>
-
         <article class="article-card">
             <a href="archive/pascagoula.html" class="card-img-link">
                 <img src="assets/pascagoula.webp" width="700" height="467" loading="lazy" alt="Ingalls Shipbuilding Pascagoula hiring 2026">
@@ -312,7 +312,6 @@
                 <a href="archive/pascagoula.html" class="link-red">Read Full Report →</a>
             </div>
         </article>
-
         <article class="article-card">
             <a href="archive/tax-blueprint.html" class="card-img-link">
                 <img src="assets/taxprep.webp" width="700" height="467" loading="lazy" alt="Jackson MS tax filing guide 2026">
@@ -324,7 +323,6 @@
                 <a href="archive/tax-blueprint.html" class="link-red">Read Full Guide →</a>
             </div>
         </article>
-
         <article class="article-card">
             <a href="archive/best-tax-services-jackson-ms-2026.html" class="card-img-link">
                 <img src="assets/jackson-tax-services.webp" width="700" height="467" loading="lazy" alt="Best tax services Jackson MS 2026">
@@ -336,7 +334,6 @@
                 <a href="archive/best-tax-services-jackson-ms-2026.html" class="link-red">Read Full Guide →</a>
             </div>
         </article>
-
         <article class="article-card">
             <a href="archive/valvoline.html" class="card-img-link">
                 <img src="assets/valvoline.webp" width="700" height="467" loading="lazy" alt="Valvoline Mississippi locations 2026">
@@ -348,10 +345,8 @@
                 <a href="archive/valvoline.html" class="link-red">Read Full Guide →</a>
             </div>
         </article>
-
     </div>
 </div>
-
 <footer style="background:#0f172a;color:white;padding:60px 0 30px;margin-top:0;">
     <div style="width:90%;max-width:1100px;margin:auto;">
         <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:40px;margin-bottom:40px;">
@@ -378,7 +373,6 @@
         </div>
     </div>
 </footer>
-
 <script>
     const mobileMenu = document.getElementById('mobile-menu');
     const navList = document.getElementById('nav-list');
