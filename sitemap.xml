@@ -3,7 +3,7 @@
   <!-- Core Pages -->
   <url>
     <loc>https://mississippilead.com/</loc>
-    <lastmod>2026-04-03</lastmod>
+    <lastmod>2026-04-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.00</priority>
   </url>
@@ -15,7 +15,7 @@
   </url>
   <url>
     <loc>https://mississippilead.com/business.html</loc>
-    <lastmod>2026-04-03</lastmod>
+    <lastmod>2026-04-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
@@ -42,6 +42,13 @@
   <url>
     <loc>https://mississippilead.com/privacy.html</loc>
     <priority>0.20</priority>
+  </url>
+  <!-- April 2026 — Business -->
+  <url>
+    <loc>https://mississippilead.com/business/oxford-quiet-tech-revolution.html</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.92</priority>
   </url>
   <!-- April 2026 — Lifestyle -->
   <url>
