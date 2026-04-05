@@ -33,7 +33,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
-
 <style>
 :root { --navy-blue: #0f172a; --accent-red: #b91c1c; }
 .logo-text { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 1.6rem; letter-spacing: -0.5px; color: var(--navy-blue); }
@@ -71,7 +70,6 @@
 @media (max-width: 520px) { .articles-grid { grid-template-columns: 1fr; } }
 </style>
 </head>
-
 <body>
 <nav>
     <div class="container nav-flex">
@@ -90,31 +88,43 @@
         </ul>
     </div>
 </nav>
-
 <div class="page-wrap">
-
     <div class="section-header">
         <div class="dot"></div>
         <h1>News</h1>
         <div class="line"></div>
     </div>
 
+    <!-- HERO: Lamar Odom (Apr 9, 2026) -->
     <article class="hero-card">
         <div class="hero-text">
-            <span class="category-badge">Incident Investigation</span>
-            <h2>Not Guilty Is Not the Same as Innocent: The Questions the DiBiase Verdict Leaves Unanswered</h2>
-            <p>Ted DiBiase Jr. walked free. The welfare money is still gone. The jury's decision settles the legal question — but leaves the larger one wide open.</p>
-            <a href="archive/dibiase-verdict-2026.html" class="btn-primary">Read Full Investigation</a>
+            <span class="category-badge">Analysis</span>
+            <h2>Khloé's Documentary: How Netflix's <em>Untold</em> Became the Kardashians' Most Sophisticated PR Move</h2>
+            <p>Riveting television. Almost entirely unverifiable. And its two most explosive accusations target men who cannot respond — because they are dead.</p>
+            <a href="news/lamar-odom-untold-documentary-analysis.html" class="btn-primary">Read Full Analysis</a>
         </div>
         <div class="hero-img">
-            <a href="archive/dibiase-verdict-2026.html">
-                <img src="assets/dibiase-verdict.webp" width="1200" height="800" fetchpriority="high" alt="DiBiase verdict Mississippi welfare fraud 2026">
+            <a href="news/lamar-odom-untold-documentary-analysis.html">
+                <img src="assets/news/lamar-odom-untold-hero.webp" width="1200" height="800" fetchpriority="high" alt="Netflix Untold Lamar Odom documentary analysis">
             </a>
         </div>
     </article>
 
     <div class="grid-label">Earlier coverage</div>
     <div class="articles-grid">
+
+        <!-- Slot 1: previous hero → DiBiase -->
+        <article class="article-card">
+            <a href="archive/dibiase-verdict-2026.html" class="card-img-link">
+                <img src="assets/dibiase-verdict.webp" width="700" height="467" loading="lazy" alt="DiBiase verdict Mississippi welfare fraud 2026">
+            </a>
+            <div class="card-body">
+                <div class="card-date">Apr 2, 2026</div>
+                <h3>Not Guilty Is Not the Same as Innocent: The Questions the DiBiase Verdict Leaves Unanswered</h3>
+                <p>Ted DiBiase Jr. walked free. The welfare money is still gone. The jury's decision settles the legal question — but leaves the larger one wide open.</p>
+                <a href="archive/dibiase-verdict-2026.html" class="link-red">Read Full Investigation →</a>
+            </div>
+        </article>
 
         <article class="article-card">
             <a href="archive/mississippi-fire-weather-watch-2026.html" class="card-img-link">
@@ -262,7 +272,6 @@
 
     </div>
 </div>
-
 <footer style="background:#0f172a;color:white;padding:60px 0 30px;margin-top:0;">
     <div style="width:90%;max-width:1100px;margin:auto;">
         <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:40px;margin-bottom:40px;">
@@ -289,7 +298,6 @@
         </div>
     </div>
 </footer>
-
 <script>
     const mobileMenu = document.getElementById('mobile-menu');
     const navList = document.getElementById('nav-list');
