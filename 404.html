@@ -2,116 +2,338 @@
 <html lang="en">
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-MFDRJW65W1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MFDRJW65W1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-MFDRJW65W1');
+  </script>
 
-  gtag('config', 'G-MFDRJW65W1');
-</script>
-  
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Page Not Found | Mississippi Lead</title>
-  <meta name="robots" content="noindex, nofollow">
+  <title>404 – Page Not Found | Mississippi Lead</title>
+  <meta name="description" content="The page you're looking for doesn't exist. Return to Mississippi Lead for the latest news from Jackson and the Gulf Coast.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: Georgia, 'Times New Roman', serif;
-      background: #f9f7f2;
-      color: #1a1a1a;
-      min-height: 100vh;
+    :root {
+      --navy-blue: #0f172a;
+      --accent-red: #b91c1c;
+      --slate-light: #f8fafc;
+      --slate-mid: #64748b;
+      --slate-border: #e2e8f0;
+    }
+
+    /* ── Logo (matches site) ── */
+    .logo-text {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: 1.6rem;
+      letter-spacing: -0.5px;
+      color: var(--navy-blue);
+    }
+    .logo-text span { color: var(--accent-red); }
+
+    /* ── 404 wrapper ── */
+    .error-page {
+      min-height: calc(100vh - 80px);
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 2rem;
-    }
-    .container {
-      max-width: 520px;
+      padding: 80px 20px 60px;
       text-align: center;
+      position: relative;
+      overflow: hidden;
     }
-    .logo {
-      font-size: 13px;
-      font-family: Arial, sans-serif;
+
+    /* Large decorative 404 behind content */
+    .error-bg-number {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: clamp(180px, 30vw, 340px);
+      color: transparent;
+      -webkit-text-stroke: 1.5px #e2e8f0;
+      letter-spacing: -0.05em;
+      user-select: none;
+      pointer-events: none;
+      white-space: nowrap;
+      animation: fadeIn 0.8s ease both;
+    }
+
+    /* Thin red rule above kicker */
+    .error-kicker {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 900;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent-red);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 1;
+      animation: slideUp 0.6s ease 0.1s both;
+    }
+    .error-kicker::before,
+    .error-kicker::after {
+      content: '';
+      width: 48px;
+      height: 1px;
+      background: var(--accent-red);
+      opacity: 0.5;
+    }
+
+    .error-headline {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      color: var(--navy-blue);
+      line-height: 1.2;
+      margin: 0 0 18px;
+      max-width: 560px;
+      position: relative;
+      z-index: 1;
+      animation: slideUp 0.6s ease 0.2s both;
+    }
+
+    .error-body {
+      font-size: 1rem;
+      color: var(--slate-mid);
+      line-height: 1.75;
+      max-width: 480px;
+      margin: 0 0 40px;
+      position: relative;
+      z-index: 1;
+      animation: slideUp 0.6s ease 0.3s both;
+    }
+
+    /* CTA buttons */
+    .error-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      justify-content: center;
+      position: relative;
+      z-index: 1;
+      animation: slideUp 0.6s ease 0.4s both;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background: var(--navy-blue);
+      color: white;
+      padding: 13px 28px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: 0.82rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn-primary:hover {
+      background: #1e293b;
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      display: inline-block;
+      background: transparent;
+      color: var(--accent-red);
+      padding: 13px 28px;
+      border-radius: 6px;
+      border: 1.5px solid var(--accent-red);
+      text-decoration: none;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: 0.82rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: background 0.2s, color 0.2s, transform 0.15s;
+    }
+    .btn-secondary:hover {
+      background: var(--accent-red);
+      color: white;
+      transform: translateY(-1px);
+    }
+
+    /* Quick links section */
+    .error-links {
+      margin-top: 60px;
+      padding-top: 40px;
+      border-top: 1px solid var(--slate-border);
+      width: 100%;
+      max-width: 640px;
+      position: relative;
+      z-index: 1;
+      animation: slideUp 0.6s ease 0.5s both;
+    }
+
+    .error-links-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 900;
       letter-spacing: 0.15em;
-      font-weight: 700;
-      color: #1a1a1a;
-      text-decoration: none;
+      text-transform: uppercase;
+      color: var(--slate-mid);
+      margin-bottom: 20px;
+    }
+
+    .quick-links {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .quick-link {
       display: inline-block;
-      margin-bottom: 2.5rem;
-      border-bottom: 2px solid #1a1a1a;
-      padding-bottom: 4px;
-    }
-    .code {
-      font-size: 72px;
-      font-weight: 700;
-      line-height: 1;
-      color: #1a1a1a;
-      margin-bottom: 0.5rem;
-    }
-    h1 {
-      font-size: 20px;
-      font-weight: 400;
-      color: #444;
-      margin-bottom: 1rem;
-      font-family: Arial, sans-serif;
-    }
-    p {
-      font-size: 15px;
-      color: #666;
-      line-height: 1.7;
-      margin-bottom: 2rem;
-    }
-    .divider {
-      width: 40px;
-      height: 2px;
-      background: #1a1a1a;
-      margin: 1.5rem auto;
-    }
-    .btn {
-      display: inline-block;
-      background: #1a1a1a;
-      color: #fff;
+      background: var(--slate-light);
+      color: var(--navy-blue);
+      padding: 9px 18px;
+      border-radius: 6px;
+      border: 0.5px solid var(--slate-border);
       text-decoration: none;
-      font-family: Arial, sans-serif;
-      font-size: 13px;
-      letter-spacing: 0.1em;
+      font-size: 0.85rem;
       font-weight: 700;
-      padding: 12px 28px;
-      transition: background 0.2s;
+      transition: background 0.2s, border-color 0.2s, transform 0.15s;
     }
-    .btn:hover { background: #333; }
-    .counter {
-      margin-top: 1.5rem;
-      font-family: Arial, sans-serif;
-      font-size: 12px;
-      color: #999;
+    .quick-link:hover {
+      background: white;
+      border-color: var(--navy-blue);
+      transform: translateY(-1px);
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 520px) {
+      .error-bg-number { font-size: 150px; }
+      .error-actions { flex-direction: column; align-items: center; }
+      .btn-primary, .btn-secondary { width: 100%; max-width: 280px; text-align: center; }
     }
   </style>
 </head>
+
 <body>
-  <div class="container">
-    <a class="logo" href="/">MISSISSIPPI LEAD</a>
-    <div class="code">404</div>
-    <h1>This page no longer exists.</h1>
-    <div class="divider"></div>
-    <p>The article or page you're looking for has been moved or removed. You'll be redirected to our homepage shortly.</p>
-    <a class="btn" href="/">RETURN TO HOMEPAGE</a>
-    <p class="counter">Redirecting in <span id="sec">5</span> seconds…</p>
+
+<!-- ── Navigation (identical to site) ── -->
+<nav>
+  <div class="container nav-flex">
+    <a href="index.html" class="logo" style="display:flex;align-items:center;gap:12px;text-decoration:none;">
+      <img src="assets/logo.png" width="1000" height="1000" alt="Logo" style="height:40px;width:auto;">
+      <span class="logo-text">MISSISSIPPI<span>LEAD</span></span>
+    </a>
+    <div class="menu-toggle" id="mobile-menu">
+      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+    </div>
+    <ul class="nav-links" id="nav-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="business.html">Business</a></li>
+      <li><a href="lifestyle.html">Lifestyle</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ── 404 Content ── -->
+<div class="error-page">
+
+  <!-- Large ghost number -->
+  <div class="error-bg-number" aria-hidden="true">404</div>
+
+  <!-- Kicker -->
+  <div class="error-kicker">Page Not Found</div>
+
+  <!-- Headline -->
+  <h1 class="error-headline">
+    This story doesn't exist&nbsp;— yet.
+  </h1>
+
+  <!-- Body -->
+  <p class="error-body">
+    The page you're looking for may have been moved, renamed, or removed from our archive.
+    Head back to the newsroom for the latest from Jackson and the Gulf Coast.
+  </p>
+
+  <!-- CTAs -->
+  <div class="error-actions">
+    <a href="index.html" class="btn-primary">Back to Homepage</a>
+    <a href="news.html" class="btn-secondary">Browse News</a>
   </div>
 
-  <script>
-    var s = 5;
-    var el = document.getElementById('sec');
-    var t = setInterval(function() {
-      s--;
-      el.textContent = s;
-      if (s <= 0) {
-        clearInterval(t);
-        window.location.href = '/';
-      }
-    }, 1000);
-  </script>
+  <!-- Quick links -->
+  <div class="error-links">
+    <div class="error-links-label">Or jump to a section</div>
+    <div class="quick-links">
+      <a href="business.html" class="quick-link">Business</a>
+      <a href="lifestyle.html" class="quick-link">Lifestyle</a>
+      <a href="archive.html" class="quick-link">Archive</a>
+      <a href="acquire.html" class="quick-link">Contact</a>
+      <a href="about.html" class="quick-link">About Us</a>
+    </div>
+  </div>
+
+</div>
+
+<!-- ── Footer (identical to site) ── -->
+<footer style="background:#0f172a;color:white;padding:60px 0 30px;margin-top:0;">
+  <div style="width:90%;max-width:1100px;margin:auto;">
+    <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:40px;margin-bottom:40px;">
+      <div style="flex:1;min-width:250px;">
+        <h3 style="color:#b91c1c;margin-bottom:20px;">MISSISSIPPI LEAD</h3>
+        <p style="color:#94a3b8;font-size:0.9rem;line-height:1.6;">The premier source for business intelligence, local news, and strategic insights in the Magnolia State.</p>
+      </div>
+      <div style="flex:1;min-width:150px;">
+        <h3 style="margin-bottom:20px;font-size:1.1rem;">Quick Links</h3>
+        <ul style="list-style:none;padding:0;font-size:0.9rem;">
+          <li style="margin-bottom:10px;"><a href="about.html" style="color:#94a3b8;text-decoration:none;">About Us</a></li>
+          <li style="margin-bottom:10px;"><a href="archive.html" style="color:#94a3b8;text-decoration:none;">Archive</a></li>
+          <li style="margin-bottom:10px;"><a href="acquire.html" style="color:#94a3b8;text-decoration:none;">Contact</a></li>
+        </ul>
+      </div>
+      <div style="flex:1;min-width:200px;">
+        <h3 style="margin-bottom:20px;font-size:1.1rem;">Contact</h3>
+        <p style="color:#94a3b8;font-size:0.9rem;">📍 Jackson, Mississippi</p>
+        <p style="color:#94a3b8;font-size:0.9rem;">✉️ <a href="mailto:info@mississippilead.com" style="color:#94a3b8;">info@mississippilead.com</a></p>
+      </div>
+    </div>
+    <div style="border-top:1px solid #1e293b;padding-top:20px;text-align:center;color:#64748b;font-size:0.85rem;">
+      <p>© 2026 MississippiLead.com | All Rights Reserved. | <a href="privacy.html" style="color:#64748b;text-decoration:underline;">Privacy Policy</a></p>
+    </div>
+  </div>
+</footer>
+
+<!-- Mobile nav toggle -->
+<script>
+  const mobileMenu = document.getElementById('mobile-menu');
+  const navList = document.getElementById('nav-list');
+  if (mobileMenu) {
+    mobileMenu.addEventListener('click', () => {
+      navList.classList.toggle('active');
+    });
+  }
+</script>
+
 </body>
 </html>
