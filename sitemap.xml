@@ -3,7 +3,7 @@
   <!-- Core Pages -->
   <url>
     <loc>https://mississippilead.com/</loc>
-    <lastmod>2026-04-07</lastmod>
+    <lastmod>2026-04-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.00</priority>
   </url>
@@ -15,7 +15,7 @@
   </url>
   <url>
     <loc>https://mississippilead.com/business.html</loc>
-    <lastmod>2026-04-04</lastmod>
+    <lastmod>2026-04-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
@@ -27,7 +27,7 @@
   </url>
   <url>
     <loc>https://mississippilead.com/archive.html</loc>
-    <lastmod>2026-04-09</lastmod>
+    <lastmod>2026-04-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.75</priority>
   </url>
@@ -51,6 +51,12 @@
     <priority>0.92</priority>
   </url>
   <!-- April 2026 — Business -->
+  <url>
+    <loc>https://mississippilead.com/business/amazon-25-billion-deal-mississippi-taxpayers.html</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
   <url>
     <loc>https://mississippilead.com/business/oxford-quiet-tech-revolution.html</loc>
     <lastmod>2026-04-04</lastmod>
@@ -168,7 +174,7 @@
   </url>
   <!-- Sports articles — section discontinued, low priority -->
   <url>
-    <loc>https://mississippilead.com/archive/tiger-woods-dui-arrest-2026.html</loc>
+    <loc>https://mississippilead.com/archive/tiger-woods-diu-arrest-2026.html</loc>
     <lastmod>2026-03-28</lastmod>
     <priority>0.45</priority>
   </url>
