@@ -141,10 +141,14 @@
 /* Tags row */
 .latest-tags-row {
     display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 6px;
+    flex-direction: column;
+    gap: 8px;
     margin-bottom: 16px;
+}
+.latest-tags-row .tags-line2 {
+    display: flex;
+    align-items: center;
+    gap: 6px;
 }
 .latest-tag {
     display: inline-flex;
@@ -391,8 +395,10 @@
         <div class="hero-text">
             <div class="latest-tags-row">
                 <span class="latest-tag">Latest Article</span>
-                <span class="category-badge">Analysis</span>
-                <span class="section-tag">News</span>
+                <div class="tags-line2">
+                    <span class="section-tag">News</span>                  
+                    <span class="category-badge">Analysis</span>
+                </div>
             </div>
             <h2>A Hospital That Outlived Its Town: The Structural Collapse Behind Greenwood Leflore's Final Crisis</h2>
             <p>Over $44 million in public funds, three rounds of rescue, and a negotiation history that has collapsed twice before. What the numbers actually show about Greenwood Leflore Hospital — and why this is not a story that policy can fix.</p>
