@@ -53,7 +53,6 @@
     --navy-blue: #0f172a;
     --accent-red: #b91c1c;
 }
-/* ── Logo ── */
 .logo-text {
     font-family: 'Montserrat', sans-serif;
     font-weight: 900;
@@ -62,8 +61,6 @@
     color: var(--navy-blue);
 }
 .logo-text span { color: var(--accent-red); }
-
-/* ── Section label ── */
 .section-label {
     display: flex;
     align-items: center;
@@ -79,20 +76,13 @@
     color: var(--navy-blue);
     margin: 0;
 }
-.section-label .line {
-    flex: 1;
-    height: 1px;
-    background: #e2e8f0;
-}
+.section-label .line { flex: 1; height: 1px; background: #e2e8f0; }
 .section-label .dot {
-    width: 8px;
-    height: 8px;
+    width: 8px; height: 8px;
     border-radius: 50%;
     background: var(--accent-red);
     flex-shrink: 0;
 }
-
-/* ── LATEST ARTICLE HERO ── */
 .latest-hero {
     background: white;
     border-radius: 12px;
@@ -114,17 +104,8 @@
     justify-content: center;
     box-sizing: border-box;
 }
-.latest-hero .hero-img {
-    flex: 1;
-    min-width: 300px;
-    height: 420px;
-}
-.latest-hero .hero-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
+.latest-hero .hero-img { flex: 1; min-width: 300px; height: 420px; }
+.latest-hero .hero-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .latest-hero h2 {
     font-family: 'Playfair Display', serif;
     font-size: 2rem;
@@ -132,24 +113,9 @@
     line-height: 1.3;
     margin: 0 0 16px;
 }
-.latest-hero p {
-    font-size: 1rem;
-    color: #334155;
-    line-height: 1.7;
-    margin-bottom: 26px;
-}
-/* Tags row */
-.latest-tags-row {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    margin-bottom: 16px;
-}
-.latest-tags-row .tags-line2 {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-}
+.latest-hero p { font-size: 1rem; color: #334155; line-height: 1.7; margin-bottom: 26px; }
+.latest-tags-row { display: flex; flex-direction: column; gap: 8px; margin-bottom: 16px; }
+.latest-tags-row .tags-line2 { display: flex; align-items: center; gap: 6px; }
 .latest-tag {
     display: inline-flex;
     align-items: center;
@@ -167,8 +133,7 @@
 }
 .latest-tag::before {
     content: '';
-    width: 6px;
-    height: 6px;
+    width: 6px; height: 6px;
     border-radius: 50%;
     background: #16a34a;
     animation: pulse 1.8s ease-in-out infinite;
@@ -199,8 +164,6 @@
     text-transform: uppercase;
     letter-spacing: 0.08em;
 }
-
-/* ── Section row: hero left + sidebar right ── */
 .section-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -208,8 +171,6 @@
     margin-bottom: 16px;
     align-items: start;
 }
-
-/* ── Section Hero card ── */
 .section-hero-card {
     background: white;
     border-radius: 12px;
@@ -221,18 +182,8 @@
     height: 100%;
     box-sizing: border-box;
 }
-.section-hero-card img {
-    width: 100%;
-    height: 260px;
-    object-fit: cover;
-    display: block;
-}
-.section-hero-card .card-body {
-    padding: 28px;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
+.section-hero-card img { width: 100%; height: 260px; object-fit: cover; display: block; }
+.section-hero-card .card-body { padding: 28px; flex: 1; display: flex; flex-direction: column; }
 .section-hero-card h3 {
     font-family: 'Playfair Display', serif;
     font-size: 1.45rem;
@@ -241,21 +192,8 @@
     margin: 0 0 12px;
     flex: 1;
 }
-.section-hero-card p {
-    font-size: 0.9rem;
-    color: #475569;
-    line-height: 1.65;
-    margin-bottom: 18px;
-}
-
-/* ── Sidebar stack: 4 cards ── */
-.sidebar-stack {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-/* ── Sidebar card ── */
+.section-hero-card p { font-size: 0.9rem; color: #475569; line-height: 1.65; margin-bottom: 18px; }
+.sidebar-stack { display: flex; flex-direction: column; gap: 10px; }
 .sidebar-card {
     background: white;
     border-radius: 10px;
@@ -267,14 +205,7 @@
     transition: box-shadow 0.2s;
 }
 .sidebar-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
-.sidebar-card img {
-    width: 100px;
-    min-width: 100px;
-    height: 80px;
-    object-fit: cover;
-    display: block;
-    flex-shrink: 0;
-}
+.sidebar-card img { width: 100px; min-width: 100px; height: 80px; object-fit: cover; display: block; flex-shrink: 0; }
 .sidebar-card .card-body {
     padding: 8px 13px;
     display: flex;
@@ -293,8 +224,6 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
-
-/* ── Shared ── */
 .cat-label {
     font-size: 0.62rem;
     font-weight: 700;
@@ -326,12 +255,7 @@
     white-space: nowrap;
 }
 .link-red:hover { opacity: 0.75; }
-
-/* ── View all ── */
-.view-all-wrap {
-    text-align: center;
-    margin: 40px 0 60px;
-}
+.view-all-wrap { text-align: center; margin: 40px 0 60px; }
 .btn-dark {
     display: inline-block;
     background: var(--navy-blue);
@@ -344,11 +268,7 @@
     transition: background 0.2s;
 }
 .btn-dark:hover { background: #1e293b; }
-
-/* ── Responsive ── */
-@media (max-width: 900px) {
-    .section-row { grid-template-columns: 1fr; }
-}
+@media (max-width: 900px) { .section-row { grid-template-columns: 1fr; } }
 @media (max-width: 768px) {
     .latest-hero { flex-direction: column; }
     .latest-hero .hero-text { order: 2; }
@@ -384,57 +304,67 @@
 <main class="container" style="max-width:1100px;margin:40px auto;padding:0 20px;">
 
     <!-- ═══════════════════════════════════════
-         LATEST ARTICLE
+         LATEST — Energy Expo
     ════════════════════════════════════════ -->
     <div class="section-label" style="margin-top:0;">
         <div class="dot"></div>
         <h2>Latest</h2>
         <div class="line"></div>
     </div>
-
     <article class="latest-hero">
         <div class="hero-text">
             <div class="latest-tags-row">
                 <span class="latest-tag">Latest Article</span>
                 <div class="tags-line2">
-                    <span class="category-badge">Analysis</span>
-                    <span class="section-tag">News</span>
+                    <span class="category-badge">Career Guide</span>
+                    <span class="section-tag">Business</span>
                 </div>
             </div>
-            <h2>A Hospital That Outlived Its Town: The Structural Collapse Behind Greenwood Leflore's Final Crisis</h2>
-            <p>Over $44 million in public funds, three rounds of rescue, and a negotiation history that has collapsed twice before. What the numbers actually show about Greenwood Leflore Hospital — and why this is not a story that policy can fix.</p>
-            <a href="news/greenwood-leflore-hospital-analysis.html" class="btn-primary">Read Full Analysis</a>
+            <h2>The Door Is Open. Here's How to Walk Through It.</h2>
+            <p>15+ energy companies. One room. Tuesday morning in Biloxi. Your complete pre-event guide to the 2026 Energy Expo &amp; Job Fair — who's hiring, what roles are open, and exactly how to prepare.</p>
+            <a href="business/energy-expo-job-fair-biloxi-2026-guide.html" class="btn-primary">Read Full Guide</a>
         </div>
         <div class="hero-img">
-            <a href="news/greenwood-leflore-hospital-analysis.html">
-                <img src="assets/news/glh-hero.webp" width="1200" height="800" fetchpriority="high" alt="Greenwood Leflore Hospital analysis Mississippi Lead">
+            <a href="business/energy-expo-job-fair-biloxi-2026-guide.html">
+                <img src="assets/business/biloxi-civic-center-energy-expo.webp" width="1200" height="800" fetchpriority="high" alt="Biloxi Civic Center — 2026 Energy Expo and Job Fair">
             </a>
         </div>
     </article>
 
     <!-- ═══════════════════════════════════════
-         NEWS
+         NEWS — Greenwood Leflore as hero
     ════════════════════════════════════════ -->
     <div class="section-label">
         <div class="dot"></div>
         <h2>News</h2>
         <div class="line"></div>
     </div>
-
     <div class="section-row">
         <article class="section-hero-card">
-            <a href="news/lamar-odom-untold-documentary-analysis.html">
-                <img src="assets/news/lamar-odom-untold-hero.webp" width="1200" height="800" loading="lazy" alt="Netflix Untold Lamar Odom documentary analysis">
+            <a href="news/greenwood-leflore-hospital-analysis.html">
+                <img src="assets/news/glh-hero.webp" width="1200" height="800" loading="lazy" alt="Greenwood Leflore Hospital analysis Mississippi Lead">
             </a>
             <div class="card-body">
                 <span class="cat-label">Analysis</span>
-                <h3>Khloé's Documentary: How Netflix's <em>Untold</em> Became the Kardashians' Most Sophisticated PR Move</h3>
-                <p>Riveting television. Almost entirely unverifiable. And its two most explosive accusations target men who cannot respond — because they are dead.</p>
-                <a href="news/lamar-odom-untold-documentary-analysis.html" class="link-red">Read Full Analysis →</a>
+                <h3>A Hospital That Outlived Its Town: The Structural Collapse Behind Greenwood Leflore's Final Crisis</h3>
+                <p>Over $44 million in public funds, three rounds of rescue, and a negotiation history that has collapsed twice before. What the numbers actually show — and why this is not a story that policy can fix.</p>
+                <a href="news/greenwood-leflore-hospital-analysis.html" class="link-red">Read Full Analysis →</a>
             </div>
         </article>
-
         <div class="sidebar-stack">
+            <!-- Lamar Odom — moved from hero to sidebar #1 -->
+            <article class="sidebar-card" style="border-left-color:var(--accent-red);">
+                <a href="news/lamar-odom-untold-documentary-analysis.html">
+                    <img src="assets/news/lamar-odom-untold-hero.webp" width="700" height="467" loading="lazy" alt="Netflix Untold Lamar Odom documentary analysis">
+                </a>
+                <div class="card-body">
+                    <div>
+                        <span class="cat-label">Analysis</span>
+                        <h4>Khloé's Documentary: How Netflix's <em>Untold</em> Became the Kardashians' Most Sophisticated PR Move</h4>
+                    </div>
+                    <a href="news/lamar-odom-untold-documentary-analysis.html" class="link-red">Read →</a>
+                </div>
+            </article>
             <article class="sidebar-card" style="border-left-color:var(--accent-red);">
                 <a href="archive/dibiase-verdict-2026.html">
                     <img src="assets/dibiase-verdict.webp" width="700" height="467" loading="lazy" alt="DiBiase verdict">
@@ -483,18 +413,7 @@
                     <a href="archive/ms-anime-fest-2026.html" class="link-red">Read →</a>
                 </div>
             </article>
-            <article class="sidebar-card" style="border-left-color:var(--accent-red);">
-                <a href="archive/Robert-Carradine.html">
-                    <img src="assets/robert-carradine.webp" width="700" height="467" loading="lazy" alt="Robert Carradine investigation 2026">
-                </a>
-                <div class="card-body">
-                    <div>
-                        <span class="cat-label">Investigation</span>
-                        <h4>Robert Carradine: From a Simple Suicide to a Planned Murder?</h4>
-                    </div>
-                    <a href="archive/Robert-Carradine.html" class="link-red">Read →</a>
-                </div>
-            </article>
+            <!-- Robert Carradine removed -->
         </div>
     </div>
 
@@ -506,7 +425,6 @@
         <h2>Business</h2>
         <div class="line"></div>
     </div>
-
     <div class="section-row">
         <article class="section-hero-card" style="border-top-color:var(--navy-blue);">
             <a href="business/amazon-25-billion-deal-mississippi-taxpayers.html">
@@ -519,7 +437,6 @@
                 <a href="business/amazon-25-billion-deal-mississippi-taxpayers.html" class="link-red">Read Full Investigation →</a>
             </div>
         </article>
-
         <div class="sidebar-stack">
             <article class="sidebar-card" style="border-left-color:var(--navy-blue);">
                 <a href="business/oxford-quiet-tech-revolution.html">
@@ -592,7 +509,6 @@
         <h2>Lifestyle</h2>
         <div class="line"></div>
     </div>
-
     <div class="section-row">
         <article class="section-hero-card" style="border-top-color:#0d9488;">
             <a href="lifestyle/beauty-day-hattiesburg.html">
@@ -605,7 +521,6 @@
                 <a href="lifestyle/beauty-day-hattiesburg.html" class="link-red">Read Full Article →</a>
             </div>
         </article>
-
         <div class="sidebar-stack">
             <article class="sidebar-card" style="border-left-color:#0d9488;">
                 <a href="lifestyle/world-catfish-festival-2026.html">
@@ -655,14 +570,12 @@
                     <a href="archive/keifers-jackson.html" class="link-red">Read →</a>
                 </div>
             </article>
-            <!-- 5th slot: reserved for future article -->
         </div>
     </div>
 
     <div class="view-all-wrap">
         <a href="archive.html" class="btn-dark">View Full Archive →</a>
     </div>
-
 </main>
 
 <footer style="background:#0f172a;color:white;padding:60px 0 30px;margin-top:0;">
@@ -683,7 +596,7 @@
             <div style="flex:1;min-width:200px;">
                 <h3 style="margin-bottom:20px;font-size:1.1rem;">Contact</h3>
                 <p style="color:#94a3b8;font-size:0.9rem;">📍 Jackson, Mississippi</p>
-                <p style="color:#94a3b8;font-size:0.9rem;">✉️ info@mississippilead.com </p>
+                <p style="color:#94a3b8;font-size:0.9rem;">✉️ <a href="mailto:info@mississippilead.com" style="color:#94a3b8;">info@mississippilead.com</a></p>
             </div>
         </div>
         <div style="border-top:1px solid #1e293b;padding-top:20px;text-align:center;color:#64748b;font-size:0.85rem;">
