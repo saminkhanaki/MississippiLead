@@ -1,33 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
   <!-- Core Pages -->
   <url>
     <loc>https://mississippilead.com/</loc>
-    <lastmod>2026-04-16</lastmod>
+    <lastmod>2026-04-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.00</priority>
   </url>
   <url>
     <loc>https://mississippilead.com/news.html</loc>
-    <lastmod>2026-04-16</lastmod>
+    <lastmod>2026-04-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
     <loc>https://mississippilead.com/business.html</loc>
-    <lastmod>2026-04-16</lastmod>
+    <lastmod>2026-04-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://mississippilead.com/lifestyle.html</loc>
-    <lastmod>2026-04-16</lastmod>
+    <lastmod>2026-04-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://mississippilead.com/archive.html</loc>
-    <lastmod>2026-04-16</lastmod>
+    <lastmod>2026-04-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.50</priority>
   </url>
@@ -43,25 +44,39 @@
     <loc>https://mississippilead.com/privacy.html</loc>
     <priority>0.20</priority>
   </url>
+
+  <!-- April 2026 — Business -->
+  <url>
+    <loc>https://mississippilead.com/business/energy-expo-job-fair-biloxi-2026-guide.html</loc>
+    <lastmod>2026-04-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
   <!-- April 2026 — News -->
   <url>
     <loc>https://mississippilead.com/news/greenwood-leflore-hospital-analysis.html</loc>
     <lastmod>2026-04-15</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.95</priority>
+    <priority>0.93</priority>
+  </url>
+  <url>
+    <loc>https://mississippilead.com/business/amazon-25-billion-deal-mississippi-taxpayers.html</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.91</priority>
   </url>
   <url>
     <loc>https://mississippilead.com/news/lamar-odom-untold-documentary-analysis.html</loc>
     <lastmod>2026-04-09</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.90</priority>
+    <priority>0.89</priority>
   </url>
-  <!-- April 2026 — Business -->
   <url>
-    <loc>https://mississippilead.com/business/amazon-25-billion-deal-mississippi-taxpayers.html</loc>
-    <lastmod>2026-04-13</lastmod>
+    <loc>https://mississippilead.com/lifestyle/beauty-day-hattiesburg.html</loc>
+    <lastmod>2026-04-07</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.90</priority>
+    <priority>0.87</priority>
   </url>
   <url>
     <loc>https://mississippilead.com/business/oxford-quiet-tech-revolution.html</loc>
@@ -69,37 +84,43 @@
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
-  <!-- April 2026 — Lifestyle -->
-  <url>
-    <loc>https://mississippilead.com/lifestyle/beauty-day-hattiesburg.html</loc>
-    <lastmod>2026-04-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.88</priority>
-  </url>
   <url>
     <loc>https://mississippilead.com/lifestyle/world-catfish-festival-2026.html</loc>
     <lastmod>2026-04-03</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.86</priority>
+    <priority>0.83</priority>
   </url>
-  <!-- March 2026 — High-value Mississippi-specific articles -->
-  <url>
-    <loc>https://mississippilead.com/archive/dibiase-verdict-2026.html</loc>
-    <lastmod>2026-03-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
+
+  <!-- March 2026 -->
   <url>
     <loc>https://mississippilead.com/archive/mississippi-fire-weather-watch-2026.html</loc>
     <lastmod>2026-03-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.81</priority>
   </url>
   <url>
-    <loc>https://mississippilead.com/archive/mississippi-medicaid-2026.html</loc>
-    <lastmod>2026-03-16</lastmod>
+    <loc>https://mississippilead.com/archive/tiger-woods-diu-arrest-2026.html</loc>
+    <lastmod>2026-03-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.79</priority>
+  </url>
+  <url>
+    <loc>https://mississippilead.com/sports/msstate-vs-olemiss-game2-2026.html</loc>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.30</priority>
+  </url>
+  <url>
+    <loc>https://mississippilead.com/sports/houston-vs-illinois-sweet-16-2026.html</loc>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.30</priority>
+  </url>
+  <url>
+    <loc>https://mississippilead.com/archive/dibiase-verdict-2026.html</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.77</priority>
   </url>
   <url>
     <loc>https://mississippilead.com/archive/best-tax-services-jackson-ms-2026.html</loc>
@@ -108,122 +129,126 @@
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://mississippilead.com/archive/gulfport-dentists-reveiw.html</loc>
-    <lastmod>2026-03-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-  <url>
-    <loc>https://mississippilead.com/archive/general-atomics-expansion.html</loc>
-    <lastmod>2026-03-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-  <url>
     <loc>https://mississippilead.com/archive/international-paper-mississippi-2026.html</loc>
     <lastmod>2026-03-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
+    <priority>0.73</priority>
   </url>
   <url>
-    <loc>https://mississippilead.com/archive/tax-blueprint.html</loc>
-    <lastmod>2026-03-10</lastmod>
+    <loc>https://mississippilead.com/archive/mississippi-medicaid-2026.html</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
+    <priority>0.71</priority>
   </url>
   <url>
     <loc>https://mississippilead.com/archive/ms-anime-fest-2026.html</loc>
     <lastmod>2026-03-15</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
+    <priority>0.69</priority>
+  </url>
+  <url>
+    <loc>https://mississippilead.com/archive/tax-blueprint.html</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.67</priority>
+  </url>
+  <url>
+    <loc>https://mississippilead.com/archive/gulfport-dentists-reveiw.html</loc>
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://mississippilead.com/archive/general-atomics-expansion.html</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.63</priority>
+  </url>
+  <url>
+    <loc>https://mississippilead.com/archive/kristi-noem.html</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.45</priority>
   </url>
   <url>
     <loc>https://mississippilead.com/archive/roosters.html</loc>
     <lastmod>2026-03-03</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
+    <priority>0.61</priority>
   </url>
   <url>
     <loc>https://mississippilead.com/archive/pascagoula.html</loc>
     <lastmod>2026-03-01</lastmod>
-    <priority>0.70</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.59</priority>
   </url>
+
+  <!-- February 2026 -->
   <url>
     <loc>https://mississippilead.com/archive/UMMC-Cyberattack2.html</loc>
     <lastmod>2026-02-25</lastmod>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://mississippilead.com/archive/mississippi-economy-2026.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <priority>0.65</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.57</priority>
   </url>
   <url>
     <loc>https://mississippilead.com/archive/keifers-jackson.html</loc>
     <lastmod>2026-02-22</lastmod>
-    <priority>0.65</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.55</priority>
   </url>
   <url>
     <loc>https://mississippilead.com/archive/valvoline.html</loc>
     <lastmod>2026-02-23</lastmod>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://mississippilead.com/archive/incident-report.html</loc>
-    <lastmod>2026-02-20</lastmod>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://mississippilead.com/archive/kristi-noem.html</loc>
-    <lastmod>2026-03-06</lastmod>
-    <priority>0.45</priority>
-  </url>
-  <!-- Sports articles — section discontinued, low priority -->
-  <url>
-    <loc>https://mississippilead.com/archive/tiger-woods-diu-arrest-2026.html</loc>
-    <lastmod>2026-03-28</lastmod>
-    <priority>0.45</priority>
-  </url>
-  <url>
-    <loc>https://mississippilead.com/sports/msstate-vs-olemiss-game2-2026.html</loc>
-    <lastmod>2026-03-28</lastmod>
-    <priority>0.25</priority>
-  </url>
-  <url>
-    <loc>https://mississippilead.com/sports/houston-vs-illinois-sweet-16-2026.html</loc>
-    <lastmod>2026-03-27</lastmod>
-    <priority>0.25</priority>
-  </url>
-  <!-- National articles without Mississippi angle — minimal priority -->
-  <url>
-    <loc>https://mississippilead.com/archive/robert-carradine2.html</loc>
-    <lastmod>2026-03-02</lastmod>
-    <priority>0.35</priority>
-  </url>
-  <url>
-    <loc>https://mississippilead.com/archive/facebook-down-2026.html</loc>
-    <lastmod>2026-03-04</lastmod>
-    <priority>0.22</priority>
-  </url>
-  <url>
-    <loc>https://mississippilead.com/archive/iran-attack.html</loc>
-    <lastmod>2026-02-28</lastmod>
-    <priority>0.20</priority>
-  </url>
-  <url>
-    <loc>https://mississippilead.com/archive/bobby-j-brown.html</loc>
-    <lastmod>2026-02-27</lastmod>
-    <priority>0.20</priority>
-  </url>
-  <url>
-    <loc>https://mississippilead.com/archive/Robert-Carradine.html</loc>
-    <lastmod>2026-02-24</lastmod>
-    <priority>0.60</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.53</priority>
   </url>
   <url>
     <loc>https://mississippilead.com/archive/rondale-moore.html</loc>
     <lastmod>2026-02-23</lastmod>
-    <priority>0.50</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.51</priority>
+  </url>
+  <url>
+    <loc>https://mississippilead.com/archive/incident-report.html</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.49</priority>
+  </url>
+  <url>
+    <loc>https://mississippilead.com/archive/mississippi-economy-2026.html</loc>
+    <lastmod>2026-02-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.47</priority>
+  </url>
+  <url>
+    <loc>https://mississippilead.com/archive/bobby-j-brown.html</loc>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.38</priority>
+  </url>
+  <url>
+    <loc>https://mississippilead.com/archive/iran-attack.html</loc>
+    <lastmod>2026-02-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.36</priority>
+  </url>
+  <url>
+    <loc>https://mississippilead.com/archive/Robert-Carradine.html</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.34</priority>
+  </url>
+  <url>
+    <loc>https://mississippilead.com/archive/robert-carradine2.html</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.32</priority>
+  </url>
+  <url>
+    <loc>https://mississippilead.com/archive/facebook-down-2026.html</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.30</priority>
   </url>
   <url>
     <loc>https://mississippilead.com/archive/news3.html</loc>
@@ -240,9 +265,11 @@
     <lastmod>2026-02-21</lastmod>
     <priority>0.18</priority>
   </url>
+
   <!-- Utility -->
   <url>
     <loc>https://mississippilead.com/404.html</loc>
     <priority>0.10</priority>
   </url>
+
 </urlset>
