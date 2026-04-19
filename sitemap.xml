@@ -4,31 +4,31 @@
   <!-- Core Pages -->
   <url>
     <loc>https://mississippilead.com/</loc>
-    <lastmod>2026-04-18</lastmod>
+    <lastmod>2026-04-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.00</priority>
   </url>
   <url>
     <loc>https://mississippilead.com/news.html</loc>
-    <lastmod>2026-04-18</lastmod>
+    <lastmod>2026-04-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
     <loc>https://mississippilead.com/business.html</loc>
-    <lastmod>2026-04-18</lastmod>
+    <lastmod>2026-04-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://mississippilead.com/lifestyle.html</loc>
-    <lastmod>2026-04-18</lastmod>
+    <lastmod>2026-04-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://mississippilead.com/archive.html</loc>
-    <lastmod>2026-04-18</lastmod>
+    <lastmod>2026-04-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.50</priority>
   </url>
@@ -46,6 +46,13 @@
   </url>
 
   <!-- April 2026 — Business -->
+  
+  <url>
+    <loc>https://mississippilead.com/lifestyle/moving-to-tupelo-with-kids.html</loc>
+    <lastmod>2026-04-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
   <url>
     <loc>https://mississippilead.com/business/energy-expo-job-fair-biloxi-2026-guide.html</loc>
     <lastmod>2026-04-18</lastmod>
