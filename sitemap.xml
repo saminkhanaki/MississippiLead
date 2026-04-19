@@ -18,31 +18,31 @@
     <loc>https://mississippilead.com/business.html</loc>
     <lastmod>2026-04-18</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.90</priority>
   </url>
   <url>
     <loc>https://mississippilead.com/lifestyle.html</loc>
     <lastmod>2026-04-18</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.90</priority>
   </url>
   <url>
     <loc>https://mississippilead.com/archive.html</loc>
     <lastmod>2026-04-19</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.50</priority>
-  </url>
-  <url>
-    <loc>https://mississippilead.com/about.html</loc>
     <priority>0.40</priority>
   </url>
   <url>
+    <loc>https://mississippilead.com/about.html</loc>
+    <priority>0.30</priority>
+  </url>
+  <url>
     <loc>https://mississippilead.com/acquire.html</loc>
-    <priority>0.28</priority>
+    <priority>0.25</priority>
   </url>
   <url>
     <loc>https://mississippilead.com/privacy.html</loc>
-    <priority>0.20</priority>
+    <priority>0.15</priority>
   </url>
 
   <!-- April 2026 — Business -->
