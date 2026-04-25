@@ -389,6 +389,50 @@
       font-size: 0.95rem !important;
       text-align: left !important;
     }
+    .infographic-placeholder img {
+      cursor: zoom-in;
+      transition: opacity 0.2s;
+    }
+    .infographic-placeholder img:hover { opacity: 0.88; }
+    .lightbox-overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.92);
+      z-index: 9999;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      box-sizing: border-box;
+      cursor: zoom-out;
+    }
+    .lightbox-overlay.active { display: flex; }
+    .lightbox-overlay img {
+      max-width: 100%;
+      max-height: 90vh;
+      object-fit: contain;
+      border-radius: 6px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+      cursor: default;
+    }
+    .lightbox-close {
+      position: fixed;
+      top: 18px; right: 24px;
+      color: white;
+      font-size: 2.2rem;
+      cursor: pointer;
+      opacity: 0.8;
+      line-height: 1;
+    }
+    .lightbox-close:hover { opacity: 1; }
+    .zoom-hint {
+      font-size: 0.75rem;
+      color: #94a3b8;
+      text-align: center;
+      margin-top: 6px;
+      font-style: italic;
+    }
   </style>
 </head>
 <body>
@@ -487,6 +531,7 @@
     <div class="infographic-placeholder">
       <img src="../assets/news/prado-ai-entergy-monopoly-chart.webp" alt="Infographic: Entergy Mississippi — What They Say vs. What's At Stake | MississippiLead">
       <p class="infographic-caption">Entergy's legal arguments are sound. Its interests are also clear. The two are not the same thing.</p>
+      <p class="zoom-hint">Click image to enlarge</p>
     </div>
 
     <h2>Why Entergy Is Not Afraid of 350 Megawatts</h2>
@@ -536,6 +581,7 @@
     <div class="infographic-placeholder">
       <img src="../assets/news/prado-ai-scenarios-chart.webp" alt="Infographic: Three Scenarios — Who Wins, Who Loses, and What Mississippi Ratepayers Get in Each | MississippiLead">
       <p class="infographic-caption">In every scenario, Mississippi ratepayers are either watching or paying. No scenario puts them at the table.</p>
+      <p class="zoom-hint">Click image to enlarge</p>
     </div>
 
     <h2>The Pattern This Case Fits</h2>
@@ -663,6 +709,33 @@
 <footer style="background: var(--primary); color: white; padding: 30px 0; margin-top: 60px; text-align: center;">
   <p>&copy; 2026 Mississippi Lead</p>
 </footer>
+
+<div class="lightbox-overlay" id="lightbox" onclick="closeLightbox()">
+  <span class="lightbox-close" onclick="closeLightbox()">&#x2715;</span>
+  <img id="lightbox-img" src="" alt="">
+</div>
+
+<script>
+  function openLightbox(src, alt) {
+    document.getElementById('lightbox-img').src = src;
+    document.getElementById('lightbox-img').alt = alt;
+    document.getElementById('lightbox').classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('active');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeLightbox();
+  });
+  document.querySelectorAll('.infographic-placeholder img').forEach(function(img) {
+    img.addEventListener('click', function(e) {
+      e.stopPropagation();
+      openLightbox(this.src, this.alt);
+    });
+  });
+</script>
 
 </body>
 </html>
